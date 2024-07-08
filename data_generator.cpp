@@ -35,9 +35,9 @@ void DataGenerator::fillDouble(testData& data) {
 
 void DataGenerator::fillChar(testData& data, size_t value_size) {
     char* ptr = reinterpret_cast<char*>(&data);
-    size_t num_members = sizeof(testData) / (value_size + 1);
+    size_t num_members = sizeof(testData) / value_size;
     for (size_t i = 0; i < num_members; ++i) {
-        generateRandomString(ptr + i * (value_size + 1), value_size);
+        generateRandomString(ptr + i * value_size, value_size);
     }
 }
 
@@ -55,7 +55,7 @@ void DataGenerator::generateRandomString(char* str, size_t size) {
     const char charset[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
     const size_t charset_size = sizeof(charset) - 1;
 
-    for (size_t i = 0; i < size; ++i) {
+    for (size_t i = 0; i < size - 1; ++i) {
         str[i] = charset[std::uniform_int_distribution<>(0, charset_size - 1)(gen)];
     }
     str[size] = '\0';  // Null-terminate the string

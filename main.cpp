@@ -8,24 +8,28 @@
 #include "benchmark_struct.h"
 #include "data_generator.h"
 
-int main() {
-    // Read config.txt to get value size and type
+// Read config.txt to get value size and type
+void getTokens(std::vector<std::string> &tokens) {
     std::ifstream config_file("config.txt");
     std::string line;
     std::getline(config_file, line);
     std::replace(line.begin(), line.end(), ',', ' ');
     std::istringstream iss(line);
     std::string token;
-    std::vector<std::string> tokens;
     for (std::string s; iss >> s;) 
         tokens.push_back(s);
     
-    if (tokens.size() < 4) {
+    if (tokens.size() < 5) {
         std::cerr << "Error: Not enough parameters in config file" << std::endl;
-        return 1;
+        exit(1);
     }
+}
 
-    size_t value_size = std::stoi(tokens[3]);
+int main() {
+    std::vector<std::string> tokens;
+    getTokens(tokens);
+
+    size_t value_size = std::stoi(tokens[4]);
     std::string type = tokens[1];
 
     testData data;
@@ -33,7 +37,7 @@ int main() {
 
     generator.fillStruct(data, value_size, type);
 
-    // Print out the first few values to verify
+    // print test data
     if (type == "int32_t") {
         int32_t* ptr = reinterpret_cast<int32_t*>(&data);
         for (int i = 0; i < 3; ++i) {
@@ -50,6 +54,8 @@ int main() {
             std::cout << "String " << i + 1 << ": " << (ptr + i * (value_size + 1)) << std::endl;
         }
     }
+
+
 
     return 0;
 }
