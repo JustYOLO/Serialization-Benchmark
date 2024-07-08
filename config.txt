@@ -1,0 +1,4 @@
+4, double, 4, 16
+# nkey, tkey, skey, sval
+# string means: char {variable length = skey} [{sval + 1}]
+# adding 1 in sval means it needs a space for null character
