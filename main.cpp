@@ -7,6 +7,8 @@
 #include <benchmark/benchmark.h>
 #include "benchmark_struct.h"
 #include "data_generator.h"
+#include "serializers.h"
+#include "benchmark_func.h"
 
 // Read config.txt to get value size and type
 void getTokens(std::vector<std::string> &tokens) {
@@ -19,43 +21,91 @@ void getTokens(std::vector<std::string> &tokens) {
     for (std::string s; iss >> s;) 
         tokens.push_back(s);
     
-    if (tokens.size() < 5) {
+    if (tokens.size() < 6) {
         std::cerr << "Error: Not enough parameters in config file" << std::endl;
         exit(1);
     }
 }
 
-int main() {
-    std::vector<std::string> tokens;
-    getTokens(tokens);
-
-    size_t value_size = std::stoi(tokens[4]);
-    std::string type = tokens[1];
-
-    testData data;
-    DataGenerator generator;
-
-    generator.fillStruct(data, value_size, type);
-
-    // print test data
-    if (type == "int32_t") {
-        int32_t* ptr = reinterpret_cast<int32_t*>(&data);
-        for (int i = 0; i < 3; ++i) {
-            std::cout << "Value " << i + 1 << ": " << ptr[i] << std::endl;
-        }
-    } else if (type == "double") {
-        double* ptr = reinterpret_cast<double*>(&data);
-        for (int i = 0; i < 3; ++i) {
-            std::cout << "Value " << i + 1 << ": " << ptr[i] << std::endl;
-        }
-    } else if (type == "string") {
-        char* ptr = reinterpret_cast<char*>(&data);
-        for (int i = 0; i < 3; ++i) {
-            std::cout << "String " << i + 1 << ": " << (ptr + i * (value_size + 1)) << std::endl;
+class CustomReporter : public benchmark::BenchmarkReporter {
+public:
+    CustomReporter(const std::string& latencyFileName, const std::string& sizeFileName) : latencyFile(latencyFileName), sizeFile(sizeFileName), consoleReporter() {
+        if (!latencyFile.is_open() || !sizeFile.is_open()) {
+            throw std::runtime_error("Failed to open file");
         }
     }
 
+    bool ReportContext(const Context& context) override {
+        consoleReporter.ReportContext(context);
+        return true;
+    }
 
+    void ReportRuns(const std::vector<Run>& report) override {
+        for (const auto& run : report) {
+            double time_ns = (run.real_accumulated_time * 1e9) / run.iterations;
+            latencyBuf += std::to_string(time_ns) + "\n"; // output unit is nano seconds
+            if(run.report_label != "")
+                sizeBuf += run.report_label + "\n"; 
+        }
+        consoleReporter.ReportRuns(report);
+    }
+
+    void Finalize() override {
+        latencyFile << latencyBuf;
+        sizeFile << sizeBuf;
+        latencyFile.close();
+        sizeFile.close();
+        consoleReporter.Finalize();
+    }
+
+private:
+    std::string latencyBuf;
+    std::string sizeBuf;
+    std::ofstream latencyFile;
+    std::ofstream sizeFile;
+    benchmark::ConsoleReporter consoleReporter;
+};
+
+
+int main(int argc, char** argv) {
+    std::vector<std::string> tokens;
+    getTokens(tokens);
+
+    size_t nkeys = std::stoi(tokens[0]);
+    size_t svalMin = std::stoi(tokens[4]);
+    size_t svalMax = std::stoi(tokens[5]);
+    size_t testSize = std::stoi(tokens[6]);
+    std::string type = tokens[1];
+
+    benchmark::Initialize(&argc, argv);
+    DataGenerator generator;
+
+    std::vector<testData> testDataVector (testSize);
+
+    for (size_t i = 0; i < testDataVector.size(); ++i) {
+        generator.fillStruct(testDataVector[i], nkeys, svalMin, svalMax, type);
+        benchmark::RegisterBenchmark(
+            ("BM_MsgPackSerialization_" + std::to_string(i)).c_str(),
+            BM_MsgPackSerialization, testDataVector[i], "tmp/" + std::to_string(i) + ".msgpack");
+
+        benchmark::RegisterBenchmark(
+            ("BM_MsgPackDeserialization_" + std::to_string(i)).c_str(),
+            BM_MsgPackDeserialization, "tmp/" + std::to_string(i) + ".msgpack");
+        
+
+    }
+
+    auto start_time = std::chrono::high_resolution_clock::now();
+
+    CustomReporter reporter("MP-16-string-16-16-16-latency.txt", "MP-16-string-16-16-16-size.txt");
+    benchmark::RunSpecifiedBenchmarks(&reporter);
+    benchmark::Shutdown();
+
+    auto end_time = std::chrono::high_resolution_clock::now();
+    std::chrono::duration<double> elapsed = end_time - start_time;
+
+
+    std::cout << "Total elapsed time: " << elapsed.count() << " seconds" << std::endl;
 
     return 0;
 }

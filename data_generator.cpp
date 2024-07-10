@@ -2,22 +2,24 @@
 #include <algorithm>
 #include <cstring>
 #include <stdexcept>
+#include <cstdlib>
 
 DataGenerator::DataGenerator(unsigned seed) : gen(seed) {}
 
-void DataGenerator::fillStruct(testData& data, size_t value_size, const std::string& type) {
+void DataGenerator::fillStruct(testData& data, size_t nkeys, size_t svalMin, size_t svalMax, const std::string& type) {
     if (type == "int32_t") {
         fillInt32(data);
     } else if (type == "double") {
         fillDouble(data);
     } else if (type == "string") {
-        fillChar(data, value_size);
+        fillString(data, nkeys, svalMin, svalMax);
     } else {
         throw std::runtime_error("Unsupported type");
     }
 }
 
 void DataGenerator::fillInt32(testData& data) {
+    
     int32_t* ptr = reinterpret_cast<int32_t*>(&data); // Is it ok to use reinterpret_cast? Is there any better method?
     size_t num_members = sizeof(testData) / sizeof(int32_t);
     for (size_t i = 0; i < num_members; ++i) {
@@ -33,14 +35,6 @@ void DataGenerator::fillDouble(testData& data) {
     }
 }
 
-void DataGenerator::fillChar(testData& data, size_t value_size) {
-    char* ptr = reinterpret_cast<char*>(&data);
-    size_t num_members = sizeof(testData) / value_size;
-    for (size_t i = 0; i < num_members; ++i) {
-        generateRandomString(ptr + i * value_size, value_size);
-    }
-}
-
 template<>
 int32_t DataGenerator::generateRandomValue<int32_t>() {
     return std::uniform_int_distribution<int32_t>{}(gen);
@@ -51,12 +45,12 @@ double DataGenerator::generateRandomValue<double>() {
     return std::uniform_real_distribution<double>{}(gen);
 }
 
-void DataGenerator::generateRandomString(char* str, size_t size) {
-    const char charset[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-    const size_t charset_size = sizeof(charset) - 1;
+void DataGenerator::generateRandomString(size_t index, size_t svalMin, size_t svalMax) {
+    // const char charset[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    // const size_t charset_size = sizeof(charset) - 1;
 
-    for (size_t i = 0; i < size - 1; ++i) {
-        str[i] = charset[std::uniform_int_distribution<>(0, charset_size - 1)(gen)];
-    }
-    str[size] = '\0';  // Null-terminate the string
+    // for (size_t i = 0; i < size - 1; ++i) {
+    //     str[i] = charset[std::uniform_int_distribution<>(0, charset_size - 1)(gen)];
+    // }
+    // str[size] = '\0';  // Null-terminate the string
 }

@@ -4,4 +4,4 @@ python3 generate_struct.py
 make clean
 make
 
-./main
+./benchmark_test

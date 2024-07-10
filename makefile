@@ -1,21 +1,20 @@
 CXX = g++
-CXXFLAGS = -g -std=c++17 -Wall -Wextra
+CXXFLAGS = -std=c++17 -Wall -Wextra -g
 LDFLAGS = -lbenchmark
 
-OBJS = main.o data_generator.o
+SRCS = main.cpp data_generator.cpp serializers.cpp  data_generator_string.cpp
+OBJS = $(SRCS:.cpp=.o)
+TARGET = benchmark_test
 
-all: main
+all: $(TARGET)
 
-main: $(OBJS)
-	$(CXX) $(OBJS) -o main $(LDFLAGS) -g
+$(TARGET): $(OBJS)
+	$(CXX) $(OBJS) -o $(TARGET) $(LDFLAGS)
 
-data_generator.o: data_generator.cpp data_generator.h
-	$(CXX) $(CXXFLAGS) -c data_generator.cpp
-
-main.o: main.cpp
-	$(CXX) $(CXXFLAGS) -c main.cpp
+%.o: %.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
-	rm -f *~ *.o main
+	rm -f $(OBJS) $(TARGET)
 
 .PHONY: all clean
