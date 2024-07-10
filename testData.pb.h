@@ -54,20 +54,20 @@ struct TableStruct_testData_2eproto {
   static const ::PROTOBUF_NAMESPACE_ID::uint32 offsets[];
 };
 extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_testData_2eproto;
-namespace tutorial {
+namespace proto {
 class testData;
 class testDataDefaultTypeInternal;
 extern testDataDefaultTypeInternal _testData_default_instance_;
-}  // namespace tutorial
+}  // namespace proto
 PROTOBUF_NAMESPACE_OPEN
-template<> ::tutorial::testData* Arena::CreateMaybeMessage<::tutorial::testData>(Arena*);
+template<> ::proto::testData* Arena::CreateMaybeMessage<::proto::testData>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
-namespace tutorial {
+namespace proto {
 
 // ===================================================================
 
 class testData PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:tutorial.testData) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:proto.testData) */ {
  public:
   inline testData() : testData(nullptr) {};
   virtual ~testData();
@@ -163,7 +163,7 @@ class testData PROTOBUF_FINAL :
   void InternalSwap(testData* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "tutorial.testData";
+    return "proto.testData";
   }
   protected:
   explicit testData(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -186,41 +186,47 @@ class testData PROTOBUF_FINAL :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kKeysFieldNumber = 1,
+    kAeHwVPEMZoyzcGgRFieldNumber = 1,
   };
-  // repeated string keys = 1;
-  int keys_size() const;
+  // optional string aeHwVPEMZoyzcGgR = 1;
+  bool has_aehwvpemzoyzcggr() const;
   private:
-  int _internal_keys_size() const;
+  bool _internal_has_aehwvpemzoyzcggr() const;
   public:
-  void clear_keys();
-  const std::string& keys(int index) const;
-  std::string* mutable_keys(int index);
-  void set_keys(int index, const std::string& value);
-  void set_keys(int index, std::string&& value);
-  void set_keys(int index, const char* value);
-  void set_keys(int index, const char* value, size_t size);
-  std::string* add_keys();
-  void add_keys(const std::string& value);
-  void add_keys(std::string&& value);
-  void add_keys(const char* value);
-  void add_keys(const char* value, size_t size);
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& keys() const;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_keys();
+  void clear_aehwvpemzoyzcggr();
+  const std::string& aehwvpemzoyzcggr() const;
+  void set_aehwvpemzoyzcggr(const std::string& value);
+  void set_aehwvpemzoyzcggr(std::string&& value);
+  void set_aehwvpemzoyzcggr(const char* value);
+  void set_aehwvpemzoyzcggr(const char* value, size_t size);
+  std::string* mutable_aehwvpemzoyzcggr();
+  std::string* release_aehwvpemzoyzcggr();
+  void set_allocated_aehwvpemzoyzcggr(std::string* aehwvpemzoyzcggr);
+  GOOGLE_PROTOBUF_RUNTIME_DEPRECATED("The unsafe_arena_ accessors for"
+  "    string fields are deprecated and will be removed in a"
+  "    future release.")
+  std::string* unsafe_arena_release_aehwvpemzoyzcggr();
+  GOOGLE_PROTOBUF_RUNTIME_DEPRECATED("The unsafe_arena_ accessors for"
+  "    string fields are deprecated and will be removed in a"
+  "    future release.")
+  void unsafe_arena_set_allocated_aehwvpemzoyzcggr(
+      std::string* aehwvpemzoyzcggr);
   private:
-  const std::string& _internal_keys(int index) const;
-  std::string* _internal_add_keys();
+  const std::string& _internal_aehwvpemzoyzcggr() const;
+  void _internal_set_aehwvpemzoyzcggr(const std::string& value);
+  std::string* _internal_mutable_aehwvpemzoyzcggr();
   public:
 
-  // @@protoc_insertion_point(class_scope:tutorial.testData)
+  // @@protoc_insertion_point(class_scope:proto.testData)
  private:
   class _Internal;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> keys_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr aehwvpemzoyzcggr_;
   friend struct ::TableStruct_testData_2eproto;
 };
 // ===================================================================
@@ -234,78 +240,97 @@ class testData PROTOBUF_FINAL :
 #endif  // __GNUC__
 // testData
 
-// repeated string keys = 1;
-inline int testData::_internal_keys_size() const {
-  return keys_.size();
+// optional string aeHwVPEMZoyzcGgR = 1;
+inline bool testData::_internal_has_aehwvpemzoyzcggr() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  return value;
 }
-inline int testData::keys_size() const {
-  return _internal_keys_size();
+inline bool testData::has_aehwvpemzoyzcggr() const {
+  return _internal_has_aehwvpemzoyzcggr();
 }
-inline void testData::clear_keys() {
-  keys_.Clear();
+inline void testData::clear_aehwvpemzoyzcggr() {
+  aehwvpemzoyzcggr_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  _has_bits_[0] &= ~0x00000001u;
 }
-inline std::string* testData::add_keys() {
-  // @@protoc_insertion_point(field_add_mutable:tutorial.testData.keys)
-  return _internal_add_keys();
+inline const std::string& testData::aehwvpemzoyzcggr() const {
+  // @@protoc_insertion_point(field_get:proto.testData.aeHwVPEMZoyzcGgR)
+  return _internal_aehwvpemzoyzcggr();
 }
-inline const std::string& testData::_internal_keys(int index) const {
-  return keys_.Get(index);
+inline void testData::set_aehwvpemzoyzcggr(const std::string& value) {
+  _internal_set_aehwvpemzoyzcggr(value);
+  // @@protoc_insertion_point(field_set:proto.testData.aeHwVPEMZoyzcGgR)
 }
-inline const std::string& testData::keys(int index) const {
-  // @@protoc_insertion_point(field_get:tutorial.testData.keys)
-  return _internal_keys(index);
+inline std::string* testData::mutable_aehwvpemzoyzcggr() {
+  // @@protoc_insertion_point(field_mutable:proto.testData.aeHwVPEMZoyzcGgR)
+  return _internal_mutable_aehwvpemzoyzcggr();
 }
-inline std::string* testData::mutable_keys(int index) {
-  // @@protoc_insertion_point(field_mutable:tutorial.testData.keys)
-  return keys_.Mutable(index);
+inline const std::string& testData::_internal_aehwvpemzoyzcggr() const {
+  return aehwvpemzoyzcggr_.Get();
 }
-inline void testData::set_keys(int index, const std::string& value) {
-  // @@protoc_insertion_point(field_set:tutorial.testData.keys)
-  keys_.Mutable(index)->assign(value);
+inline void testData::_internal_set_aehwvpemzoyzcggr(const std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  aehwvpemzoyzcggr_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
 }
-inline void testData::set_keys(int index, std::string&& value) {
-  // @@protoc_insertion_point(field_set:tutorial.testData.keys)
-  keys_.Mutable(index)->assign(std::move(value));
+inline void testData::set_aehwvpemzoyzcggr(std::string&& value) {
+  _has_bits_[0] |= 0x00000001u;
+  aehwvpemzoyzcggr_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:proto.testData.aeHwVPEMZoyzcGgR)
 }
-inline void testData::set_keys(int index, const char* value) {
+inline void testData::set_aehwvpemzoyzcggr(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  keys_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:tutorial.testData.keys)
+  _has_bits_[0] |= 0x00000001u;
+  aehwvpemzoyzcggr_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:proto.testData.aeHwVPEMZoyzcGgR)
 }
-inline void testData::set_keys(int index, const char* value, size_t size) {
-  keys_.Mutable(index)->assign(
-    reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:tutorial.testData.keys)
+inline void testData::set_aehwvpemzoyzcggr(const char* value,
+    size_t size) {
+  _has_bits_[0] |= 0x00000001u;
+  aehwvpemzoyzcggr_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:proto.testData.aeHwVPEMZoyzcGgR)
 }
-inline std::string* testData::_internal_add_keys() {
-  return keys_.Add();
+inline std::string* testData::_internal_mutable_aehwvpemzoyzcggr() {
+  _has_bits_[0] |= 0x00000001u;
+  return aehwvpemzoyzcggr_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
-inline void testData::add_keys(const std::string& value) {
-  keys_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:tutorial.testData.keys)
+inline std::string* testData::release_aehwvpemzoyzcggr() {
+  // @@protoc_insertion_point(field_release:proto.testData.aeHwVPEMZoyzcGgR)
+  if (!_internal_has_aehwvpemzoyzcggr()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  return aehwvpemzoyzcggr_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
-inline void testData::add_keys(std::string&& value) {
-  keys_.Add(std::move(value));
-  // @@protoc_insertion_point(field_add:tutorial.testData.keys)
+inline void testData::set_allocated_aehwvpemzoyzcggr(std::string* aehwvpemzoyzcggr) {
+  if (aehwvpemzoyzcggr != nullptr) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  aehwvpemzoyzcggr_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), aehwvpemzoyzcggr,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:proto.testData.aeHwVPEMZoyzcGgR)
 }
-inline void testData::add_keys(const char* value) {
-  GOOGLE_DCHECK(value != nullptr);
-  keys_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:tutorial.testData.keys)
+inline std::string* testData::unsafe_arena_release_aehwvpemzoyzcggr() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:proto.testData.aeHwVPEMZoyzcGgR)
+  GOOGLE_DCHECK(GetArena() != nullptr);
+  _has_bits_[0] &= ~0x00000001u;
+  return aehwvpemzoyzcggr_.UnsafeArenaRelease(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      GetArena());
 }
-inline void testData::add_keys(const char* value, size_t size) {
-  keys_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:tutorial.testData.keys)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
-testData::keys() const {
-  // @@protoc_insertion_point(field_list:tutorial.testData.keys)
-  return keys_;
-}
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
-testData::mutable_keys() {
-  // @@protoc_insertion_point(field_mutable_list:tutorial.testData.keys)
-  return &keys_;
+inline void testData::unsafe_arena_set_allocated_aehwvpemzoyzcggr(
+    std::string* aehwvpemzoyzcggr) {
+  GOOGLE_DCHECK(GetArena() != nullptr);
+  if (aehwvpemzoyzcggr != nullptr) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  aehwvpemzoyzcggr_.UnsafeArenaSetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      aehwvpemzoyzcggr, GetArena());
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.testData.aeHwVPEMZoyzcGgR)
 }
 
 #ifdef __GNUC__
@@ -314,7 +339,7 @@ testData::mutable_keys() {
 
 // @@protoc_insertion_point(namespace_scope)
 
-}  // namespace tutorial
+}  // namespace proto
 
 // @@protoc_insertion_point(global_scope)
 

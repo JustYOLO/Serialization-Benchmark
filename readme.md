@@ -7,8 +7,9 @@ Serialization Benchmark
 ## Requirements
 
 1. [Google Benchmark](https://github.com/google/benchmark) as a global library
-2. python with [numpy](https://numpy.org/) library (for zipfian)
-
+2. [Protocol Buffers](https://protobuf.dev/)
+3. [JSON library for C++](https://github.com/nlohmann/json) by Niels Lohmann (used 3.10.5-2)
+4. [flexbuffers/flatbuffers](https://github.com/google/flatbuffers)
 
 ## How to use (?)
 

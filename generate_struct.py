@@ -84,7 +84,10 @@ def generate_string_struct():
             f.write("}\n")
 
 def generate_protoBuf_struct():
-    pass
+    header_content = """
+
+"""
+    
 
 # starts here? 
 

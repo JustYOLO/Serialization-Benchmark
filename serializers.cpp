@@ -47,5 +47,13 @@ testData deserializeProtoBuf(const std::string& filename) {
     // TODO: Implement this function
 }
 
+size_t serializeJson(const testData& data, const std::string& filename) {
+    // TODO: how about using std::map (?)
+}
+
+testData deserializeJson(const std::string& filename) {
+
+}
+
 
 }  // namespace serializers
