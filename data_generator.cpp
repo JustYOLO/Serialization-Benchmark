@@ -19,7 +19,6 @@ void DataGenerator::fillStruct(testData& data, size_t nkeys, size_t svalMin, siz
 }
 
 void DataGenerator::fillInt32(testData& data) {
-    
     int32_t* ptr = reinterpret_cast<int32_t*>(&data); // Is it ok to use reinterpret_cast? Is there any better method?
     size_t num_members = sizeof(testData) / sizeof(int32_t);
     for (size_t i = 0; i < num_members; ++i) {

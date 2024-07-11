@@ -13,10 +13,18 @@ namespace serializers {
 size_t serializeMsgPack(const testData& data, const std::string& filename);
 testData deserializeMsgPack(const std::string& filename);
 
-size_t serializeProtoBuf(const testData& data, const std::string& filename);
-testData deserializeProtoBuf(const std::string& filename);
+// TODO: add more serialization functions here
 
-size_t serializeJson(const testData& data, const std::string& filename);
-testData deserializeJson(const std::string& filename);
+// Protobuf
+// size_t serializeProtoBuf(const testData& data, const std::string& filename);
+// testData deserializeProtoBuf(const std::string& filename);
+
+// JSON
+// size_t serializeJson(const testData& data, const std::string& filename);
+// testData deserializeJson(const std::string& filename);
+
+// FlexBuffers
+size_t serializeFlexBuffers(const testData& data, const std::string& filename);
+testData deserializeFlexBuffers(const std::string& filename);
 
 }  // namespace serializers

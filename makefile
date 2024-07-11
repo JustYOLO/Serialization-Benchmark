@@ -1,6 +1,6 @@
 CXX = g++
 CXXFLAGS = -std=c++17 -Wall -Wextra -g
-LDFLAGS = -lbenchmark
+LDFLAGS = -lbenchmark -lflatbuffers
 
 SRCS = main.cpp data_generator.cpp serializers.cpp  data_generator_string.cpp
 # TODO: add -lprotobuf to LDFLAGS and testData.pb.cc to SRCS

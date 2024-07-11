@@ -93,6 +93,55 @@ def generate_protoBuf_struct():
 
 """
 
+def generate_flexBuf_struct():
+    header_content = """#include <flatbuffers/flexbuffers.h>
+#include "benchmark_struct.h"
+
+namespace flex {
+    void Serialize(const testData& data, std::vector<uint8_t> &outBuffer) {
+        flexbuffers::Builder builder;
+
+        builder.Map([&]() {
+"""
+    # builder.String("key", "value");
+    if tkey == "string":
+        for key in key_value_pair.keys():
+            header_content += f"            builder.String(\"{key}\", data.{key});\n"
+    elif tkey == "int32_t":
+        for key in key_value_pair.keys():
+            header_content += f"            builder.Int(\"{key}\", data.{key});\n"
+    elif tkey == "double":
+        for key in key_value_pair.keys():
+            header_content += f"            builder.Double(\"{key}\", data.{key});\n"
+
+    header_content += """
+        });
+
+        builder.Finish();
+        outBuffer = builder.GetBuffer();
+    }
+    void Deserialize(testData& data, const std::vector<uint8_t> &inBuffer) {
+        auto root = flexbuffers::GetRoot(inBuffer).AsMap();
+        
+"""
+    # data.dngdRVLn = root["dngdRVLn"].AsString().str();
+    if tkey == "string":
+        for key in key_value_pair.keys():
+            header_content += f"        data.{key} = root[\"{key}\"].AsString().str();\n"
+    elif tkey == "int32_t":
+        for key in key_value_pair.keys():
+            header_content += f"        data.{key} = root[\"{key}\"].AsInt32();\n"
+    elif tkey == "double":
+        for key in key_value_pair.keys():
+            header_content += f"        data.{key} = root[\"{key}\"].AdDouble();\n"
+
+
+    header_content += """    }
+}
+"""
+    with open("flexbuffers_func.h", "w") as f:
+        f.write(header_content)
+
 def generate_values_file():
     with open("values.txt", "w") as f:
         for i in range(testSize):
@@ -114,7 +163,9 @@ header_content = generate_header_file(nkey, tkey, skeyMin, skeyMax)
 with open("benchmark_struct.h", "w") as f:
     f.write(header_content)
 
-generate_string_struct() # makes string struct for C++
-generate_values_file() # make values file
+generate_string_struct() # makes string struct for C++ (msgpack?)
+generate_flexBuf_struct()
+if(tkey == "string"):
+    generate_values_file() # make values file
 
 print("benchmark_struct.h and data_generator_string.cpp have been generated.")

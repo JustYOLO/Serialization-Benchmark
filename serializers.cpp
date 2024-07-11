@@ -1,4 +1,5 @@
 #include "serializers.h"
+#include "flexbuffers_func.h"
 
 namespace serializers {
 
@@ -40,20 +41,54 @@ testData deserializeMsgPack(const std::string& filename) {
     return result;
 }
 
-size_t serializeProtoBuf(const testData& data, const std::string& filename) {
-    // TODO: Implement this function
-}
-testData deserializeProtoBuf(const std::string& filename) {
-    // TODO: Implement this function
-}
+// size_t serializeProtoBuf(const testData& data, const std::string& filename) {
+//     // TODO: Implement this function
+// }
+// testData deserializeProtoBuf(const std::string& filename) {
+//     // TODO: Implement this function
+// }
 
-size_t serializeJson(const testData& data, const std::string& filename) {
-    // TODO: how about using std::map (?)
-}
+// size_t serializeJson(const testData& data, const std::string& filename) {
+//     // TODO: how about using std::map (?)
+// }
 
-testData deserializeJson(const std::string& filename) {
+// testData deserializeJson(const std::string& filename) {
+// }
 
-}
+    size_t serializeFlexBuffers(const testData& data, const std::string& filename) {
+        std::vector<uint8_t> outBuffer;
+        flex::Serialize(data, outBuffer);
+
+        std::ofstream outFile(filename, std::ios::binary);
+        if (outFile) {
+            outFile.write(reinterpret_cast<const char *>(outBuffer.data()), outBuffer.size());
+        } else {
+            std::cerr << "Failed to open file for writing: " << filename << std::endl;
+        }
+
+        return outBuffer.size();
+    }
+
+    testData deserializeFlexBuffers(const std::string& filename) {
+        // TODO: if needed, convert deserialized data to testData
+        std::vector<uint8_t> buffer;
+        std::ifstream inFile(filename, std::ios::binary | std::ios::ate);
+        if (inFile) {
+            std::streamsize size = inFile.tellg();
+            inFile.seekg(0, std::ios::beg);
+
+            buffer.resize(size);
+            inFile.read(reinterpret_cast<char *>(buffer.data()), size);
+        } else {
+            std::cerr << "Failed to open file for reading: " << filename << std::endl;
+        }
+
+        testData result;
+        flex::Deserialize(result, buffer);
+
+        return result;
+    }
+
 
 
 }  // namespace serializers

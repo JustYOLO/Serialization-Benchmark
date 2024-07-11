@@ -92,12 +92,14 @@ int main(int argc, char** argv) {
     std::string type = tokens[1];
 
     std::vector<std::string> values [testSize];
-    getValues(values, testSize); // values contains random generated values from python
+    if(type == "string") {
+        getValues(values, testSize); // values contains random generated values from python (only in string)
 
-    for(size_t i = 0; i < testSize; i++) {
-        for(size_t j = 0; j < nkeys; j++)
-            std::cout << values[i].at(j) << " ";
-        std::cout << std::endl;
+        for(size_t i = 0; i < testSize; i++) {
+            for(size_t j = 0; j < nkeys; j++)
+                std::cout << values[i].at(j) << " ";
+            std::cout << std::endl;
+        }
     }
 
     benchmark::Initialize(&argc, argv);
@@ -106,16 +108,27 @@ int main(int argc, char** argv) {
     std::vector<testData> testDataVector (testSize);
     for (size_t i = 0; i < testSize; ++i) {
         generator.fillStruct(testDataVector[i], nkeys, svalMin, svalMax, type, values[i]);
-        benchmark::RegisterBenchmark(
-            ("BM_MsgPackSerialization_" + std::to_string(i)).c_str(),
-            BM_MsgPackSerialization, testDataVector[i], "tmp/" + std::to_string(i) + ".msgpack");
+        // benchmark::RegisterBenchmark(
+        //     ("BM_MsgPackSerialization_" + std::to_string(i)).c_str(),
+        //     BM_MsgPackSerialization, testDataVector[i], "tmp/" + std::to_string(i) + ".msgpack");
+
+        // benchmark::RegisterBenchmark(
+        //     ("BM_MsgPackDeserialization_" + std::to_string(i)).c_str(),
+        //     BM_MsgPackDeserialization, "tmp/" + std::to_string(i) + ".msgpack");
 
         benchmark::RegisterBenchmark(
-            ("BM_MsgPackDeserialization_" + std::to_string(i)).c_str(),
-            BM_MsgPackDeserialization, "tmp/" + std::to_string(i) + ".msgpack");
+            ("BM_FlexBufSerialization_" + std::to_string(i)).c_str(),
+            BM_MsgPackSerialization, testDataVector[i], "tmp/" + std::to_string(i) + ".fb");
+
+        benchmark::RegisterBenchmark(
+            ("BM_FlexBufDeserialization_" + std::to_string(i)).c_str(),
+            BM_MsgPackDeserialization, "tmp/" + std::to_string(i) + ".fb");
     }
 
-    CustomReporter reporter("MP-16-string-16-16-16-latency.txt", "MP-16-string-16-16-16-size.txt");
+    std::string fileHeader = "FB-" + std::to_string(nkeys) + "-" + type + "-" + std::to_string(svalMin) + "-" + std::to_string(svalMax) + "-" + std::to_string(testSize);
+    std::string latencyFileName = fileHeader + "-latency.txt";
+    std::string sizeFileName = fileHeader + "-size.txt";
+    CustomReporter reporter(latencyFileName, sizeFileName);
     auto start_time = std::chrono::high_resolution_clock::now();
     benchmark::RunSpecifiedBenchmarks(&reporter);
     benchmark::Shutdown();
