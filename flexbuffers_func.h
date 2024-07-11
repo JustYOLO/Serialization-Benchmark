@@ -6,14 +6,14 @@ namespace flex {
         flexbuffers::Builder builder;
 
         builder.Map([&]() {
-            builder.Int("rxpBVKZm", data.rxpBVKZm);
-            builder.Int("IBGMyqVi", data.IBGMyqVi);
-            builder.Int("zzGMxurm", data.zzGMxurm);
-            builder.Int("FLJfpQwW", data.FLJfpQwW);
-            builder.Int("kcgzfQYK", data.kcgzfQYK);
-            builder.Int("WCqGIdaV", data.WCqGIdaV);
-            builder.Int("kNagacUI", data.kNagacUI);
-            builder.Int("BrOHaYcB", data.BrOHaYcB);
+            builder.String("qieezdij", data.qieezdij);
+            builder.String("rbqjhkqq", data.rbqjhkqq);
+            builder.String("tnxueiff", data.tnxueiff);
+            builder.String("wfzxitxa", data.wfzxitxa);
+            builder.String("wjhiporp", data.wjhiporp);
+            builder.String("bntuygoi", data.bntuygoi);
+            builder.String("smxkhuxz", data.smxkhuxz);
+            builder.String("jjomypit", data.jjomypit);
 
         });
 
@@ -23,13 +23,13 @@ namespace flex {
     void Deserialize(testData& data, const std::vector<uint8_t> &inBuffer) {
         auto root = flexbuffers::GetRoot(inBuffer).AsMap();
         
-        data.rxpBVKZm = root["rxpBVKZm"].AsInt32();
-        data.IBGMyqVi = root["IBGMyqVi"].AsInt32();
-        data.zzGMxurm = root["zzGMxurm"].AsInt32();
-        data.FLJfpQwW = root["FLJfpQwW"].AsInt32();
-        data.kcgzfQYK = root["kcgzfQYK"].AsInt32();
-        data.WCqGIdaV = root["WCqGIdaV"].AsInt32();
-        data.kNagacUI = root["kNagacUI"].AsInt32();
-        data.BrOHaYcB = root["BrOHaYcB"].AsInt32();
+        data.qieezdij = root["qieezdij"].AsString().str();
+        data.rbqjhkqq = root["rbqjhkqq"].AsString().str();
+        data.tnxueiff = root["tnxueiff"].AsString().str();
+        data.wfzxitxa = root["wfzxitxa"].AsString().str();
+        data.wjhiporp = root["wjhiporp"].AsString().str();
+        data.bntuygoi = root["bntuygoi"].AsString().str();
+        data.smxkhuxz = root["smxkhuxz"].AsString().str();
+        data.jjomypit = root["jjomypit"].AsString().str();
     }
 }

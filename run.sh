@@ -1,6 +1,6 @@
 #!/bin/sh
 python3 generate_struct.py
-protoc --cpp_out=./ ./testData.proto # for making protobuf struct
+protoc --cpp_out=./ ./ProtoData.proto # for making protobuf struct
 
 make clean
 make

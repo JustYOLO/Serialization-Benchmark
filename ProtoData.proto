@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+message ProtoData {
+    string qieezdij = 1;
+    string rbqjhkqq = 2;
+    string tnxueiff = 3;
+    string wfzxitxa = 4;
+    string wjhiporp = 5;
+    string bntuygoi = 6;
+    string smxkhuxz = 7;
+    string jjomypit = 8;
+}

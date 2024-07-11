@@ -9,9 +9,9 @@ import string
 import numpy
 import math
 
-CPP_Header = """
-#include "data_generator.h"
+CPP_Header = """#include "data_generator.h"
 // this may only used by msgPack
+
 void DataGenerator::fillString(testData& data, size_t nkeys, size_t svalMin, size_t svalMax, const std::vector<std::string> &values) {
     
 """
@@ -32,7 +32,7 @@ struct testData {{
     if(tkey != "string"): 
         for i in range(nkey):
             while True:
-                tmp = ''.join(random.SystemRandom().choice(string.ascii_uppercase + string.ascii_lowercase) for _ in range(random.randint(skeyMin, skeyMax)))
+                tmp = ''.join(random.SystemRandom().choice(string.ascii_lowercase) for _ in range(random.randint(skeyMin, skeyMax)))
                 if tmp not in key_value_pair.keys():
                     struct_content += f"    {tkey} {tmp};\n" # TODO: set key name based on zipfian
                     key_value_pair[tmp] = 1 # value is used only in string type
@@ -40,7 +40,7 @@ struct testData {{
     else: # in case of string
         for i in range(nkey): 
             while True:
-                tmp = ''.join(random.SystemRandom().choice(string.ascii_uppercase + string.ascii_lowercase) for _ in range(random.randint(skeyMin, skeyMax)))
+                tmp = ''.join(random.SystemRandom().choice(string.ascii_lowercase) for _ in range(random.randint(skeyMin, skeyMax)))
                 if tmp not in key_value_pair.keys():
                     key_value_pair[tmp] = []
                     struct_content += f"    std::string {tmp};\n"
@@ -89,9 +89,57 @@ def generate_string_struct():
             f.write("}\n")
 
 def generate_protoBuf_struct():
-    header_content = """
+    # This function generates two files: the ProtoData.proto file and the protoBuf_func.h file
+    header_content = """syntax = "proto3";
 
+message ProtoData {
 """
+    if tkey == "string":
+        for idx, key in enumerate(key_value_pair.keys()):
+            header_content += f"    string {key} = {idx + 1};\n"
+    elif tkey == "int32_t":
+        for idx, key in enumerate(key_value_pair.keys()):
+            header_content += f"    int32 {key} = {idx + 1};\n"
+    elif tkey == "double":
+        for idx, key in enumerate(key_value_pair.keys()):
+            header_content += f"    double {key} = {idx + 1};\n"
+    header_content += "}\n"
+
+    func_content = """#include "benchmark_struct.h"
+#include "ProtoData.pb.h"
+
+namespace proto {
+    size_t Serialize(const testData& data, const std::string& filename) {
+        GOOGLE_PROTOBUF_VERIFY_VERSION; // is it necessary?
+        ProtoData protoData;
+"""
+    for key in key_value_pair.keys():
+        func_content += f"        protoData.set_{key}(data.{key});\n"
+
+    func_content += """        std::ofstream output(filename, std::ios::out | std::ios::binary);
+        if (!protoData.SerializeToOstream(&output)) {
+            std::cerr << "protobuf: Failed to write data to file." << std::endl;
+        }
+        return protoData.ByteSizeLong();
+    }
+    void Deserialize(testData& data, const std::string& filename) {
+        std::ifstream input(filename, std::ios::in | std::ios::binary);
+        ProtoData protoData;
+        if (!protoData.ParseFromIstream(&input)) {
+            std::cerr << "protobuf: Failed to read data from file." << std::endl;
+        }
+"""
+    for key in key_value_pair.keys():
+        func_content += f"        data.{key} = protoData.{key}();\n"
+    func_content += """    }
+}
+"""
+
+    with open("ProtoData.proto", "w") as f:
+        f.write(header_content)
+    with open("protobuf_func.h", "w") as f:
+        f.write(func_content)
+
 
 def generate_flexBuf_struct():
     header_content = """#include <flatbuffers/flexbuffers.h>
@@ -165,7 +213,8 @@ with open("benchmark_struct.h", "w") as f:
 
 generate_string_struct() # makes string struct for C++ (msgpack?)
 generate_flexBuf_struct()
+generate_protoBuf_struct()
 if(tkey == "string"):
     generate_values_file() # make values file
 
-print("benchmark_struct.h and data_generator_string.cpp have been generated.")
+print("structures have been generated.")

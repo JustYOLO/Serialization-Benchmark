@@ -1,5 +1,6 @@
 #include "serializers.h"
 #include "flexbuffers_func.h"
+#include "protobuf_func.h"
 
 namespace serializers {
 
@@ -41,12 +42,14 @@ testData deserializeMsgPack(const std::string& filename) {
     return result;
 }
 
-// size_t serializeProtoBuf(const testData& data, const std::string& filename) {
-//     // TODO: Implement this function
-// }
-// testData deserializeProtoBuf(const std::string& filename) {
-//     // TODO: Implement this function
-// }
+size_t serializeProtoBuf(const testData& data, const std::string& filename) {
+    return proto::Serialize(data, filename);
+}
+testData deserializeProtoBuf(const std::string& filename) {
+    testData data;
+    proto::Deserialize(data, filename);
+    return data;
+}
 
 // size_t serializeJson(const testData& data, const std::string& filename) {
 //     // TODO: how about using std::map (?)

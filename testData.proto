@@ -1,7 +1,12 @@
-syntax = "proto2";
-
-package proto;
+syntax = "proto3";
 
 message testData {
-  optional string aeHwVPEMZoyzcGgR = 1;
+    string sMiNkXEG = 1;
+    string ChDAIVjp = 2;
+    string YsRgltuW = 3;
+    string jGlKcCSY = 4;
+    string uOHYtpvK = 5;
+    string jfwYuDrR = 6;
+    string eJCYRNCt = 7;
+    string tGjuQNUm = 8;
 }
