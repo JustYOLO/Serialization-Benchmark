@@ -6,13 +6,13 @@
 
 DataGenerator::DataGenerator(unsigned seed) : gen(seed) {}
 
-void DataGenerator::fillStruct(testData& data, size_t nkeys, size_t svalMin, size_t svalMax, const std::string& type) {
+void DataGenerator::fillStruct(testData& data, size_t nkeys, size_t svalMin, size_t svalMax, const std::string& type, const std::vector<std::string> &values) {
     if (type == "int32_t") {
         fillInt32(data);
     } else if (type == "double") {
         fillDouble(data);
     } else if (type == "string") {
-        fillString(data, nkeys, svalMin, svalMax);
+        fillString(data, nkeys, svalMin, svalMax, values);
     } else {
         throw std::runtime_error("Unsupported type");
     }
@@ -43,14 +43,4 @@ int32_t DataGenerator::generateRandomValue<int32_t>() {
 template<>
 double DataGenerator::generateRandomValue<double>() {
     return std::uniform_real_distribution<double>{}(gen);
-}
-
-void DataGenerator::generateRandomString(size_t index, size_t svalMin, size_t svalMax) {
-    // const char charset[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-    // const size_t charset_size = sizeof(charset) - 1;
-
-    // for (size_t i = 0; i < size - 1; ++i) {
-    //     str[i] = charset[std::uniform_int_distribution<>(0, charset_size - 1)(gen)];
-    // }
-    // str[size] = '\0';  // Null-terminate the string
 }

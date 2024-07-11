@@ -10,14 +10,14 @@
 // Value size bound: [8, 16]
 
 struct testData {
-    std::string VHdWUbNK;
-    std::string XGtyllbl;
-    std::string rOYkYdtW;
-    std::string uNOUnwNJ;
-    std::string YoIciLHh;
-    std::string tabhvGTH;
-    std::string EbpPqtXb;
-    std::string LevxuCCH;
-    MSGPACK_DEFINE_MAP(VHdWUbNK, XGtyllbl, rOYkYdtW, uNOUnwNJ, YoIciLHh, tabhvGTH, EbpPqtXb, LevxuCCH);
+    std::string nXLCtzdd;
+    std::string XYDjhZGh;
+    std::string IwNslNAl;
+    std::string xaNbROYA;
+    std::string ZAdkVVyZ;
+    std::string IvZdoNja;
+    std::string PedStlUo;
+    std::string dngdRVLn;
+    MSGPACK_DEFINE_MAP(nXLCtzdd, XYDjhZGh, IwNslNAl, xaNbROYA, ZAdkVVyZ, IvZdoNja, PedStlUo, dngdRVLn);
 };
 

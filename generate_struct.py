@@ -11,14 +11,14 @@ import math
 
 CPP_Header = """
 #include "data_generator.h"
-
-void DataGenerator::fillString(testData& data, size_t nkeys, size_t svalMin, size_t svalMax) {
+// this may only used by msgPack
+void DataGenerator::fillString(testData& data, size_t nkeys, size_t svalMin, size_t svalMax, const std::vector<std::string> &values) {
     
 """
 
 CHARSET = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
 
-key_value_pair = {} # for checking duplicate keys & more (?)
+key_value_pair = {} # have key-value pair
 
 def generate_struct(nkey, tkey, skeyMin, skeyMax):
     struct_content = f"""// Automatically generated struct by generate_struct.py
@@ -35,15 +35,17 @@ struct testData {{
                 tmp = ''.join(random.SystemRandom().choice(string.ascii_uppercase + string.ascii_lowercase) for _ in range(random.randint(skeyMin, skeyMax)))
                 if tmp not in key_value_pair.keys():
                     struct_content += f"    {tkey} {tmp};\n" # TODO: set key name based on zipfian
-                    key_value_pair[tmp] = 1
+                    key_value_pair[tmp] = 1 # value is used only in string type
                     break
     else: # in case of string
         for i in range(nkey): 
             while True:
                 tmp = ''.join(random.SystemRandom().choice(string.ascii_uppercase + string.ascii_lowercase) for _ in range(random.randint(skeyMin, skeyMax)))
                 if tmp not in key_value_pair.keys():
+                    key_value_pair[tmp] = []
                     struct_content += f"    std::string {tmp};\n"
-                    key_value_pair[tmp] = ''.join(random.SystemRandom().choice(CHARSET) for _ in range(random.randint(svalMin, svalMax)))
+                    for _ in range(testSize):
+                        key_value_pair[tmp].append(''.join(random.SystemRandom().choice(CHARSET) for _ in range(random.randint(svalMin, svalMax))))
                     break
 
     
@@ -70,13 +72,16 @@ def generate_header_file(nkey, tkey, skeyMin, skeyMax):
     return header_content
 
 def generate_string_struct():
+    i = 0
     if tkey == "string":
         with open("data_generator_string.cpp", "w") as f:
             f.write(CPP_Header)
             strBuf = ""
-            for name in key_value_pair.keys():
-                strBuf += f"    data.{name} = \"{key_value_pair[name]}\";\n"
+            for idx, name in enumerate(key_value_pair.keys()):
+                strBuf += f"    data.{name} = values[{idx}];\n"
             f.write(strBuf)
+            # this line is for debugging
+            # f.write(f"    std::cout << values[0] << \", \" << values[{testSize - 1}] << std::endl;\n")
             f.write("}\n")
     else:
         with open("data_generator_string.cpp", "w") as f:
@@ -87,13 +92,20 @@ def generate_protoBuf_struct():
     header_content = """
 
 """
-    
+
+def generate_values_file():
+    with open("values.txt", "w") as f:
+        for i in range(testSize):
+            for key in key_value_pair.keys():
+                f.write(key_value_pair[key][i] + ", ")
+            f.write("\n")
+
 
 # starts here? 
 
 with open("config.txt", "r") as f:
     nkey, tkey, skeyMin, skeyMax, svalMin, svalMax, testSize = f.readline().split(", ")
-nkey, skeyMin, skeyMax, svalMin, svalMax = map(int, (nkey, skeyMin, skeyMax, svalMin, svalMax))
+nkey, skeyMin, skeyMax, svalMin, svalMax, testSize = map(int, (nkey, skeyMin, skeyMax, svalMin, svalMax, testSize))
 
 # Generate the header file content
 header_content = generate_header_file(nkey, tkey, skeyMin, skeyMax)
@@ -103,6 +115,6 @@ with open("benchmark_struct.h", "w") as f:
     f.write(header_content)
 
 generate_string_struct() # makes string struct for C++
-
+generate_values_file() # make values file
 
 print("benchmark_struct.h and data_generator_string.cpp have been generated.")

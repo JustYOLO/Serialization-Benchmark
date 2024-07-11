@@ -26,6 +26,20 @@ void getTokens(std::vector<std::string> &tokens) {
         exit(1);
     }
 }
+void getValues(std::vector<std::string> *values, size_t testSize) {
+    std::ifstream config_file("values.txt");
+    std::string line;
+    for(size_t i = 0; i < testSize; ++i) {
+        line.clear();
+        std::getline(config_file, line);
+        std::replace(line.begin(), line.end(), ',', ' ');
+        std::istringstream iss(line);
+        for (std::string s; iss >> s;) 
+            values[i].push_back(s);
+    }
+}
+
+
 
 class CustomReporter : public benchmark::BenchmarkReporter {
 public:
@@ -51,7 +65,7 @@ public:
     }
 
     void Finalize() override {
-        latencyFile << latencyBuf;
+        latencyFile << latencyBuf; // TODO: seperate serialize and deserialize latency output file
         sizeFile << sizeBuf;
         latencyFile.close();
         sizeFile.close();
@@ -68,7 +82,7 @@ private:
 
 
 int main(int argc, char** argv) {
-    std::vector<std::string> tokens;
+    std::vector<std::string> tokens;    
     getTokens(tokens);
 
     size_t nkeys = std::stoi(tokens[0]);
@@ -77,13 +91,21 @@ int main(int argc, char** argv) {
     size_t testSize = std::stoi(tokens[6]);
     std::string type = tokens[1];
 
+    std::vector<std::string> values [testSize];
+    getValues(values, testSize); // values contains random generated values from python
+
+    for(size_t i = 0; i < testSize; i++) {
+        for(size_t j = 0; j < nkeys; j++)
+            std::cout << values[i].at(j) << " ";
+        std::cout << std::endl;
+    }
+
     benchmark::Initialize(&argc, argv);
     DataGenerator generator;
 
     std::vector<testData> testDataVector (testSize);
-
-    for (size_t i = 0; i < testDataVector.size(); ++i) {
-        generator.fillStruct(testDataVector[i], nkeys, svalMin, svalMax, type);
+    for (size_t i = 0; i < testSize; ++i) {
+        generator.fillStruct(testDataVector[i], nkeys, svalMin, svalMax, type, values[i]);
         benchmark::RegisterBenchmark(
             ("BM_MsgPackSerialization_" + std::to_string(i)).c_str(),
             BM_MsgPackSerialization, testDataVector[i], "tmp/" + std::to_string(i) + ".msgpack");
@@ -91,19 +113,14 @@ int main(int argc, char** argv) {
         benchmark::RegisterBenchmark(
             ("BM_MsgPackDeserialization_" + std::to_string(i)).c_str(),
             BM_MsgPackDeserialization, "tmp/" + std::to_string(i) + ".msgpack");
-        
-
     }
 
-    auto start_time = std::chrono::high_resolution_clock::now();
-
     CustomReporter reporter("MP-16-string-16-16-16-latency.txt", "MP-16-string-16-16-16-size.txt");
+    auto start_time = std::chrono::high_resolution_clock::now();
     benchmark::RunSpecifiedBenchmarks(&reporter);
     benchmark::Shutdown();
-
     auto end_time = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double> elapsed = end_time - start_time;
-
 
     std::cout << "Total elapsed time: " << elapsed.count() << " seconds" << std::endl;
 
