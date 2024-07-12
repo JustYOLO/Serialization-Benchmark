@@ -42,14 +42,14 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_ProtoData_2eproto::offsets[] P
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::ProtoData, qieezdij_),
-  PROTOBUF_FIELD_OFFSET(::ProtoData, rbqjhkqq_),
-  PROTOBUF_FIELD_OFFSET(::ProtoData, tnxueiff_),
-  PROTOBUF_FIELD_OFFSET(::ProtoData, wfzxitxa_),
-  PROTOBUF_FIELD_OFFSET(::ProtoData, wjhiporp_),
-  PROTOBUF_FIELD_OFFSET(::ProtoData, bntuygoi_),
-  PROTOBUF_FIELD_OFFSET(::ProtoData, smxkhuxz_),
-  PROTOBUF_FIELD_OFFSET(::ProtoData, jjomypit_),
+  PROTOBUF_FIELD_OFFSET(::ProtoData, itpfypwk_),
+  PROTOBUF_FIELD_OFFSET(::ProtoData, rwmdhsqd_),
+  PROTOBUF_FIELD_OFFSET(::ProtoData, trtzcnjk_),
+  PROTOBUF_FIELD_OFFSET(::ProtoData, zifozeef_),
+  PROTOBUF_FIELD_OFFSET(::ProtoData, jrssogei_),
+  PROTOBUF_FIELD_OFFSET(::ProtoData, qzagtdun_),
+  PROTOBUF_FIELD_OFFSET(::ProtoData, sgcokhhb_),
+  PROTOBUF_FIELD_OFFSET(::ProtoData, bwmmqqsh_),
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::ProtoData)},
@@ -60,11 +60,11 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
 };
 
 const char descriptor_table_protodef_ProtoData_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\017ProtoData.proto\"\233\001\n\tProtoData\022\020\n\010qieez"
-  "dij\030\001 \001(\t\022\020\n\010rbqjhkqq\030\002 \001(\t\022\020\n\010tnxueiff\030"
-  "\003 \001(\t\022\020\n\010wfzxitxa\030\004 \001(\t\022\020\n\010wjhiporp\030\005 \001("
-  "\t\022\020\n\010bntuygoi\030\006 \001(\t\022\020\n\010smxkhuxz\030\007 \001(\t\022\020\n"
-  "\010jjomypit\030\010 \001(\tb\006proto3"
+  "\n\017ProtoData.proto\"\233\001\n\tProtoData\022\020\n\010itpfy"
+  "pwk\030\001 \001(\005\022\020\n\010rwmdhsqd\030\002 \001(\005\022\020\n\010trtzcnjk\030"
+  "\003 \001(\005\022\020\n\010zifozeef\030\004 \001(\005\022\020\n\010jrssogei\030\005 \001("
+  "\005\022\020\n\010qzagtdun\030\006 \001(\005\022\020\n\010sgcokhhb\030\007 \001(\005\022\020\n"
+  "\010bwmmqqsh\030\010 \001(\005b\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_ProtoData_2eproto_deps[1] = {
 };
@@ -99,59 +99,16 @@ ProtoData::ProtoData(::PROTOBUF_NAMESPACE_ID::Arena* arena)
 ProtoData::ProtoData(const ProtoData& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  qieezdij_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal_qieezdij().empty()) {
-    qieezdij_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_qieezdij(),
-      GetArena());
-  }
-  rbqjhkqq_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal_rbqjhkqq().empty()) {
-    rbqjhkqq_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_rbqjhkqq(),
-      GetArena());
-  }
-  tnxueiff_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal_tnxueiff().empty()) {
-    tnxueiff_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_tnxueiff(),
-      GetArena());
-  }
-  wfzxitxa_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal_wfzxitxa().empty()) {
-    wfzxitxa_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_wfzxitxa(),
-      GetArena());
-  }
-  wjhiporp_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal_wjhiporp().empty()) {
-    wjhiporp_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_wjhiporp(),
-      GetArena());
-  }
-  bntuygoi_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal_bntuygoi().empty()) {
-    bntuygoi_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_bntuygoi(),
-      GetArena());
-  }
-  smxkhuxz_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal_smxkhuxz().empty()) {
-    smxkhuxz_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_smxkhuxz(),
-      GetArena());
-  }
-  jjomypit_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal_jjomypit().empty()) {
-    jjomypit_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_jjomypit(),
-      GetArena());
-  }
+  ::memcpy(&itpfypwk_, &from.itpfypwk_,
+    static_cast<size_t>(reinterpret_cast<char*>(&bwmmqqsh_) -
+    reinterpret_cast<char*>(&itpfypwk_)) + sizeof(bwmmqqsh_));
   // @@protoc_insertion_point(copy_constructor:ProtoData)
 }
 
 void ProtoData::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_ProtoData_ProtoData_2eproto.base);
-  qieezdij_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  rbqjhkqq_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  tnxueiff_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  wfzxitxa_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  wjhiporp_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  bntuygoi_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  smxkhuxz_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  jjomypit_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  ::memset(&itpfypwk_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&bwmmqqsh_) -
+      reinterpret_cast<char*>(&itpfypwk_)) + sizeof(bwmmqqsh_));
 }
 
 ProtoData::~ProtoData() {
@@ -162,14 +119,6 @@ ProtoData::~ProtoData() {
 
 void ProtoData::SharedDtor() {
   GOOGLE_DCHECK(GetArena() == nullptr);
-  qieezdij_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  rbqjhkqq_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  tnxueiff_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  wfzxitxa_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  wjhiporp_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  bntuygoi_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  smxkhuxz_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  jjomypit_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 void ProtoData::ArenaDtor(void* object) {
@@ -193,14 +142,9 @@ void ProtoData::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  qieezdij_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  rbqjhkqq_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  tnxueiff_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  wfzxitxa_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  wjhiporp_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  bntuygoi_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  smxkhuxz_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  jjomypit_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  ::memset(&itpfypwk_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&bwmmqqsh_) -
+      reinterpret_cast<char*>(&itpfypwk_)) + sizeof(bwmmqqsh_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -212,75 +156,59 @@ const char* ProtoData::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // string qieezdij = 1;
+      // int32 itpfypwk = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          auto str = _internal_mutable_qieezdij();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ProtoData.qieezdij"));
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
+          itpfypwk_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // string rbqjhkqq = 2;
+      // int32 rwmdhsqd = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          auto str = _internal_mutable_rbqjhkqq();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ProtoData.rbqjhkqq"));
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
+          rwmdhsqd_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // string tnxueiff = 3;
+      // int32 trtzcnjk = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          auto str = _internal_mutable_tnxueiff();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ProtoData.tnxueiff"));
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 24)) {
+          trtzcnjk_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // string wfzxitxa = 4;
+      // int32 zifozeef = 4;
       case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
-          auto str = _internal_mutable_wfzxitxa();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ProtoData.wfzxitxa"));
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 32)) {
+          zifozeef_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // string wjhiporp = 5;
+      // int32 jrssogei = 5;
       case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
-          auto str = _internal_mutable_wjhiporp();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ProtoData.wjhiporp"));
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 40)) {
+          jrssogei_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // string bntuygoi = 6;
+      // int32 qzagtdun = 6;
       case 6:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
-          auto str = _internal_mutable_bntuygoi();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ProtoData.bntuygoi"));
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 48)) {
+          qzagtdun_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // string smxkhuxz = 7;
+      // int32 sgcokhhb = 7;
       case 7:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
-          auto str = _internal_mutable_smxkhuxz();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ProtoData.smxkhuxz"));
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 56)) {
+          sgcokhhb_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // string jjomypit = 8;
+      // int32 bwmmqqsh = 8;
       case 8:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 66)) {
-          auto str = _internal_mutable_jjomypit();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ProtoData.jjomypit"));
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 64)) {
+          bwmmqqsh_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -312,84 +240,52 @@ failure:
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string qieezdij = 1;
-  if (this->qieezdij().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_qieezdij().data(), static_cast<int>(this->_internal_qieezdij().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ProtoData.qieezdij");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_qieezdij(), target);
+  // int32 itpfypwk = 1;
+  if (this->itpfypwk() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(1, this->_internal_itpfypwk(), target);
   }
 
-  // string rbqjhkqq = 2;
-  if (this->rbqjhkqq().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_rbqjhkqq().data(), static_cast<int>(this->_internal_rbqjhkqq().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ProtoData.rbqjhkqq");
-    target = stream->WriteStringMaybeAliased(
-        2, this->_internal_rbqjhkqq(), target);
+  // int32 rwmdhsqd = 2;
+  if (this->rwmdhsqd() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(2, this->_internal_rwmdhsqd(), target);
   }
 
-  // string tnxueiff = 3;
-  if (this->tnxueiff().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_tnxueiff().data(), static_cast<int>(this->_internal_tnxueiff().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ProtoData.tnxueiff");
-    target = stream->WriteStringMaybeAliased(
-        3, this->_internal_tnxueiff(), target);
+  // int32 trtzcnjk = 3;
+  if (this->trtzcnjk() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(3, this->_internal_trtzcnjk(), target);
   }
 
-  // string wfzxitxa = 4;
-  if (this->wfzxitxa().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_wfzxitxa().data(), static_cast<int>(this->_internal_wfzxitxa().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ProtoData.wfzxitxa");
-    target = stream->WriteStringMaybeAliased(
-        4, this->_internal_wfzxitxa(), target);
+  // int32 zifozeef = 4;
+  if (this->zifozeef() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(4, this->_internal_zifozeef(), target);
   }
 
-  // string wjhiporp = 5;
-  if (this->wjhiporp().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_wjhiporp().data(), static_cast<int>(this->_internal_wjhiporp().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ProtoData.wjhiporp");
-    target = stream->WriteStringMaybeAliased(
-        5, this->_internal_wjhiporp(), target);
+  // int32 jrssogei = 5;
+  if (this->jrssogei() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(5, this->_internal_jrssogei(), target);
   }
 
-  // string bntuygoi = 6;
-  if (this->bntuygoi().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_bntuygoi().data(), static_cast<int>(this->_internal_bntuygoi().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ProtoData.bntuygoi");
-    target = stream->WriteStringMaybeAliased(
-        6, this->_internal_bntuygoi(), target);
+  // int32 qzagtdun = 6;
+  if (this->qzagtdun() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(6, this->_internal_qzagtdun(), target);
   }
 
-  // string smxkhuxz = 7;
-  if (this->smxkhuxz().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_smxkhuxz().data(), static_cast<int>(this->_internal_smxkhuxz().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ProtoData.smxkhuxz");
-    target = stream->WriteStringMaybeAliased(
-        7, this->_internal_smxkhuxz(), target);
+  // int32 sgcokhhb = 7;
+  if (this->sgcokhhb() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(7, this->_internal_sgcokhhb(), target);
   }
 
-  // string jjomypit = 8;
-  if (this->jjomypit().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_jjomypit().data(), static_cast<int>(this->_internal_jjomypit().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ProtoData.jjomypit");
-    target = stream->WriteStringMaybeAliased(
-        8, this->_internal_jjomypit(), target);
+  // int32 bwmmqqsh = 8;
+  if (this->bwmmqqsh() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(8, this->_internal_bwmmqqsh(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -408,60 +304,60 @@ size_t ProtoData::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string qieezdij = 1;
-  if (this->qieezdij().size() > 0) {
+  // int32 itpfypwk = 1;
+  if (this->itpfypwk() != 0) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_qieezdij());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->_internal_itpfypwk());
   }
 
-  // string rbqjhkqq = 2;
-  if (this->rbqjhkqq().size() > 0) {
+  // int32 rwmdhsqd = 2;
+  if (this->rwmdhsqd() != 0) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_rbqjhkqq());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->_internal_rwmdhsqd());
   }
 
-  // string tnxueiff = 3;
-  if (this->tnxueiff().size() > 0) {
+  // int32 trtzcnjk = 3;
+  if (this->trtzcnjk() != 0) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_tnxueiff());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->_internal_trtzcnjk());
   }
 
-  // string wfzxitxa = 4;
-  if (this->wfzxitxa().size() > 0) {
+  // int32 zifozeef = 4;
+  if (this->zifozeef() != 0) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_wfzxitxa());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->_internal_zifozeef());
   }
 
-  // string wjhiporp = 5;
-  if (this->wjhiporp().size() > 0) {
+  // int32 jrssogei = 5;
+  if (this->jrssogei() != 0) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_wjhiporp());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->_internal_jrssogei());
   }
 
-  // string bntuygoi = 6;
-  if (this->bntuygoi().size() > 0) {
+  // int32 qzagtdun = 6;
+  if (this->qzagtdun() != 0) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_bntuygoi());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->_internal_qzagtdun());
   }
 
-  // string smxkhuxz = 7;
-  if (this->smxkhuxz().size() > 0) {
+  // int32 sgcokhhb = 7;
+  if (this->sgcokhhb() != 0) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_smxkhuxz());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->_internal_sgcokhhb());
   }
 
-  // string jjomypit = 8;
-  if (this->jjomypit().size() > 0) {
+  // int32 bwmmqqsh = 8;
+  if (this->bwmmqqsh() != 0) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_jjomypit());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->_internal_bwmmqqsh());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -495,29 +391,29 @@ void ProtoData::MergeFrom(const ProtoData& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.qieezdij().size() > 0) {
-    _internal_set_qieezdij(from._internal_qieezdij());
+  if (from.itpfypwk() != 0) {
+    _internal_set_itpfypwk(from._internal_itpfypwk());
   }
-  if (from.rbqjhkqq().size() > 0) {
-    _internal_set_rbqjhkqq(from._internal_rbqjhkqq());
+  if (from.rwmdhsqd() != 0) {
+    _internal_set_rwmdhsqd(from._internal_rwmdhsqd());
   }
-  if (from.tnxueiff().size() > 0) {
-    _internal_set_tnxueiff(from._internal_tnxueiff());
+  if (from.trtzcnjk() != 0) {
+    _internal_set_trtzcnjk(from._internal_trtzcnjk());
   }
-  if (from.wfzxitxa().size() > 0) {
-    _internal_set_wfzxitxa(from._internal_wfzxitxa());
+  if (from.zifozeef() != 0) {
+    _internal_set_zifozeef(from._internal_zifozeef());
   }
-  if (from.wjhiporp().size() > 0) {
-    _internal_set_wjhiporp(from._internal_wjhiporp());
+  if (from.jrssogei() != 0) {
+    _internal_set_jrssogei(from._internal_jrssogei());
   }
-  if (from.bntuygoi().size() > 0) {
-    _internal_set_bntuygoi(from._internal_bntuygoi());
+  if (from.qzagtdun() != 0) {
+    _internal_set_qzagtdun(from._internal_qzagtdun());
   }
-  if (from.smxkhuxz().size() > 0) {
-    _internal_set_smxkhuxz(from._internal_smxkhuxz());
+  if (from.sgcokhhb() != 0) {
+    _internal_set_sgcokhhb(from._internal_sgcokhhb());
   }
-  if (from.jjomypit().size() > 0) {
-    _internal_set_jjomypit(from._internal_jjomypit());
+  if (from.bwmmqqsh() != 0) {
+    _internal_set_bwmmqqsh(from._internal_bwmmqqsh());
   }
 }
 
@@ -542,14 +438,12 @@ bool ProtoData::IsInitialized() const {
 void ProtoData::InternalSwap(ProtoData* other) {
   using std::swap;
   _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  qieezdij_.Swap(&other->qieezdij_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  rbqjhkqq_.Swap(&other->rbqjhkqq_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  tnxueiff_.Swap(&other->tnxueiff_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  wfzxitxa_.Swap(&other->wfzxitxa_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  wjhiporp_.Swap(&other->wjhiporp_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  bntuygoi_.Swap(&other->bntuygoi_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  smxkhuxz_.Swap(&other->smxkhuxz_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  jjomypit_.Swap(&other->jjomypit_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(ProtoData, bwmmqqsh_)
+      + sizeof(ProtoData::bwmmqqsh_)
+      - PROTOBUF_FIELD_OFFSET(ProtoData, itpfypwk_)>(
+          reinterpret_cast<char*>(&itpfypwk_),
+          reinterpret_cast<char*>(&other->itpfypwk_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata ProtoData::GetMetadata() const {

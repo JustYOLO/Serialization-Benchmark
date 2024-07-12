@@ -26,4 +26,9 @@ testData deserializeProtoBuf(const std::string& filename);
 size_t serializeFlexBuffers(const testData& data, const std::string& filename);
 testData deserializeFlexBuffers(const std::string& filename);
 
+// Apache Thrift
+
+size_t serializeApacheThrift(const testData& data, const std::string& filename);
+testData deserializeApacheThrift(const std::string& filename);
+
 }  // namespace serializers

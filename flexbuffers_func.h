@@ -6,14 +6,14 @@ namespace flex {
         flexbuffers::Builder builder;
 
         builder.Map([&]() {
-            builder.String("qieezdij", data.qieezdij);
-            builder.String("rbqjhkqq", data.rbqjhkqq);
-            builder.String("tnxueiff", data.tnxueiff);
-            builder.String("wfzxitxa", data.wfzxitxa);
-            builder.String("wjhiporp", data.wjhiporp);
-            builder.String("bntuygoi", data.bntuygoi);
-            builder.String("smxkhuxz", data.smxkhuxz);
-            builder.String("jjomypit", data.jjomypit);
+            builder.Int("itpfypwk", data.itpfypwk);
+            builder.Int("rwmdhsqd", data.rwmdhsqd);
+            builder.Int("trtzcnjk", data.trtzcnjk);
+            builder.Int("zifozeef", data.zifozeef);
+            builder.Int("jrssogei", data.jrssogei);
+            builder.Int("qzagtdun", data.qzagtdun);
+            builder.Int("sgcokhhb", data.sgcokhhb);
+            builder.Int("bwmmqqsh", data.bwmmqqsh);
 
         });
 
@@ -23,13 +23,13 @@ namespace flex {
     void Deserialize(testData& data, const std::vector<uint8_t> &inBuffer) {
         auto root = flexbuffers::GetRoot(inBuffer).AsMap();
         
-        data.qieezdij = root["qieezdij"].AsString().str();
-        data.rbqjhkqq = root["rbqjhkqq"].AsString().str();
-        data.tnxueiff = root["tnxueiff"].AsString().str();
-        data.wfzxitxa = root["wfzxitxa"].AsString().str();
-        data.wjhiporp = root["wjhiporp"].AsString().str();
-        data.bntuygoi = root["bntuygoi"].AsString().str();
-        data.smxkhuxz = root["smxkhuxz"].AsString().str();
-        data.jjomypit = root["jjomypit"].AsString().str();
+        data.itpfypwk = root["itpfypwk"].AsInt32();
+        data.rwmdhsqd = root["rwmdhsqd"].AsInt32();
+        data.trtzcnjk = root["trtzcnjk"].AsInt32();
+        data.zifozeef = root["zifozeef"].AsInt32();
+        data.jrssogei = root["jrssogei"].AsInt32();
+        data.qzagtdun = root["qzagtdun"].AsInt32();
+        data.sgcokhhb = root["sgcokhhb"].AsInt32();
+        data.bwmmqqsh = root["bwmmqqsh"].AsInt32();
     }
 }

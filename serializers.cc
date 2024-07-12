@@ -1,6 +1,7 @@
 #include "serializers.h"
 #include "flexbuffers_func.h"
 #include "protobuf_func.h"
+#include "thrift_func.h"
 
 namespace serializers {
 
@@ -92,6 +93,25 @@ testData deserializeProtoBuf(const std::string& filename) {
         return result;
     }
 
+    size_t serializeApacheThrift(const testData& data, const std::string& filename) {
+        std::string serialized_str;
+        thrift::Serialize(data, serialized_str);
 
+        std::ofstream outFile(filename, std::ios::binary);
+        outFile.write(serialized_str.c_str(), serialized_str.length());
+        outFile.close();
+        return serialized_str.length();
+    }
+
+    testData deserializeApacheThrift(const std::string& filename) {
+        testData data;
+        std::ifstream inFile(filename, std::ios::binary);
+        std::vector<uint8_t> serialData((std::istreambuf_iterator<char>(inFile)), std::istreambuf_iterator<char>());
+        inFile.close();
+
+        thrift::Deserialize(data, serialData);
+
+        return data;
+    }
 
 }  // namespace serializers

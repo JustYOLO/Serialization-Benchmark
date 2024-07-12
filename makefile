@@ -1,22 +1,25 @@
 CXX = g++
-CXXFLAGS = -std=c++17 -Wall -Wextra -g
-LDFLAGS = -lbenchmark -lflatbuffers -lprotobuf -pthread
+CXXFLAGS = -std=c++17 -Wall -Wextra -g $(shell pkg-config --cflags thrift)
+LDFLAGS = -lbenchmark -lflatbuffers -lprotobuf -pthread $(shell pkg-config --libs thrift)
 
-SRCS = main.cc data_generator.cc serializers.cc data_generator_string.cc ProtoData.pb.cc
-# TODO: add -lprotobuf to LDFLAGS and testData.pb.cc to SRCS
+# Source files
+SRCS = main.cc data_generator.cc serializers.cc data_generator_string.cc  
 
-# e.g) g++ test.cpp testData.pb.cc -o test -lprotobuf
+# Object files
 OBJS = $(SRCS:.cc=.o)
+
+# Target executable
 TARGET = benchmark_test
 
 all: $(TARGET)
 
+# Link the target executable
 $(TARGET): $(OBJS)
-	$(CXX) $(OBJS) -o $(TARGET) $(LDFLAGS)
+	$(CXX) $(OBJS) gen-cpp/struct_types.cpp ProtoData.pb.cc -o $(TARGET) $(LDFLAGS) 
 
-%.o: %.cpp
+# Compile source files to object files
+%.o: %.cc
 	$(CXX) $(CXXFLAGS) -c $< -o $@
-
 
 clean:
 	rm -f $(OBJS) $(TARGET)

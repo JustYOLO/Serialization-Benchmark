@@ -110,7 +110,7 @@ int main(int argc, char** argv) {
 
     std::vector<testData> testDataVector (testSize);
     for (size_t i = 0; i < testSize; ++i) {
-        generator.fillStruct(testDataVector[i], nkeys, svalMin, svalMax, type, values[i]);
+        generator.fillStruct(testDataVector[i], type, values[i]);
         // benchmark::RegisterBenchmark(
         //     ("BM_MsgPackSerialization_" + std::to_string(i)).c_str(),
         //     BM_MsgPackSerialization, testDataVector[i], "tmp/" + std::to_string(i) + ".msgpack");
@@ -127,13 +127,21 @@ int main(int argc, char** argv) {
         //     ("BM_FlexBufDeserialization_" + std::to_string(i)).c_str(),
         //     BM_MsgPackDeserialization, "tmp/" + std::to_string(i) + ".fb");
 
-        benchmark::RegisterBenchmark(
-            ("BM_ProtoBufSerialization_" + std::to_string(i)).c_str(),
-            BM_ProtoBufSerialization, testDataVector[i], "tmp/" + std::to_string(i) + ".pb");
+        // benchmark::RegisterBenchmark(
+        //     ("BM_ProtoBufSerialization_" + std::to_string(i)).c_str(),
+        //     BM_ProtoBufSerialization, testDataVector[i], "tmp/" + std::to_string(i) + ".pb");
+
+        // benchmark::RegisterBenchmark(
+        //     ("BM_ProtoBufDeserialization_" + std::to_string(i)).c_str(),
+        //     BM_ProtoBufDeserialization, "tmp/" + std::to_string(i) + ".pb");
 
         benchmark::RegisterBenchmark(
-            ("BM_ProtoBufDeserialization_" + std::to_string(i)).c_str(),
-            BM_ProtoBufDeserialization, "tmp/" + std::to_string(i) + ".pb");
+            ("BM_ThriftSerialization_" + std::to_string(i)).c_str(),
+            BM_ThriftSerialization, testDataVector[i], "tmp/" + std::to_string(i) + ".th");
+
+        benchmark::RegisterBenchmark(
+            ("BM_ThriftDeserialization_" + std::to_string(i)).c_str(),
+            BM_ThriftDeserialization, "tmp/" + std::to_string(i) + ".th");
     }
 
     // setting name for output files

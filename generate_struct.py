@@ -12,7 +12,7 @@ import math
 CPP_Header = """#include "data_generator.h"
 // this may only used by msgPack
 
-void DataGenerator::fillString(testData& data, size_t nkeys, size_t svalMin, size_t svalMax, const std::vector<std::string> &values) {
+void DataGenerator::fillString(testData& data, const std::vector<std::string> &values) {
     
 """
 
@@ -74,7 +74,7 @@ def generate_header_file(nkey, tkey, skeyMin, skeyMax):
 def generate_string_struct():
     i = 0
     if tkey == "string":
-        with open("data_generator_string.cpp", "w") as f:
+        with open("data_generator_string.cc", "w") as f:
             f.write(CPP_Header)
             strBuf = ""
             for idx, name in enumerate(key_value_pair.keys()):
@@ -84,7 +84,7 @@ def generate_string_struct():
             # f.write(f"    std::cout << values[0] << \", \" << values[{testSize - 1}] << std::endl;\n")
             f.write("}\n")
     else:
-        with open("data_generator_string.cpp", "w") as f:
+        with open("data_generator_string.cc", "w") as f:
             f.write(CPP_Header)
             f.write("}\n")
 
@@ -190,6 +190,68 @@ namespace flex {
     with open("flexbuffers_func.h", "w") as f:
         f.write(header_content)
 
+def generate_thrift_struct():
+    # This function generates two files: the struct.thrift file and the thrift_func.h file
+    struct_content = """#include <thrift/protocol/TBinaryProtocol.h>
+#include <thrift/transport/TBufferTransports.h>
+#include <vector>
+#include "gen-cpp/struct_types.h"
+#include "benchmark_struct.h"
+
+using namespace apache::thrift;
+using namespace apache::thrift::protocol;
+using namespace apache::thrift::transport;
+
+namespace thrift {
+    void Serialize(const testData& data, std::string& serialized_str) {
+        TStruct tStruct;
+"""
+    for key in key_value_pair.keys():
+        struct_content += f"        tStruct.{key} = data.{key};\n"
+    struct_content += """
+        std::shared_ptr<TMemoryBuffer> buffer(new TMemoryBuffer());
+        std::shared_ptr<TBinaryProtocol> protocol(new TBinaryProtocol(buffer));
+
+        tStruct.write(protocol.get());
+
+        // uint8_t* serializedData;
+        // buffer->getBuffer(&serializedData, &dataSize);
+        serialized_str = buffer->getBufferAsString();
+    }
+
+    void Deserialize(testData& data, std::vector<uint8_t>& inBuffer) {
+        std::shared_ptr<TMemoryBuffer> bufferIn(new TMemoryBuffer());
+        bufferIn->resetBuffer(inBuffer.data(), inBuffer.size());
+        std::shared_ptr<TBinaryProtocol> protocolIn(new TBinaryProtocol(bufferIn));
+
+        TStruct tStruct;
+        tStruct.read(protocolIn.get());
+"""
+    for key in key_value_pair.keys():
+        struct_content += f"        data.{key} = tStruct.{key};\n"
+    struct_content += """    }
+}
+"""
+    thrift_content = """struct TStruct {
+"""
+    if tkey == "string":
+        for idx, key in enumerate(key_value_pair.keys()):
+            thrift_content += f" {idx+1}: string {key},\n"
+    elif tkey == "int32_t":
+        for idx, key in enumerate(key_value_pair.keys()):
+            thrift_content += f" {idx+1}: i32 {key},\n"
+    elif tkey == "double":
+        for idx, key in enumerate(key_value_pair.keys()):
+            thrift_content += f" {idx+1}: double {key},\n"
+    thrift_content += "}\n"
+
+
+    with open("thrift_func.h", "w") as f:
+        f.write(struct_content)
+    with open("struct.thrift", "w") as f:
+        f.write(thrift_content)
+
+
 def generate_values_file():
     with open("values.txt", "w") as f:
         for i in range(testSize):
@@ -214,6 +276,7 @@ with open("benchmark_struct.h", "w") as f:
 generate_string_struct() # makes string struct for C++ (msgpack?)
 generate_flexBuf_struct()
 generate_protoBuf_struct()
+generate_thrift_struct()
 if(tkey == "string"):
     generate_values_file() # make values file
 

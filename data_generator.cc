@@ -6,13 +6,14 @@
 
 DataGenerator::DataGenerator(unsigned seed) : gen(seed) {}
 
-void DataGenerator::fillStruct(testData& data, size_t nkeys, size_t svalMin, size_t svalMax, const std::string& type, const std::vector<std::string> &values) {
+// void DataGenerator::fillStruct(testData& data, size_t nkeys, size_t svalMin, size_t svalMax, const std::string& type, const std::vector<std::string> &values) {
+void DataGenerator::fillStruct(testData& data, const std::string& type, const std::vector<std::string> &values) {
     if (type == "int32_t") {
         fillInt32(data);
     } else if (type == "double") {
         fillDouble(data);
     } else if (type == "string") {
-        fillString(data, nkeys, svalMin, svalMax, values);
+        fillString(data, values);
     } else {
         throw std::runtime_error("Unsupported type");
     }

@@ -176,213 +176,85 @@ class ProtoData PROTOBUF_FINAL :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kQieezdijFieldNumber = 1,
-    kRbqjhkqqFieldNumber = 2,
-    kTnxueiffFieldNumber = 3,
-    kWfzxitxaFieldNumber = 4,
-    kWjhiporpFieldNumber = 5,
-    kBntuygoiFieldNumber = 6,
-    kSmxkhuxzFieldNumber = 7,
-    kJjomypitFieldNumber = 8,
+    kItpfypwkFieldNumber = 1,
+    kRwmdhsqdFieldNumber = 2,
+    kTrtzcnjkFieldNumber = 3,
+    kZifozeefFieldNumber = 4,
+    kJrssogeiFieldNumber = 5,
+    kQzagtdunFieldNumber = 6,
+    kSgcokhhbFieldNumber = 7,
+    kBwmmqqshFieldNumber = 8,
   };
-  // string qieezdij = 1;
-  void clear_qieezdij();
-  const std::string& qieezdij() const;
-  void set_qieezdij(const std::string& value);
-  void set_qieezdij(std::string&& value);
-  void set_qieezdij(const char* value);
-  void set_qieezdij(const char* value, size_t size);
-  std::string* mutable_qieezdij();
-  std::string* release_qieezdij();
-  void set_allocated_qieezdij(std::string* qieezdij);
-  GOOGLE_PROTOBUF_RUNTIME_DEPRECATED("The unsafe_arena_ accessors for"
-  "    string fields are deprecated and will be removed in a"
-  "    future release.")
-  std::string* unsafe_arena_release_qieezdij();
-  GOOGLE_PROTOBUF_RUNTIME_DEPRECATED("The unsafe_arena_ accessors for"
-  "    string fields are deprecated and will be removed in a"
-  "    future release.")
-  void unsafe_arena_set_allocated_qieezdij(
-      std::string* qieezdij);
+  // int32 itpfypwk = 1;
+  void clear_itpfypwk();
+  ::PROTOBUF_NAMESPACE_ID::int32 itpfypwk() const;
+  void set_itpfypwk(::PROTOBUF_NAMESPACE_ID::int32 value);
   private:
-  const std::string& _internal_qieezdij() const;
-  void _internal_set_qieezdij(const std::string& value);
-  std::string* _internal_mutable_qieezdij();
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_itpfypwk() const;
+  void _internal_set_itpfypwk(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // string rbqjhkqq = 2;
-  void clear_rbqjhkqq();
-  const std::string& rbqjhkqq() const;
-  void set_rbqjhkqq(const std::string& value);
-  void set_rbqjhkqq(std::string&& value);
-  void set_rbqjhkqq(const char* value);
-  void set_rbqjhkqq(const char* value, size_t size);
-  std::string* mutable_rbqjhkqq();
-  std::string* release_rbqjhkqq();
-  void set_allocated_rbqjhkqq(std::string* rbqjhkqq);
-  GOOGLE_PROTOBUF_RUNTIME_DEPRECATED("The unsafe_arena_ accessors for"
-  "    string fields are deprecated and will be removed in a"
-  "    future release.")
-  std::string* unsafe_arena_release_rbqjhkqq();
-  GOOGLE_PROTOBUF_RUNTIME_DEPRECATED("The unsafe_arena_ accessors for"
-  "    string fields are deprecated and will be removed in a"
-  "    future release.")
-  void unsafe_arena_set_allocated_rbqjhkqq(
-      std::string* rbqjhkqq);
+  // int32 rwmdhsqd = 2;
+  void clear_rwmdhsqd();
+  ::PROTOBUF_NAMESPACE_ID::int32 rwmdhsqd() const;
+  void set_rwmdhsqd(::PROTOBUF_NAMESPACE_ID::int32 value);
   private:
-  const std::string& _internal_rbqjhkqq() const;
-  void _internal_set_rbqjhkqq(const std::string& value);
-  std::string* _internal_mutable_rbqjhkqq();
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_rwmdhsqd() const;
+  void _internal_set_rwmdhsqd(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // string tnxueiff = 3;
-  void clear_tnxueiff();
-  const std::string& tnxueiff() const;
-  void set_tnxueiff(const std::string& value);
-  void set_tnxueiff(std::string&& value);
-  void set_tnxueiff(const char* value);
-  void set_tnxueiff(const char* value, size_t size);
-  std::string* mutable_tnxueiff();
-  std::string* release_tnxueiff();
-  void set_allocated_tnxueiff(std::string* tnxueiff);
-  GOOGLE_PROTOBUF_RUNTIME_DEPRECATED("The unsafe_arena_ accessors for"
-  "    string fields are deprecated and will be removed in a"
-  "    future release.")
-  std::string* unsafe_arena_release_tnxueiff();
-  GOOGLE_PROTOBUF_RUNTIME_DEPRECATED("The unsafe_arena_ accessors for"
-  "    string fields are deprecated and will be removed in a"
-  "    future release.")
-  void unsafe_arena_set_allocated_tnxueiff(
-      std::string* tnxueiff);
+  // int32 trtzcnjk = 3;
+  void clear_trtzcnjk();
+  ::PROTOBUF_NAMESPACE_ID::int32 trtzcnjk() const;
+  void set_trtzcnjk(::PROTOBUF_NAMESPACE_ID::int32 value);
   private:
-  const std::string& _internal_tnxueiff() const;
-  void _internal_set_tnxueiff(const std::string& value);
-  std::string* _internal_mutable_tnxueiff();
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_trtzcnjk() const;
+  void _internal_set_trtzcnjk(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // string wfzxitxa = 4;
-  void clear_wfzxitxa();
-  const std::string& wfzxitxa() const;
-  void set_wfzxitxa(const std::string& value);
-  void set_wfzxitxa(std::string&& value);
-  void set_wfzxitxa(const char* value);
-  void set_wfzxitxa(const char* value, size_t size);
-  std::string* mutable_wfzxitxa();
-  std::string* release_wfzxitxa();
-  void set_allocated_wfzxitxa(std::string* wfzxitxa);
-  GOOGLE_PROTOBUF_RUNTIME_DEPRECATED("The unsafe_arena_ accessors for"
-  "    string fields are deprecated and will be removed in a"
-  "    future release.")
-  std::string* unsafe_arena_release_wfzxitxa();
-  GOOGLE_PROTOBUF_RUNTIME_DEPRECATED("The unsafe_arena_ accessors for"
-  "    string fields are deprecated and will be removed in a"
-  "    future release.")
-  void unsafe_arena_set_allocated_wfzxitxa(
-      std::string* wfzxitxa);
+  // int32 zifozeef = 4;
+  void clear_zifozeef();
+  ::PROTOBUF_NAMESPACE_ID::int32 zifozeef() const;
+  void set_zifozeef(::PROTOBUF_NAMESPACE_ID::int32 value);
   private:
-  const std::string& _internal_wfzxitxa() const;
-  void _internal_set_wfzxitxa(const std::string& value);
-  std::string* _internal_mutable_wfzxitxa();
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_zifozeef() const;
+  void _internal_set_zifozeef(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // string wjhiporp = 5;
-  void clear_wjhiporp();
-  const std::string& wjhiporp() const;
-  void set_wjhiporp(const std::string& value);
-  void set_wjhiporp(std::string&& value);
-  void set_wjhiporp(const char* value);
-  void set_wjhiporp(const char* value, size_t size);
-  std::string* mutable_wjhiporp();
-  std::string* release_wjhiporp();
-  void set_allocated_wjhiporp(std::string* wjhiporp);
-  GOOGLE_PROTOBUF_RUNTIME_DEPRECATED("The unsafe_arena_ accessors for"
-  "    string fields are deprecated and will be removed in a"
-  "    future release.")
-  std::string* unsafe_arena_release_wjhiporp();
-  GOOGLE_PROTOBUF_RUNTIME_DEPRECATED("The unsafe_arena_ accessors for"
-  "    string fields are deprecated and will be removed in a"
-  "    future release.")
-  void unsafe_arena_set_allocated_wjhiporp(
-      std::string* wjhiporp);
+  // int32 jrssogei = 5;
+  void clear_jrssogei();
+  ::PROTOBUF_NAMESPACE_ID::int32 jrssogei() const;
+  void set_jrssogei(::PROTOBUF_NAMESPACE_ID::int32 value);
   private:
-  const std::string& _internal_wjhiporp() const;
-  void _internal_set_wjhiporp(const std::string& value);
-  std::string* _internal_mutable_wjhiporp();
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_jrssogei() const;
+  void _internal_set_jrssogei(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // string bntuygoi = 6;
-  void clear_bntuygoi();
-  const std::string& bntuygoi() const;
-  void set_bntuygoi(const std::string& value);
-  void set_bntuygoi(std::string&& value);
-  void set_bntuygoi(const char* value);
-  void set_bntuygoi(const char* value, size_t size);
-  std::string* mutable_bntuygoi();
-  std::string* release_bntuygoi();
-  void set_allocated_bntuygoi(std::string* bntuygoi);
-  GOOGLE_PROTOBUF_RUNTIME_DEPRECATED("The unsafe_arena_ accessors for"
-  "    string fields are deprecated and will be removed in a"
-  "    future release.")
-  std::string* unsafe_arena_release_bntuygoi();
-  GOOGLE_PROTOBUF_RUNTIME_DEPRECATED("The unsafe_arena_ accessors for"
-  "    string fields are deprecated and will be removed in a"
-  "    future release.")
-  void unsafe_arena_set_allocated_bntuygoi(
-      std::string* bntuygoi);
+  // int32 qzagtdun = 6;
+  void clear_qzagtdun();
+  ::PROTOBUF_NAMESPACE_ID::int32 qzagtdun() const;
+  void set_qzagtdun(::PROTOBUF_NAMESPACE_ID::int32 value);
   private:
-  const std::string& _internal_bntuygoi() const;
-  void _internal_set_bntuygoi(const std::string& value);
-  std::string* _internal_mutable_bntuygoi();
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_qzagtdun() const;
+  void _internal_set_qzagtdun(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // string smxkhuxz = 7;
-  void clear_smxkhuxz();
-  const std::string& smxkhuxz() const;
-  void set_smxkhuxz(const std::string& value);
-  void set_smxkhuxz(std::string&& value);
-  void set_smxkhuxz(const char* value);
-  void set_smxkhuxz(const char* value, size_t size);
-  std::string* mutable_smxkhuxz();
-  std::string* release_smxkhuxz();
-  void set_allocated_smxkhuxz(std::string* smxkhuxz);
-  GOOGLE_PROTOBUF_RUNTIME_DEPRECATED("The unsafe_arena_ accessors for"
-  "    string fields are deprecated and will be removed in a"
-  "    future release.")
-  std::string* unsafe_arena_release_smxkhuxz();
-  GOOGLE_PROTOBUF_RUNTIME_DEPRECATED("The unsafe_arena_ accessors for"
-  "    string fields are deprecated and will be removed in a"
-  "    future release.")
-  void unsafe_arena_set_allocated_smxkhuxz(
-      std::string* smxkhuxz);
+  // int32 sgcokhhb = 7;
+  void clear_sgcokhhb();
+  ::PROTOBUF_NAMESPACE_ID::int32 sgcokhhb() const;
+  void set_sgcokhhb(::PROTOBUF_NAMESPACE_ID::int32 value);
   private:
-  const std::string& _internal_smxkhuxz() const;
-  void _internal_set_smxkhuxz(const std::string& value);
-  std::string* _internal_mutable_smxkhuxz();
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_sgcokhhb() const;
+  void _internal_set_sgcokhhb(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // string jjomypit = 8;
-  void clear_jjomypit();
-  const std::string& jjomypit() const;
-  void set_jjomypit(const std::string& value);
-  void set_jjomypit(std::string&& value);
-  void set_jjomypit(const char* value);
-  void set_jjomypit(const char* value, size_t size);
-  std::string* mutable_jjomypit();
-  std::string* release_jjomypit();
-  void set_allocated_jjomypit(std::string* jjomypit);
-  GOOGLE_PROTOBUF_RUNTIME_DEPRECATED("The unsafe_arena_ accessors for"
-  "    string fields are deprecated and will be removed in a"
-  "    future release.")
-  std::string* unsafe_arena_release_jjomypit();
-  GOOGLE_PROTOBUF_RUNTIME_DEPRECATED("The unsafe_arena_ accessors for"
-  "    string fields are deprecated and will be removed in a"
-  "    future release.")
-  void unsafe_arena_set_allocated_jjomypit(
-      std::string* jjomypit);
+  // int32 bwmmqqsh = 8;
+  void clear_bwmmqqsh();
+  ::PROTOBUF_NAMESPACE_ID::int32 bwmmqqsh() const;
+  void set_bwmmqqsh(::PROTOBUF_NAMESPACE_ID::int32 value);
   private:
-  const std::string& _internal_jjomypit() const;
-  void _internal_set_jjomypit(const std::string& value);
-  std::string* _internal_mutable_jjomypit();
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_bwmmqqsh() const;
+  void _internal_set_bwmmqqsh(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
   // @@protoc_insertion_point(class_scope:ProtoData)
@@ -392,14 +264,14 @@ class ProtoData PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr qieezdij_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr rbqjhkqq_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr tnxueiff_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr wfzxitxa_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr wjhiporp_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr bntuygoi_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr smxkhuxz_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr jjomypit_;
+  ::PROTOBUF_NAMESPACE_ID::int32 itpfypwk_;
+  ::PROTOBUF_NAMESPACE_ID::int32 rwmdhsqd_;
+  ::PROTOBUF_NAMESPACE_ID::int32 trtzcnjk_;
+  ::PROTOBUF_NAMESPACE_ID::int32 zifozeef_;
+  ::PROTOBUF_NAMESPACE_ID::int32 jrssogei_;
+  ::PROTOBUF_NAMESPACE_ID::int32 qzagtdun_;
+  ::PROTOBUF_NAMESPACE_ID::int32 sgcokhhb_;
+  ::PROTOBUF_NAMESPACE_ID::int32 bwmmqqsh_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_ProtoData_2eproto;
 };
@@ -414,652 +286,164 @@ class ProtoData PROTOBUF_FINAL :
 #endif  // __GNUC__
 // ProtoData
 
-// string qieezdij = 1;
-inline void ProtoData::clear_qieezdij() {
-  qieezdij_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+// int32 itpfypwk = 1;
+inline void ProtoData::clear_itpfypwk() {
+  itpfypwk_ = 0;
 }
-inline const std::string& ProtoData::qieezdij() const {
-  // @@protoc_insertion_point(field_get:ProtoData.qieezdij)
-  return _internal_qieezdij();
+inline ::PROTOBUF_NAMESPACE_ID::int32 ProtoData::_internal_itpfypwk() const {
+  return itpfypwk_;
 }
-inline void ProtoData::set_qieezdij(const std::string& value) {
-  _internal_set_qieezdij(value);
-  // @@protoc_insertion_point(field_set:ProtoData.qieezdij)
+inline ::PROTOBUF_NAMESPACE_ID::int32 ProtoData::itpfypwk() const {
+  // @@protoc_insertion_point(field_get:ProtoData.itpfypwk)
+  return _internal_itpfypwk();
 }
-inline std::string* ProtoData::mutable_qieezdij() {
-  // @@protoc_insertion_point(field_mutable:ProtoData.qieezdij)
-  return _internal_mutable_qieezdij();
-}
-inline const std::string& ProtoData::_internal_qieezdij() const {
-  return qieezdij_.Get();
-}
-inline void ProtoData::_internal_set_qieezdij(const std::string& value) {
+inline void ProtoData::_internal_set_itpfypwk(::PROTOBUF_NAMESPACE_ID::int32 value) {
   
-  qieezdij_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+  itpfypwk_ = value;
 }
-inline void ProtoData::set_qieezdij(std::string&& value) {
-  
-  qieezdij_.Set(
-    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:ProtoData.qieezdij)
-}
-inline void ProtoData::set_qieezdij(const char* value) {
-  GOOGLE_DCHECK(value != nullptr);
-  
-  qieezdij_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
-              GetArena());
-  // @@protoc_insertion_point(field_set_char:ProtoData.qieezdij)
-}
-inline void ProtoData::set_qieezdij(const char* value,
-    size_t size) {
-  
-  qieezdij_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
-      reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:ProtoData.qieezdij)
-}
-inline std::string* ProtoData::_internal_mutable_qieezdij() {
-  
-  return qieezdij_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline std::string* ProtoData::release_qieezdij() {
-  // @@protoc_insertion_point(field_release:ProtoData.qieezdij)
-  return qieezdij_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline void ProtoData::set_allocated_qieezdij(std::string* qieezdij) {
-  if (qieezdij != nullptr) {
-    
-  } else {
-    
-  }
-  qieezdij_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), qieezdij,
-      GetArena());
-  // @@protoc_insertion_point(field_set_allocated:ProtoData.qieezdij)
-}
-inline std::string* ProtoData::unsafe_arena_release_qieezdij() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:ProtoData.qieezdij)
-  GOOGLE_DCHECK(GetArena() != nullptr);
-  
-  return qieezdij_.UnsafeArenaRelease(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-      GetArena());
-}
-inline void ProtoData::unsafe_arena_set_allocated_qieezdij(
-    std::string* qieezdij) {
-  GOOGLE_DCHECK(GetArena() != nullptr);
-  if (qieezdij != nullptr) {
-    
-  } else {
-    
-  }
-  qieezdij_.UnsafeArenaSetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-      qieezdij, GetArena());
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ProtoData.qieezdij)
+inline void ProtoData::set_itpfypwk(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_itpfypwk(value);
+  // @@protoc_insertion_point(field_set:ProtoData.itpfypwk)
 }
 
-// string rbqjhkqq = 2;
-inline void ProtoData::clear_rbqjhkqq() {
-  rbqjhkqq_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+// int32 rwmdhsqd = 2;
+inline void ProtoData::clear_rwmdhsqd() {
+  rwmdhsqd_ = 0;
 }
-inline const std::string& ProtoData::rbqjhkqq() const {
-  // @@protoc_insertion_point(field_get:ProtoData.rbqjhkqq)
-  return _internal_rbqjhkqq();
+inline ::PROTOBUF_NAMESPACE_ID::int32 ProtoData::_internal_rwmdhsqd() const {
+  return rwmdhsqd_;
 }
-inline void ProtoData::set_rbqjhkqq(const std::string& value) {
-  _internal_set_rbqjhkqq(value);
-  // @@protoc_insertion_point(field_set:ProtoData.rbqjhkqq)
+inline ::PROTOBUF_NAMESPACE_ID::int32 ProtoData::rwmdhsqd() const {
+  // @@protoc_insertion_point(field_get:ProtoData.rwmdhsqd)
+  return _internal_rwmdhsqd();
 }
-inline std::string* ProtoData::mutable_rbqjhkqq() {
-  // @@protoc_insertion_point(field_mutable:ProtoData.rbqjhkqq)
-  return _internal_mutable_rbqjhkqq();
-}
-inline const std::string& ProtoData::_internal_rbqjhkqq() const {
-  return rbqjhkqq_.Get();
-}
-inline void ProtoData::_internal_set_rbqjhkqq(const std::string& value) {
+inline void ProtoData::_internal_set_rwmdhsqd(::PROTOBUF_NAMESPACE_ID::int32 value) {
   
-  rbqjhkqq_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+  rwmdhsqd_ = value;
 }
-inline void ProtoData::set_rbqjhkqq(std::string&& value) {
-  
-  rbqjhkqq_.Set(
-    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:ProtoData.rbqjhkqq)
-}
-inline void ProtoData::set_rbqjhkqq(const char* value) {
-  GOOGLE_DCHECK(value != nullptr);
-  
-  rbqjhkqq_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
-              GetArena());
-  // @@protoc_insertion_point(field_set_char:ProtoData.rbqjhkqq)
-}
-inline void ProtoData::set_rbqjhkqq(const char* value,
-    size_t size) {
-  
-  rbqjhkqq_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
-      reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:ProtoData.rbqjhkqq)
-}
-inline std::string* ProtoData::_internal_mutable_rbqjhkqq() {
-  
-  return rbqjhkqq_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline std::string* ProtoData::release_rbqjhkqq() {
-  // @@protoc_insertion_point(field_release:ProtoData.rbqjhkqq)
-  return rbqjhkqq_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline void ProtoData::set_allocated_rbqjhkqq(std::string* rbqjhkqq) {
-  if (rbqjhkqq != nullptr) {
-    
-  } else {
-    
-  }
-  rbqjhkqq_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), rbqjhkqq,
-      GetArena());
-  // @@protoc_insertion_point(field_set_allocated:ProtoData.rbqjhkqq)
-}
-inline std::string* ProtoData::unsafe_arena_release_rbqjhkqq() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:ProtoData.rbqjhkqq)
-  GOOGLE_DCHECK(GetArena() != nullptr);
-  
-  return rbqjhkqq_.UnsafeArenaRelease(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-      GetArena());
-}
-inline void ProtoData::unsafe_arena_set_allocated_rbqjhkqq(
-    std::string* rbqjhkqq) {
-  GOOGLE_DCHECK(GetArena() != nullptr);
-  if (rbqjhkqq != nullptr) {
-    
-  } else {
-    
-  }
-  rbqjhkqq_.UnsafeArenaSetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-      rbqjhkqq, GetArena());
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ProtoData.rbqjhkqq)
+inline void ProtoData::set_rwmdhsqd(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_rwmdhsqd(value);
+  // @@protoc_insertion_point(field_set:ProtoData.rwmdhsqd)
 }
 
-// string tnxueiff = 3;
-inline void ProtoData::clear_tnxueiff() {
-  tnxueiff_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+// int32 trtzcnjk = 3;
+inline void ProtoData::clear_trtzcnjk() {
+  trtzcnjk_ = 0;
 }
-inline const std::string& ProtoData::tnxueiff() const {
-  // @@protoc_insertion_point(field_get:ProtoData.tnxueiff)
-  return _internal_tnxueiff();
+inline ::PROTOBUF_NAMESPACE_ID::int32 ProtoData::_internal_trtzcnjk() const {
+  return trtzcnjk_;
 }
-inline void ProtoData::set_tnxueiff(const std::string& value) {
-  _internal_set_tnxueiff(value);
-  // @@protoc_insertion_point(field_set:ProtoData.tnxueiff)
+inline ::PROTOBUF_NAMESPACE_ID::int32 ProtoData::trtzcnjk() const {
+  // @@protoc_insertion_point(field_get:ProtoData.trtzcnjk)
+  return _internal_trtzcnjk();
 }
-inline std::string* ProtoData::mutable_tnxueiff() {
-  // @@protoc_insertion_point(field_mutable:ProtoData.tnxueiff)
-  return _internal_mutable_tnxueiff();
-}
-inline const std::string& ProtoData::_internal_tnxueiff() const {
-  return tnxueiff_.Get();
-}
-inline void ProtoData::_internal_set_tnxueiff(const std::string& value) {
+inline void ProtoData::_internal_set_trtzcnjk(::PROTOBUF_NAMESPACE_ID::int32 value) {
   
-  tnxueiff_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+  trtzcnjk_ = value;
 }
-inline void ProtoData::set_tnxueiff(std::string&& value) {
-  
-  tnxueiff_.Set(
-    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:ProtoData.tnxueiff)
-}
-inline void ProtoData::set_tnxueiff(const char* value) {
-  GOOGLE_DCHECK(value != nullptr);
-  
-  tnxueiff_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
-              GetArena());
-  // @@protoc_insertion_point(field_set_char:ProtoData.tnxueiff)
-}
-inline void ProtoData::set_tnxueiff(const char* value,
-    size_t size) {
-  
-  tnxueiff_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
-      reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:ProtoData.tnxueiff)
-}
-inline std::string* ProtoData::_internal_mutable_tnxueiff() {
-  
-  return tnxueiff_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline std::string* ProtoData::release_tnxueiff() {
-  // @@protoc_insertion_point(field_release:ProtoData.tnxueiff)
-  return tnxueiff_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline void ProtoData::set_allocated_tnxueiff(std::string* tnxueiff) {
-  if (tnxueiff != nullptr) {
-    
-  } else {
-    
-  }
-  tnxueiff_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), tnxueiff,
-      GetArena());
-  // @@protoc_insertion_point(field_set_allocated:ProtoData.tnxueiff)
-}
-inline std::string* ProtoData::unsafe_arena_release_tnxueiff() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:ProtoData.tnxueiff)
-  GOOGLE_DCHECK(GetArena() != nullptr);
-  
-  return tnxueiff_.UnsafeArenaRelease(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-      GetArena());
-}
-inline void ProtoData::unsafe_arena_set_allocated_tnxueiff(
-    std::string* tnxueiff) {
-  GOOGLE_DCHECK(GetArena() != nullptr);
-  if (tnxueiff != nullptr) {
-    
-  } else {
-    
-  }
-  tnxueiff_.UnsafeArenaSetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-      tnxueiff, GetArena());
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ProtoData.tnxueiff)
+inline void ProtoData::set_trtzcnjk(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_trtzcnjk(value);
+  // @@protoc_insertion_point(field_set:ProtoData.trtzcnjk)
 }
 
-// string wfzxitxa = 4;
-inline void ProtoData::clear_wfzxitxa() {
-  wfzxitxa_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+// int32 zifozeef = 4;
+inline void ProtoData::clear_zifozeef() {
+  zifozeef_ = 0;
 }
-inline const std::string& ProtoData::wfzxitxa() const {
-  // @@protoc_insertion_point(field_get:ProtoData.wfzxitxa)
-  return _internal_wfzxitxa();
+inline ::PROTOBUF_NAMESPACE_ID::int32 ProtoData::_internal_zifozeef() const {
+  return zifozeef_;
 }
-inline void ProtoData::set_wfzxitxa(const std::string& value) {
-  _internal_set_wfzxitxa(value);
-  // @@protoc_insertion_point(field_set:ProtoData.wfzxitxa)
+inline ::PROTOBUF_NAMESPACE_ID::int32 ProtoData::zifozeef() const {
+  // @@protoc_insertion_point(field_get:ProtoData.zifozeef)
+  return _internal_zifozeef();
 }
-inline std::string* ProtoData::mutable_wfzxitxa() {
-  // @@protoc_insertion_point(field_mutable:ProtoData.wfzxitxa)
-  return _internal_mutable_wfzxitxa();
-}
-inline const std::string& ProtoData::_internal_wfzxitxa() const {
-  return wfzxitxa_.Get();
-}
-inline void ProtoData::_internal_set_wfzxitxa(const std::string& value) {
+inline void ProtoData::_internal_set_zifozeef(::PROTOBUF_NAMESPACE_ID::int32 value) {
   
-  wfzxitxa_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+  zifozeef_ = value;
 }
-inline void ProtoData::set_wfzxitxa(std::string&& value) {
-  
-  wfzxitxa_.Set(
-    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:ProtoData.wfzxitxa)
-}
-inline void ProtoData::set_wfzxitxa(const char* value) {
-  GOOGLE_DCHECK(value != nullptr);
-  
-  wfzxitxa_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
-              GetArena());
-  // @@protoc_insertion_point(field_set_char:ProtoData.wfzxitxa)
-}
-inline void ProtoData::set_wfzxitxa(const char* value,
-    size_t size) {
-  
-  wfzxitxa_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
-      reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:ProtoData.wfzxitxa)
-}
-inline std::string* ProtoData::_internal_mutable_wfzxitxa() {
-  
-  return wfzxitxa_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline std::string* ProtoData::release_wfzxitxa() {
-  // @@protoc_insertion_point(field_release:ProtoData.wfzxitxa)
-  return wfzxitxa_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline void ProtoData::set_allocated_wfzxitxa(std::string* wfzxitxa) {
-  if (wfzxitxa != nullptr) {
-    
-  } else {
-    
-  }
-  wfzxitxa_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), wfzxitxa,
-      GetArena());
-  // @@protoc_insertion_point(field_set_allocated:ProtoData.wfzxitxa)
-}
-inline std::string* ProtoData::unsafe_arena_release_wfzxitxa() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:ProtoData.wfzxitxa)
-  GOOGLE_DCHECK(GetArena() != nullptr);
-  
-  return wfzxitxa_.UnsafeArenaRelease(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-      GetArena());
-}
-inline void ProtoData::unsafe_arena_set_allocated_wfzxitxa(
-    std::string* wfzxitxa) {
-  GOOGLE_DCHECK(GetArena() != nullptr);
-  if (wfzxitxa != nullptr) {
-    
-  } else {
-    
-  }
-  wfzxitxa_.UnsafeArenaSetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-      wfzxitxa, GetArena());
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ProtoData.wfzxitxa)
+inline void ProtoData::set_zifozeef(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_zifozeef(value);
+  // @@protoc_insertion_point(field_set:ProtoData.zifozeef)
 }
 
-// string wjhiporp = 5;
-inline void ProtoData::clear_wjhiporp() {
-  wjhiporp_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+// int32 jrssogei = 5;
+inline void ProtoData::clear_jrssogei() {
+  jrssogei_ = 0;
 }
-inline const std::string& ProtoData::wjhiporp() const {
-  // @@protoc_insertion_point(field_get:ProtoData.wjhiporp)
-  return _internal_wjhiporp();
+inline ::PROTOBUF_NAMESPACE_ID::int32 ProtoData::_internal_jrssogei() const {
+  return jrssogei_;
 }
-inline void ProtoData::set_wjhiporp(const std::string& value) {
-  _internal_set_wjhiporp(value);
-  // @@protoc_insertion_point(field_set:ProtoData.wjhiporp)
+inline ::PROTOBUF_NAMESPACE_ID::int32 ProtoData::jrssogei() const {
+  // @@protoc_insertion_point(field_get:ProtoData.jrssogei)
+  return _internal_jrssogei();
 }
-inline std::string* ProtoData::mutable_wjhiporp() {
-  // @@protoc_insertion_point(field_mutable:ProtoData.wjhiporp)
-  return _internal_mutable_wjhiporp();
-}
-inline const std::string& ProtoData::_internal_wjhiporp() const {
-  return wjhiporp_.Get();
-}
-inline void ProtoData::_internal_set_wjhiporp(const std::string& value) {
+inline void ProtoData::_internal_set_jrssogei(::PROTOBUF_NAMESPACE_ID::int32 value) {
   
-  wjhiporp_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+  jrssogei_ = value;
 }
-inline void ProtoData::set_wjhiporp(std::string&& value) {
-  
-  wjhiporp_.Set(
-    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:ProtoData.wjhiporp)
-}
-inline void ProtoData::set_wjhiporp(const char* value) {
-  GOOGLE_DCHECK(value != nullptr);
-  
-  wjhiporp_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
-              GetArena());
-  // @@protoc_insertion_point(field_set_char:ProtoData.wjhiporp)
-}
-inline void ProtoData::set_wjhiporp(const char* value,
-    size_t size) {
-  
-  wjhiporp_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
-      reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:ProtoData.wjhiporp)
-}
-inline std::string* ProtoData::_internal_mutable_wjhiporp() {
-  
-  return wjhiporp_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline std::string* ProtoData::release_wjhiporp() {
-  // @@protoc_insertion_point(field_release:ProtoData.wjhiporp)
-  return wjhiporp_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline void ProtoData::set_allocated_wjhiporp(std::string* wjhiporp) {
-  if (wjhiporp != nullptr) {
-    
-  } else {
-    
-  }
-  wjhiporp_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), wjhiporp,
-      GetArena());
-  // @@protoc_insertion_point(field_set_allocated:ProtoData.wjhiporp)
-}
-inline std::string* ProtoData::unsafe_arena_release_wjhiporp() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:ProtoData.wjhiporp)
-  GOOGLE_DCHECK(GetArena() != nullptr);
-  
-  return wjhiporp_.UnsafeArenaRelease(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-      GetArena());
-}
-inline void ProtoData::unsafe_arena_set_allocated_wjhiporp(
-    std::string* wjhiporp) {
-  GOOGLE_DCHECK(GetArena() != nullptr);
-  if (wjhiporp != nullptr) {
-    
-  } else {
-    
-  }
-  wjhiporp_.UnsafeArenaSetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-      wjhiporp, GetArena());
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ProtoData.wjhiporp)
+inline void ProtoData::set_jrssogei(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_jrssogei(value);
+  // @@protoc_insertion_point(field_set:ProtoData.jrssogei)
 }
 
-// string bntuygoi = 6;
-inline void ProtoData::clear_bntuygoi() {
-  bntuygoi_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+// int32 qzagtdun = 6;
+inline void ProtoData::clear_qzagtdun() {
+  qzagtdun_ = 0;
 }
-inline const std::string& ProtoData::bntuygoi() const {
-  // @@protoc_insertion_point(field_get:ProtoData.bntuygoi)
-  return _internal_bntuygoi();
+inline ::PROTOBUF_NAMESPACE_ID::int32 ProtoData::_internal_qzagtdun() const {
+  return qzagtdun_;
 }
-inline void ProtoData::set_bntuygoi(const std::string& value) {
-  _internal_set_bntuygoi(value);
-  // @@protoc_insertion_point(field_set:ProtoData.bntuygoi)
+inline ::PROTOBUF_NAMESPACE_ID::int32 ProtoData::qzagtdun() const {
+  // @@protoc_insertion_point(field_get:ProtoData.qzagtdun)
+  return _internal_qzagtdun();
 }
-inline std::string* ProtoData::mutable_bntuygoi() {
-  // @@protoc_insertion_point(field_mutable:ProtoData.bntuygoi)
-  return _internal_mutable_bntuygoi();
-}
-inline const std::string& ProtoData::_internal_bntuygoi() const {
-  return bntuygoi_.Get();
-}
-inline void ProtoData::_internal_set_bntuygoi(const std::string& value) {
+inline void ProtoData::_internal_set_qzagtdun(::PROTOBUF_NAMESPACE_ID::int32 value) {
   
-  bntuygoi_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+  qzagtdun_ = value;
 }
-inline void ProtoData::set_bntuygoi(std::string&& value) {
-  
-  bntuygoi_.Set(
-    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:ProtoData.bntuygoi)
-}
-inline void ProtoData::set_bntuygoi(const char* value) {
-  GOOGLE_DCHECK(value != nullptr);
-  
-  bntuygoi_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
-              GetArena());
-  // @@protoc_insertion_point(field_set_char:ProtoData.bntuygoi)
-}
-inline void ProtoData::set_bntuygoi(const char* value,
-    size_t size) {
-  
-  bntuygoi_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
-      reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:ProtoData.bntuygoi)
-}
-inline std::string* ProtoData::_internal_mutable_bntuygoi() {
-  
-  return bntuygoi_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline std::string* ProtoData::release_bntuygoi() {
-  // @@protoc_insertion_point(field_release:ProtoData.bntuygoi)
-  return bntuygoi_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline void ProtoData::set_allocated_bntuygoi(std::string* bntuygoi) {
-  if (bntuygoi != nullptr) {
-    
-  } else {
-    
-  }
-  bntuygoi_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), bntuygoi,
-      GetArena());
-  // @@protoc_insertion_point(field_set_allocated:ProtoData.bntuygoi)
-}
-inline std::string* ProtoData::unsafe_arena_release_bntuygoi() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:ProtoData.bntuygoi)
-  GOOGLE_DCHECK(GetArena() != nullptr);
-  
-  return bntuygoi_.UnsafeArenaRelease(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-      GetArena());
-}
-inline void ProtoData::unsafe_arena_set_allocated_bntuygoi(
-    std::string* bntuygoi) {
-  GOOGLE_DCHECK(GetArena() != nullptr);
-  if (bntuygoi != nullptr) {
-    
-  } else {
-    
-  }
-  bntuygoi_.UnsafeArenaSetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-      bntuygoi, GetArena());
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ProtoData.bntuygoi)
+inline void ProtoData::set_qzagtdun(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_qzagtdun(value);
+  // @@protoc_insertion_point(field_set:ProtoData.qzagtdun)
 }
 
-// string smxkhuxz = 7;
-inline void ProtoData::clear_smxkhuxz() {
-  smxkhuxz_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+// int32 sgcokhhb = 7;
+inline void ProtoData::clear_sgcokhhb() {
+  sgcokhhb_ = 0;
 }
-inline const std::string& ProtoData::smxkhuxz() const {
-  // @@protoc_insertion_point(field_get:ProtoData.smxkhuxz)
-  return _internal_smxkhuxz();
+inline ::PROTOBUF_NAMESPACE_ID::int32 ProtoData::_internal_sgcokhhb() const {
+  return sgcokhhb_;
 }
-inline void ProtoData::set_smxkhuxz(const std::string& value) {
-  _internal_set_smxkhuxz(value);
-  // @@protoc_insertion_point(field_set:ProtoData.smxkhuxz)
+inline ::PROTOBUF_NAMESPACE_ID::int32 ProtoData::sgcokhhb() const {
+  // @@protoc_insertion_point(field_get:ProtoData.sgcokhhb)
+  return _internal_sgcokhhb();
 }
-inline std::string* ProtoData::mutable_smxkhuxz() {
-  // @@protoc_insertion_point(field_mutable:ProtoData.smxkhuxz)
-  return _internal_mutable_smxkhuxz();
-}
-inline const std::string& ProtoData::_internal_smxkhuxz() const {
-  return smxkhuxz_.Get();
-}
-inline void ProtoData::_internal_set_smxkhuxz(const std::string& value) {
+inline void ProtoData::_internal_set_sgcokhhb(::PROTOBUF_NAMESPACE_ID::int32 value) {
   
-  smxkhuxz_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+  sgcokhhb_ = value;
 }
-inline void ProtoData::set_smxkhuxz(std::string&& value) {
-  
-  smxkhuxz_.Set(
-    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:ProtoData.smxkhuxz)
-}
-inline void ProtoData::set_smxkhuxz(const char* value) {
-  GOOGLE_DCHECK(value != nullptr);
-  
-  smxkhuxz_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
-              GetArena());
-  // @@protoc_insertion_point(field_set_char:ProtoData.smxkhuxz)
-}
-inline void ProtoData::set_smxkhuxz(const char* value,
-    size_t size) {
-  
-  smxkhuxz_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
-      reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:ProtoData.smxkhuxz)
-}
-inline std::string* ProtoData::_internal_mutable_smxkhuxz() {
-  
-  return smxkhuxz_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline std::string* ProtoData::release_smxkhuxz() {
-  // @@protoc_insertion_point(field_release:ProtoData.smxkhuxz)
-  return smxkhuxz_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline void ProtoData::set_allocated_smxkhuxz(std::string* smxkhuxz) {
-  if (smxkhuxz != nullptr) {
-    
-  } else {
-    
-  }
-  smxkhuxz_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), smxkhuxz,
-      GetArena());
-  // @@protoc_insertion_point(field_set_allocated:ProtoData.smxkhuxz)
-}
-inline std::string* ProtoData::unsafe_arena_release_smxkhuxz() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:ProtoData.smxkhuxz)
-  GOOGLE_DCHECK(GetArena() != nullptr);
-  
-  return smxkhuxz_.UnsafeArenaRelease(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-      GetArena());
-}
-inline void ProtoData::unsafe_arena_set_allocated_smxkhuxz(
-    std::string* smxkhuxz) {
-  GOOGLE_DCHECK(GetArena() != nullptr);
-  if (smxkhuxz != nullptr) {
-    
-  } else {
-    
-  }
-  smxkhuxz_.UnsafeArenaSetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-      smxkhuxz, GetArena());
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ProtoData.smxkhuxz)
+inline void ProtoData::set_sgcokhhb(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_sgcokhhb(value);
+  // @@protoc_insertion_point(field_set:ProtoData.sgcokhhb)
 }
 
-// string jjomypit = 8;
-inline void ProtoData::clear_jjomypit() {
-  jjomypit_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+// int32 bwmmqqsh = 8;
+inline void ProtoData::clear_bwmmqqsh() {
+  bwmmqqsh_ = 0;
 }
-inline const std::string& ProtoData::jjomypit() const {
-  // @@protoc_insertion_point(field_get:ProtoData.jjomypit)
-  return _internal_jjomypit();
+inline ::PROTOBUF_NAMESPACE_ID::int32 ProtoData::_internal_bwmmqqsh() const {
+  return bwmmqqsh_;
 }
-inline void ProtoData::set_jjomypit(const std::string& value) {
-  _internal_set_jjomypit(value);
-  // @@protoc_insertion_point(field_set:ProtoData.jjomypit)
+inline ::PROTOBUF_NAMESPACE_ID::int32 ProtoData::bwmmqqsh() const {
+  // @@protoc_insertion_point(field_get:ProtoData.bwmmqqsh)
+  return _internal_bwmmqqsh();
 }
-inline std::string* ProtoData::mutable_jjomypit() {
-  // @@protoc_insertion_point(field_mutable:ProtoData.jjomypit)
-  return _internal_mutable_jjomypit();
-}
-inline const std::string& ProtoData::_internal_jjomypit() const {
-  return jjomypit_.Get();
-}
-inline void ProtoData::_internal_set_jjomypit(const std::string& value) {
+inline void ProtoData::_internal_set_bwmmqqsh(::PROTOBUF_NAMESPACE_ID::int32 value) {
   
-  jjomypit_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+  bwmmqqsh_ = value;
 }
-inline void ProtoData::set_jjomypit(std::string&& value) {
-  
-  jjomypit_.Set(
-    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:ProtoData.jjomypit)
-}
-inline void ProtoData::set_jjomypit(const char* value) {
-  GOOGLE_DCHECK(value != nullptr);
-  
-  jjomypit_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
-              GetArena());
-  // @@protoc_insertion_point(field_set_char:ProtoData.jjomypit)
-}
-inline void ProtoData::set_jjomypit(const char* value,
-    size_t size) {
-  
-  jjomypit_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
-      reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:ProtoData.jjomypit)
-}
-inline std::string* ProtoData::_internal_mutable_jjomypit() {
-  
-  return jjomypit_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline std::string* ProtoData::release_jjomypit() {
-  // @@protoc_insertion_point(field_release:ProtoData.jjomypit)
-  return jjomypit_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline void ProtoData::set_allocated_jjomypit(std::string* jjomypit) {
-  if (jjomypit != nullptr) {
-    
-  } else {
-    
-  }
-  jjomypit_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), jjomypit,
-      GetArena());
-  // @@protoc_insertion_point(field_set_allocated:ProtoData.jjomypit)
-}
-inline std::string* ProtoData::unsafe_arena_release_jjomypit() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:ProtoData.jjomypit)
-  GOOGLE_DCHECK(GetArena() != nullptr);
-  
-  return jjomypit_.UnsafeArenaRelease(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-      GetArena());
-}
-inline void ProtoData::unsafe_arena_set_allocated_jjomypit(
-    std::string* jjomypit) {
-  GOOGLE_DCHECK(GetArena() != nullptr);
-  if (jjomypit != nullptr) {
-    
-  } else {
-    
-  }
-  jjomypit_.UnsafeArenaSetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-      jjomypit, GetArena());
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ProtoData.jjomypit)
+inline void ProtoData::set_bwmmqqsh(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_bwmmqqsh(value);
+  // @@protoc_insertion_point(field_set:ProtoData.bwmmqqsh)
 }
 
 #ifdef __GNUC__

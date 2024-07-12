@@ -5,14 +5,14 @@ namespace proto {
     size_t Serialize(const testData& data, const std::string& filename) {
         GOOGLE_PROTOBUF_VERIFY_VERSION; // is it necessary?
         ProtoData protoData;
-        protoData.set_qieezdij(data.qieezdij);
-        protoData.set_rbqjhkqq(data.rbqjhkqq);
-        protoData.set_tnxueiff(data.tnxueiff);
-        protoData.set_wfzxitxa(data.wfzxitxa);
-        protoData.set_wjhiporp(data.wjhiporp);
-        protoData.set_bntuygoi(data.bntuygoi);
-        protoData.set_smxkhuxz(data.smxkhuxz);
-        protoData.set_jjomypit(data.jjomypit);
+        protoData.set_itpfypwk(data.itpfypwk);
+        protoData.set_rwmdhsqd(data.rwmdhsqd);
+        protoData.set_trtzcnjk(data.trtzcnjk);
+        protoData.set_zifozeef(data.zifozeef);
+        protoData.set_jrssogei(data.jrssogei);
+        protoData.set_qzagtdun(data.qzagtdun);
+        protoData.set_sgcokhhb(data.sgcokhhb);
+        protoData.set_bwmmqqsh(data.bwmmqqsh);
         std::ofstream output(filename, std::ios::out | std::ios::binary);
         if (!protoData.SerializeToOstream(&output)) {
             std::cerr << "protobuf: Failed to write data to file." << std::endl;
@@ -25,13 +25,13 @@ namespace proto {
         if (!protoData.ParseFromIstream(&input)) {
             std::cerr << "protobuf: Failed to read data from file." << std::endl;
         }
-        data.qieezdij = protoData.qieezdij();
-        data.rbqjhkqq = protoData.rbqjhkqq();
-        data.tnxueiff = protoData.tnxueiff();
-        data.wfzxitxa = protoData.wfzxitxa();
-        data.wjhiporp = protoData.wjhiporp();
-        data.bntuygoi = protoData.bntuygoi();
-        data.smxkhuxz = protoData.smxkhuxz();
-        data.jjomypit = protoData.jjomypit();
+        data.itpfypwk = protoData.itpfypwk();
+        data.rwmdhsqd = protoData.rwmdhsqd();
+        data.trtzcnjk = protoData.trtzcnjk();
+        data.zifozeef = protoData.zifozeef();
+        data.jrssogei = protoData.jrssogei();
+        data.qzagtdun = protoData.qzagtdun();
+        data.sgcokhhb = protoData.sgcokhhb();
+        data.bwmmqqsh = protoData.bwmmqqsh();
     }
 }
