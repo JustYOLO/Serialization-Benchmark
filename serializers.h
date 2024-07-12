@@ -19,8 +19,8 @@ size_t serializeProtoBuf(const testData& data, const std::string& filename);
 testData deserializeProtoBuf(const std::string& filename);
 
 // JSON
-// size_t serializeJson(const testData& data, const std::string& filename);
-// testData deserializeJson(const std::string& filename);
+size_t serializeJson(const testData& data, const std::string& filename);
+testData deserializeJson(const std::string& filename);
 
 // FlexBuffers
 size_t serializeFlexBuffers(const testData& data, const std::string& filename);
@@ -30,5 +30,9 @@ testData deserializeFlexBuffers(const std::string& filename);
 
 size_t serializeApacheThrift(const testData& data, const std::string& filename);
 testData deserializeApacheThrift(const std::string& filename);
+
+// FlatBuffers
+size_t serializeFlatBuffers(const testData& data, const std::string& filename);
+testData deserializeFlatBuffers(const std::string& filename);
 
 }  // namespace serializers

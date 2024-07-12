@@ -2,6 +2,10 @@
 #include "flexbuffers_func.h"
 #include "protobuf_func.h"
 #include "thrift_func.h"
+#include "flatbuffers_func.h"
+#include "json_func.h"
+
+// TODO: make a uniform read/write and error handling method for all serializers
 
 namespace serializers {
 
@@ -52,12 +56,33 @@ testData deserializeProtoBuf(const std::string& filename) {
     return data;
 }
 
-// size_t serializeJson(const testData& data, const std::string& filename) {
-//     // TODO: how about using std::map (?)
-// }
+size_t serializeJson(const testData& data, const std::string& filename) {
+    std::string buf;
+    json::Serialize(data, buf);
+    std::ofstream outFile(filename, std::ios::binary);
+    outFile.write(reinterpret_cast<const char *>(buf.data()), buf.size());
+    return buf.size();
+}
 
-// testData deserializeJson(const std::string& filename) {
-// }
+testData deserializeJson(const std::string& filename) {
+    std::string buffer;
+    std::ifstream inFile(filename, std::ios::binary | std::ios::ate);
+    if (inFile) {
+        std::streamsize size = inFile.tellg();
+        inFile.seekg(0, std::ios::beg);
+
+        buffer.resize(size);
+        inFile.read(reinterpret_cast<char *>(buffer.data()), size);
+    } else {
+        std::cerr << "Failed to open file for reading: " << filename << std::endl;
+    }
+
+    testData result;
+    json::Deserialize(result, buffer);
+
+    return result;
+
+}
 
     size_t serializeFlexBuffers(const testData& data, const std::string& filename) {
         std::vector<uint8_t> outBuffer;
@@ -74,7 +99,6 @@ testData deserializeProtoBuf(const std::string& filename) {
     }
 
     testData deserializeFlexBuffers(const std::string& filename) {
-        // TODO: if needed, convert deserialized data to testData
         std::vector<uint8_t> buffer;
         std::ifstream inFile(filename, std::ios::binary | std::ios::ate);
         if (inFile) {
@@ -113,5 +137,37 @@ testData deserializeProtoBuf(const std::string& filename) {
 
         return data;
     }
+    size_t serializeFlatBuffers(const testData& data, const std::string& filename) {
+        std::vector<uint8_t> buf;
+        flat::Serialize(data, buf);
+
+        std::ofstream file(filename, std::ios::binary);
+
+        file.write(reinterpret_cast<const char*>(buf.data()), buf.size());
+        file.close();
+        return buf.size();
+    }
+
+    testData deserializeFlatBuffers(const std::string& filename) {
+        std::ifstream file(filename, std::ios::binary | std::ios::ate);
+        if (!file) {
+            throw std::runtime_error("Unable to open file for reading: " + filename);
+        }
+
+        std::streamsize size = file.tellg();
+        file.seekg(0, std::ios::beg);
+
+        std::vector<uint8_t> buffer(size);
+        if (!file.read(reinterpret_cast<char*>(buffer.data()), size)) {
+            throw std::runtime_error("Failed to read file: " + filename);
+        }
+
+        testData data;
+        flat::Deserialize(data, buffer);
+
+        return data;
+
+    }
+
 
 }  // namespace serializers

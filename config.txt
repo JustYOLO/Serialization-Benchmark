@@ -1,7 +1,1 @@
-8, int32_t, 8, 8, 8, 16, 100
-# nkey, tkey, skeyMin, skeyMax, svalMin, svalMax, testSize
-# nkey: number of keys | tkey: type of keys | skey: size of keys (min, max) | sval: size of values
-# supported types(tkey): int32_t, double, string
-# sval only uses when the type(tkey) is string
-# string means: char {variable length = skey} [{sval + 1}]
-# adding 1 in sval means it needs a space for null character
+64, string, 8, 8, 16, 16, 100, JSON

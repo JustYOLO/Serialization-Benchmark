@@ -75,3 +75,38 @@ static void BM_ThriftDeserialization(benchmark::State& state, const std::string&
     }
 }
 
+static void BM_FlatBufSerialization(benchmark::State& state, testData data, const std::string& filename) {
+    size_t dataSize = sizeof(data);
+    size_t serializedSize = 0;
+    for (auto _ : state) {
+        auto serialized = serializers::serializeFlatBuffers(data, filename);
+        benchmark::DoNotOptimize(serialized);
+        serializedSize = serialized;
+    }
+    state.SetLabel(std::to_string(dataSize) + " " + std::to_string(serializedSize));
+}
+
+static void BM_FlatBufDeserialization(benchmark::State& state, const std::string& filename) {
+    for (auto _ : state) {
+        auto deserialized = serializers::deserializeFlatBuffers(filename);
+        benchmark::DoNotOptimize(deserialized);
+    }
+}
+
+static void BM_JsonSerialization(benchmark::State& state, testData data, const std::string& filename) {
+    size_t dataSize = sizeof(data);
+    size_t serializedSize = 0;
+    for (auto _ : state) {
+        auto serialized = serializers::serializeJson(data, filename);
+        benchmark::DoNotOptimize(serialized);
+        serializedSize = serialized;
+    }
+    state.SetLabel(std::to_string(dataSize) + " " + std::to_string(serializedSize));
+}
+
+static void BM_JsonDeserialization(benchmark::State& state, const std::string& filename) {
+    for (auto _ : state) {
+        auto deserialized = serializers::deserializeJson(filename);
+        benchmark::DoNotOptimize(deserialized);
+    }
+}

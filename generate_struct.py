@@ -181,7 +181,7 @@ namespace flex {
             header_content += f"        data.{key} = root[\"{key}\"].AsInt32();\n"
     elif tkey == "double":
         for key in key_value_pair.keys():
-            header_content += f"        data.{key} = root[\"{key}\"].AdDouble();\n"
+            header_content += f"        data.{key} = root[\"{key}\"].AsDouble();\n"
 
 
     header_content += """    }
@@ -251,6 +251,103 @@ namespace thrift {
     with open("struct.thrift", "w") as f:
         f.write(thrift_content)
 
+def generate_flatBuf_struct():
+    struct_content = """table flatData {
+"""
+    if tkey == "string":
+        for key in key_value_pair.keys():
+            struct_content += f"    {key}: string;\n"
+    elif tkey == "int32_t":
+        for key in key_value_pair.keys():
+            struct_content += f"    {key}: int;\n"
+    elif tkey == "double":
+        for key in key_value_pair.keys():
+            struct_content += f"    {key}: double;\n"
+
+    struct_content += """}
+root_type flatData;
+"""
+    func_content = """#include <flatbuffers/flatbuffers.h>
+#include <vector>
+#include "benchmark_struct.h"
+#include "struct_generated.h"
+
+namespace flat {
+    void Serialize(const testData& data, std::vector<uint8_t>& buf) {
+        flatbuffers::FlatBufferBuilder builder;
+"""
+    if tkey == "string":
+        func_content += f"        std::vector<flatbuffers::Offset<flatbuffers::String>> keys;\n"
+        for key in key_value_pair.keys():
+            func_content += f"        keys.push_back(builder.CreateString(data.{key}));\n"
+        func_content += f"        auto serializedData = CreateflatData(builder, "
+        for idx, key in enumerate(key_value_pair.keys()):
+            if idx == len(key_value_pair.keys()) - 1:
+                func_content += f"keys[{idx}]"
+            else:
+                func_content += f"keys[{idx}], "
+        func_content += f");"
+    else:
+        func_content += f"        auto serializedData = CreateflatData(builder, "
+        for idx, key in enumerate(key_value_pair.keys()):
+            if idx == len(key_value_pair.keys()) - 1:
+                func_content += f"data.{key}"
+            else:
+                func_content += f"data.{key}, "
+        func_content += f");"
+    func_content += """
+        builder.Finish(serializedData);
+
+        buf.assign(builder.GetBufferPointer(), builder.GetBufferPointer() + builder.GetSize());
+    }
+    
+    void Deserialize(testData& data, const std::vector<uint8_t> &buffer) {
+        auto flatData = GetflatData(buffer.data());
+"""
+    if tkey == "string":
+        for key in key_value_pair.keys():
+            func_content += f"        data.{key} = flatData->{key}()->str();\n"
+    else:
+        for key in key_value_pair.keys():
+            func_content += f"        data.{key} = flatData->{key}();\n"
+    func_content += """        // data.{keys} = flatData->{keys}()->c_str();
+    }
+}
+"""
+    
+    with open("struct.fbs", "w") as f:
+        f.write(struct_content)
+    with open("flatbuffers_func.h", "w") as f:
+        f.write(func_content)
+
+def generate_json_func():
+    func_content = """#include <nlohmann/json.hpp>
+#include "benchmark_struct.h"
+using jsonStruct = nlohmann::json;
+
+namespace json {
+    void Serialize(const testData& data, std::string& buf) {
+    jsonStruct j = {
+        // {"{key}", data.{key}},
+"""
+    for key in key_value_pair.keys():
+        func_content += f"        {{\"{key}\", data.{key}}},\n"
+    func_content += """        };
+        buf =  j.dump(4); // The '4' argument adds indentation for pretty-printing
+    }
+
+    void Deserialize(testData& data, const std::string& buf) {
+        jsonStruct j = jsonStruct::parse(buf);
+
+        // data.{key} = j["{key}"];
+"""
+    for key in key_value_pair.keys():
+        func_content += f"        data.{key} = j[\"{key}\"];\n"
+    func_content += """    }
+}
+"""
+    with open("json_func.h", "w") as f:
+        f.write(func_content)
 
 def generate_values_file():
     with open("values.txt", "w") as f:
@@ -263,8 +360,8 @@ def generate_values_file():
 # starts here? 
 
 with open("config.txt", "r") as f:
-    nkey, tkey, skeyMin, skeyMax, svalMin, svalMax, testSize = f.readline().split(", ")
-nkey, skeyMin, skeyMax, svalMin, svalMax, testSize = map(int, (nkey, skeyMin, skeyMax, svalMin, svalMax, testSize))
+    nkey, tkey, skeyMin, skeyMax, svalMin, svalMax, testSize, serType = f.readline().split(", ")
+nkey, skeyMin, skeyMax, svalMin, svalMax, testSize= map(int, (nkey, skeyMin, skeyMax, svalMin, svalMax, testSize))
 
 # Generate the header file content
 header_content = generate_header_file(nkey, tkey, skeyMin, skeyMax)
@@ -277,6 +374,8 @@ generate_string_struct() # makes string struct for C++ (msgpack?)
 generate_flexBuf_struct()
 generate_protoBuf_struct()
 generate_thrift_struct()
+generate_json_func()
+generate_flatBuf_struct()
 if(tkey == "string"):
     generate_values_file() # make values file
 

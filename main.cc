@@ -91,6 +91,7 @@ int main(int argc, char** argv) {
     size_t svalMin = std::stoi(tokens[4]);
     size_t svalMax = std::stoi(tokens[5]);
     size_t testSize = std::stoi(tokens[6]);
+    std::string serializationType = tokens[7];
     std::string type = tokens[1];
 
     std::vector<std::string> values [testSize];
@@ -111,41 +112,68 @@ int main(int argc, char** argv) {
     std::vector<testData> testDataVector (testSize);
     for (size_t i = 0; i < testSize; ++i) {
         generator.fillStruct(testDataVector[i], type, values[i]);
-        // benchmark::RegisterBenchmark(
-        //     ("BM_MsgPackSerialization_" + std::to_string(i)).c_str(),
-        //     BM_MsgPackSerialization, testDataVector[i], "tmp/" + std::to_string(i) + ".msgpack");
 
-        // benchmark::RegisterBenchmark(
-        //     ("BM_MsgPackDeserialization_" + std::to_string(i)).c_str(),
-        //     BM_MsgPackDeserialization, "tmp/" + std::to_string(i) + ".msgpack");
+        if(serializationType == "JSON") {
+            benchmark::RegisterBenchmark(
+                ("BM_JsonSerialization_" + std::to_string(i)).c_str(),
+                BM_JsonSerialization, testDataVector[i], "tmp/" + std::to_string(i) + ".json");
 
-        // benchmark::RegisterBenchmark(
-        //     ("BM_FlexBufSerialization_" + std::to_string(i)).c_str(),
-        //     BM_MsgPackSerialization, testDataVector[i], "tmp/" + std::to_string(i) + ".fb");
+            benchmark::RegisterBenchmark(
+                ("BM_JsonDeserialization_" + std::to_string(i)).c_str(),
+                BM_JsonDeserialization, "tmp/" + std::to_string(i) + ".json");
 
-        // benchmark::RegisterBenchmark(
-        //     ("BM_FlexBufDeserialization_" + std::to_string(i)).c_str(),
-        //     BM_MsgPackDeserialization, "tmp/" + std::to_string(i) + ".fb");
+        } else if(serializationType == "FB") {
+            benchmark::RegisterBenchmark(
+                ("BM_FlatBufSerialization_" + std::to_string(i)).c_str(),
+                BM_FlatBufSerialization, testDataVector[i], "tmp/" + std::to_string(i) + ".fb");
 
-        // benchmark::RegisterBenchmark(
-        //     ("BM_ProtoBufSerialization_" + std::to_string(i)).c_str(),
-        //     BM_ProtoBufSerialization, testDataVector[i], "tmp/" + std::to_string(i) + ".pb");
+            benchmark::RegisterBenchmark(    
+                ("BM_FlatBufDeserialization_" + std::to_string(i)).c_str(),
+                BM_FlatBufDeserialization, "tmp/" + std::to_string(i) + ".fb");
 
-        // benchmark::RegisterBenchmark(
-        //     ("BM_ProtoBufDeserialization_" + std::to_string(i)).c_str(),
-        //     BM_ProtoBufDeserialization, "tmp/" + std::to_string(i) + ".pb");
+        } else if(serializationType == "MP") {
+            benchmark::RegisterBenchmark(
+                ("BM_MsgPackSerialization_" + std::to_string(i)).c_str(),
+                BM_MsgPackSerialization, testDataVector[i], "tmp/" + std::to_string(i) + ".msgpack");
 
-        benchmark::RegisterBenchmark(
-            ("BM_ThriftSerialization_" + std::to_string(i)).c_str(),
-            BM_ThriftSerialization, testDataVector[i], "tmp/" + std::to_string(i) + ".th");
+            benchmark::RegisterBenchmark(
+                ("BM_MsgPackDeserialization_" + std::to_string(i)).c_str(),
+                BM_MsgPackDeserialization, "tmp/" + std::to_string(i) + ".msgpack");
 
-        benchmark::RegisterBenchmark(
-            ("BM_ThriftDeserialization_" + std::to_string(i)).c_str(),
-            BM_ThriftDeserialization, "tmp/" + std::to_string(i) + ".th");
+        } else if(serializationType == "FX") {
+            benchmark::RegisterBenchmark(
+                ("BM_FlexBufSerialization_" + std::to_string(i)).c_str(),
+                BM_FlexBufSerialization, testDataVector[i], "tmp/" + std::to_string(i) + ".fx");
+
+            benchmark::RegisterBenchmark(
+                ("BM_FlexBufDeserialization_" + std::to_string(i)).c_str(),
+                BM_FlexBufDeserialization, "tmp/" + std::to_string(i) + ".fx");
+
+        } else if(serializationType == "PB") {
+            benchmark::RegisterBenchmark(
+                ("BM_ProtoBufSerialization_" + std::to_string(i)).c_str(),
+                BM_ProtoBufSerialization, testDataVector[i], "tmp/" + std::to_string(i) + ".pb");
+
+            benchmark::RegisterBenchmark(
+                ("BM_ProtoBufDeserialization_" + std::to_string(i)).c_str(),
+                BM_ProtoBufDeserialization, "tmp/" + std::to_string(i) + ".pb");
+
+        } else if(serializationType == "TH") {
+            benchmark::RegisterBenchmark(
+                ("BM_ThriftSerialization_" + std::to_string(i)).c_str(),
+                BM_ThriftSerialization, testDataVector[i], "tmp/" + std::to_string(i) + ".th");
+
+            benchmark::RegisterBenchmark(
+                ("BM_ThriftDeserialization_" + std::to_string(i)).c_str(),
+                BM_ThriftDeserialization, "tmp/" + std::to_string(i) + ".th");
+        } else {
+            std::cerr << "Error: Serialization type not supported" << std::endl;
+            exit(1);
+        }
     }
 
     // setting name for output files
-    std::string fileHeader = "FB-" + std::to_string(nkeys) + "-" + type + "-" + std::to_string(skeyMin) + "-" + std::to_string(skeyMax) + "-" + std::to_string(svalMin) + "-" + std::to_string(svalMax) + "-" + std::to_string(testSize);
+    std::string fileHeader = serializationType + "-" + std::to_string(nkeys) + "-" + type + "-" + std::to_string(skeyMin) + "-" + std::to_string(skeyMax) + "-" + std::to_string(svalMin) + "-" + std::to_string(svalMax) + "-" + std::to_string(testSize);
     std::string latencyFileName = fileHeader + "-latency.txt";
     std::string sizeFileName = fileHeader + "-size.txt";
     CustomReporter reporter(latencyFileName, sizeFileName);

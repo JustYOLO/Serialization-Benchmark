@@ -18,36 +18,260 @@ TStruct::~TStruct() noexcept {
 }
 
 
-void TStruct::__set_itpfypwk(const int32_t val) {
-  this->itpfypwk = val;
+void TStruct::__set_kzgiwgrw(const std::string& val) {
+  this->kzgiwgrw = val;
 }
 
-void TStruct::__set_rwmdhsqd(const int32_t val) {
-  this->rwmdhsqd = val;
+void TStruct::__set_dezjobnz(const std::string& val) {
+  this->dezjobnz = val;
 }
 
-void TStruct::__set_trtzcnjk(const int32_t val) {
-  this->trtzcnjk = val;
+void TStruct::__set_ieremuco(const std::string& val) {
+  this->ieremuco = val;
 }
 
-void TStruct::__set_zifozeef(const int32_t val) {
-  this->zifozeef = val;
+void TStruct::__set_uesgdftd(const std::string& val) {
+  this->uesgdftd = val;
 }
 
-void TStruct::__set_jrssogei(const int32_t val) {
-  this->jrssogei = val;
+void TStruct::__set_dmstvxix(const std::string& val) {
+  this->dmstvxix = val;
 }
 
-void TStruct::__set_qzagtdun(const int32_t val) {
-  this->qzagtdun = val;
+void TStruct::__set_pyonuzzg(const std::string& val) {
+  this->pyonuzzg = val;
 }
 
-void TStruct::__set_sgcokhhb(const int32_t val) {
-  this->sgcokhhb = val;
+void TStruct::__set_tilpdtek(const std::string& val) {
+  this->tilpdtek = val;
 }
 
-void TStruct::__set_bwmmqqsh(const int32_t val) {
-  this->bwmmqqsh = val;
+void TStruct::__set_qswdlcdc(const std::string& val) {
+  this->qswdlcdc = val;
+}
+
+void TStruct::__set_xljaldlb(const std::string& val) {
+  this->xljaldlb = val;
+}
+
+void TStruct::__set_sfjsktjp(const std::string& val) {
+  this->sfjsktjp = val;
+}
+
+void TStruct::__set_knapjxna(const std::string& val) {
+  this->knapjxna = val;
+}
+
+void TStruct::__set_anlawttq(const std::string& val) {
+  this->anlawttq = val;
+}
+
+void TStruct::__set_nllzxvpp(const std::string& val) {
+  this->nllzxvpp = val;
+}
+
+void TStruct::__set_tyfotgbe(const std::string& val) {
+  this->tyfotgbe = val;
+}
+
+void TStruct::__set_flnkscdj(const std::string& val) {
+  this->flnkscdj = val;
+}
+
+void TStruct::__set_mukwbnfx(const std::string& val) {
+  this->mukwbnfx = val;
+}
+
+void TStruct::__set_laxqtwmt(const std::string& val) {
+  this->laxqtwmt = val;
+}
+
+void TStruct::__set_hcperyup(const std::string& val) {
+  this->hcperyup = val;
+}
+
+void TStruct::__set_qdplqouo(const std::string& val) {
+  this->qdplqouo = val;
+}
+
+void TStruct::__set_oogbawct(const std::string& val) {
+  this->oogbawct = val;
+}
+
+void TStruct::__set_nnwgvima(const std::string& val) {
+  this->nnwgvima = val;
+}
+
+void TStruct::__set_nwuzhpdb(const std::string& val) {
+  this->nwuzhpdb = val;
+}
+
+void TStruct::__set_tmzovmhd(const std::string& val) {
+  this->tmzovmhd = val;
+}
+
+void TStruct::__set_rsnrnizf(const std::string& val) {
+  this->rsnrnizf = val;
+}
+
+void TStruct::__set_ivjhkfwa(const std::string& val) {
+  this->ivjhkfwa = val;
+}
+
+void TStruct::__set_eymlquhq(const std::string& val) {
+  this->eymlquhq = val;
+}
+
+void TStruct::__set_lhfqsqrf(const std::string& val) {
+  this->lhfqsqrf = val;
+}
+
+void TStruct::__set_rrzickmr(const std::string& val) {
+  this->rrzickmr = val;
+}
+
+void TStruct::__set_esdkloyo(const std::string& val) {
+  this->esdkloyo = val;
+}
+
+void TStruct::__set_khbvphfk(const std::string& val) {
+  this->khbvphfk = val;
+}
+
+void TStruct::__set_xvfeefth(const std::string& val) {
+  this->xvfeefth = val;
+}
+
+void TStruct::__set_iflmxuur(const std::string& val) {
+  this->iflmxuur = val;
+}
+
+void TStruct::__set_zmbwqjnz(const std::string& val) {
+  this->zmbwqjnz = val;
+}
+
+void TStruct::__set_ikulmxip(const std::string& val) {
+  this->ikulmxip = val;
+}
+
+void TStruct::__set_uscevqrf(const std::string& val) {
+  this->uscevqrf = val;
+}
+
+void TStruct::__set_ocvwicgv(const std::string& val) {
+  this->ocvwicgv = val;
+}
+
+void TStruct::__set_lcdsulto(const std::string& val) {
+  this->lcdsulto = val;
+}
+
+void TStruct::__set_pumpatfl(const std::string& val) {
+  this->pumpatfl = val;
+}
+
+void TStruct::__set_lwclnihb(const std::string& val) {
+  this->lwclnihb = val;
+}
+
+void TStruct::__set_errgsaoi(const std::string& val) {
+  this->errgsaoi = val;
+}
+
+void TStruct::__set_gyhlnjwh(const std::string& val) {
+  this->gyhlnjwh = val;
+}
+
+void TStruct::__set_ehkcedtv(const std::string& val) {
+  this->ehkcedtv = val;
+}
+
+void TStruct::__set_vdfhhycn(const std::string& val) {
+  this->vdfhhycn = val;
+}
+
+void TStruct::__set_ozhwdmpw(const std::string& val) {
+  this->ozhwdmpw = val;
+}
+
+void TStruct::__set_ykdhluxn(const std::string& val) {
+  this->ykdhluxn = val;
+}
+
+void TStruct::__set_ihnwjuhw(const std::string& val) {
+  this->ihnwjuhw = val;
+}
+
+void TStruct::__set_umpbntqn(const std::string& val) {
+  this->umpbntqn = val;
+}
+
+void TStruct::__set_oaizyhlt(const std::string& val) {
+  this->oaizyhlt = val;
+}
+
+void TStruct::__set_yyzmaoxe(const std::string& val) {
+  this->yyzmaoxe = val;
+}
+
+void TStruct::__set_ewkwedkd(const std::string& val) {
+  this->ewkwedkd = val;
+}
+
+void TStruct::__set_nexgmjdm(const std::string& val) {
+  this->nexgmjdm = val;
+}
+
+void TStruct::__set_wwlqjcvq(const std::string& val) {
+  this->wwlqjcvq = val;
+}
+
+void TStruct::__set_zppxtpkk(const std::string& val) {
+  this->zppxtpkk = val;
+}
+
+void TStruct::__set_iaodurzp(const std::string& val) {
+  this->iaodurzp = val;
+}
+
+void TStruct::__set_ifcvayzb(const std::string& val) {
+  this->ifcvayzb = val;
+}
+
+void TStruct::__set_cfzsnfwn(const std::string& val) {
+  this->cfzsnfwn = val;
+}
+
+void TStruct::__set_uhzxtshi(const std::string& val) {
+  this->uhzxtshi = val;
+}
+
+void TStruct::__set_osyexwsp(const std::string& val) {
+  this->osyexwsp = val;
+}
+
+void TStruct::__set_ojmmuukk(const std::string& val) {
+  this->ojmmuukk = val;
+}
+
+void TStruct::__set_hadshozy(const std::string& val) {
+  this->hadshozy = val;
+}
+
+void TStruct::__set_wtjmxxrx(const std::string& val) {
+  this->wtjmxxrx = val;
+}
+
+void TStruct::__set_zrsytazc(const std::string& val) {
+  this->zrsytazc = val;
+}
+
+void TStruct::__set_oxbqbuvz(const std::string& val) {
+  this->oxbqbuvz = val;
+}
+
+void TStruct::__set_khodeqzz(const std::string& val) {
+  this->khodeqzz = val;
 }
 std::ostream& operator<<(std::ostream& out, const TStruct& obj)
 {
@@ -78,65 +302,513 @@ uint32_t TStruct::read(::apache::thrift::protocol::TProtocol* iprot) {
     switch (fid)
     {
       case 1:
-        if (ftype == ::apache::thrift::protocol::T_I32) {
-          xfer += iprot->readI32(this->itpfypwk);
-          this->__isset.itpfypwk = true;
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->kzgiwgrw);
+          this->__isset.kzgiwgrw = true;
         } else {
           xfer += iprot->skip(ftype);
         }
         break;
       case 2:
-        if (ftype == ::apache::thrift::protocol::T_I32) {
-          xfer += iprot->readI32(this->rwmdhsqd);
-          this->__isset.rwmdhsqd = true;
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->dezjobnz);
+          this->__isset.dezjobnz = true;
         } else {
           xfer += iprot->skip(ftype);
         }
         break;
       case 3:
-        if (ftype == ::apache::thrift::protocol::T_I32) {
-          xfer += iprot->readI32(this->trtzcnjk);
-          this->__isset.trtzcnjk = true;
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->ieremuco);
+          this->__isset.ieremuco = true;
         } else {
           xfer += iprot->skip(ftype);
         }
         break;
       case 4:
-        if (ftype == ::apache::thrift::protocol::T_I32) {
-          xfer += iprot->readI32(this->zifozeef);
-          this->__isset.zifozeef = true;
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->uesgdftd);
+          this->__isset.uesgdftd = true;
         } else {
           xfer += iprot->skip(ftype);
         }
         break;
       case 5:
-        if (ftype == ::apache::thrift::protocol::T_I32) {
-          xfer += iprot->readI32(this->jrssogei);
-          this->__isset.jrssogei = true;
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->dmstvxix);
+          this->__isset.dmstvxix = true;
         } else {
           xfer += iprot->skip(ftype);
         }
         break;
       case 6:
-        if (ftype == ::apache::thrift::protocol::T_I32) {
-          xfer += iprot->readI32(this->qzagtdun);
-          this->__isset.qzagtdun = true;
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->pyonuzzg);
+          this->__isset.pyonuzzg = true;
         } else {
           xfer += iprot->skip(ftype);
         }
         break;
       case 7:
-        if (ftype == ::apache::thrift::protocol::T_I32) {
-          xfer += iprot->readI32(this->sgcokhhb);
-          this->__isset.sgcokhhb = true;
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->tilpdtek);
+          this->__isset.tilpdtek = true;
         } else {
           xfer += iprot->skip(ftype);
         }
         break;
       case 8:
-        if (ftype == ::apache::thrift::protocol::T_I32) {
-          xfer += iprot->readI32(this->bwmmqqsh);
-          this->__isset.bwmmqqsh = true;
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->qswdlcdc);
+          this->__isset.qswdlcdc = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 9:
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->xljaldlb);
+          this->__isset.xljaldlb = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 10:
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->sfjsktjp);
+          this->__isset.sfjsktjp = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 11:
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->knapjxna);
+          this->__isset.knapjxna = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 12:
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->anlawttq);
+          this->__isset.anlawttq = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 13:
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->nllzxvpp);
+          this->__isset.nllzxvpp = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 14:
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->tyfotgbe);
+          this->__isset.tyfotgbe = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 15:
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->flnkscdj);
+          this->__isset.flnkscdj = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 16:
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->mukwbnfx);
+          this->__isset.mukwbnfx = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 17:
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->laxqtwmt);
+          this->__isset.laxqtwmt = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 18:
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->hcperyup);
+          this->__isset.hcperyup = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 19:
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->qdplqouo);
+          this->__isset.qdplqouo = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 20:
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->oogbawct);
+          this->__isset.oogbawct = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 21:
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->nnwgvima);
+          this->__isset.nnwgvima = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 22:
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->nwuzhpdb);
+          this->__isset.nwuzhpdb = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 23:
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->tmzovmhd);
+          this->__isset.tmzovmhd = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 24:
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->rsnrnizf);
+          this->__isset.rsnrnizf = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 25:
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->ivjhkfwa);
+          this->__isset.ivjhkfwa = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 26:
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->eymlquhq);
+          this->__isset.eymlquhq = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 27:
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->lhfqsqrf);
+          this->__isset.lhfqsqrf = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 28:
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->rrzickmr);
+          this->__isset.rrzickmr = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 29:
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->esdkloyo);
+          this->__isset.esdkloyo = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 30:
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->khbvphfk);
+          this->__isset.khbvphfk = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 31:
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->xvfeefth);
+          this->__isset.xvfeefth = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 32:
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->iflmxuur);
+          this->__isset.iflmxuur = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 33:
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->zmbwqjnz);
+          this->__isset.zmbwqjnz = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 34:
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->ikulmxip);
+          this->__isset.ikulmxip = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 35:
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->uscevqrf);
+          this->__isset.uscevqrf = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 36:
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->ocvwicgv);
+          this->__isset.ocvwicgv = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 37:
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->lcdsulto);
+          this->__isset.lcdsulto = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 38:
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->pumpatfl);
+          this->__isset.pumpatfl = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 39:
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->lwclnihb);
+          this->__isset.lwclnihb = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 40:
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->errgsaoi);
+          this->__isset.errgsaoi = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 41:
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->gyhlnjwh);
+          this->__isset.gyhlnjwh = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 42:
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->ehkcedtv);
+          this->__isset.ehkcedtv = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 43:
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->vdfhhycn);
+          this->__isset.vdfhhycn = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 44:
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->ozhwdmpw);
+          this->__isset.ozhwdmpw = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 45:
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->ykdhluxn);
+          this->__isset.ykdhluxn = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 46:
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->ihnwjuhw);
+          this->__isset.ihnwjuhw = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 47:
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->umpbntqn);
+          this->__isset.umpbntqn = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 48:
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->oaizyhlt);
+          this->__isset.oaizyhlt = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 49:
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->yyzmaoxe);
+          this->__isset.yyzmaoxe = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 50:
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->ewkwedkd);
+          this->__isset.ewkwedkd = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 51:
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->nexgmjdm);
+          this->__isset.nexgmjdm = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 52:
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->wwlqjcvq);
+          this->__isset.wwlqjcvq = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 53:
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->zppxtpkk);
+          this->__isset.zppxtpkk = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 54:
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->iaodurzp);
+          this->__isset.iaodurzp = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 55:
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->ifcvayzb);
+          this->__isset.ifcvayzb = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 56:
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->cfzsnfwn);
+          this->__isset.cfzsnfwn = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 57:
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->uhzxtshi);
+          this->__isset.uhzxtshi = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 58:
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->osyexwsp);
+          this->__isset.osyexwsp = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 59:
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->ojmmuukk);
+          this->__isset.ojmmuukk = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 60:
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->hadshozy);
+          this->__isset.hadshozy = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 61:
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->wtjmxxrx);
+          this->__isset.wtjmxxrx = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 62:
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->zrsytazc);
+          this->__isset.zrsytazc = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 63:
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->oxbqbuvz);
+          this->__isset.oxbqbuvz = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 64:
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->khodeqzz);
+          this->__isset.khodeqzz = true;
         } else {
           xfer += iprot->skip(ftype);
         }
@@ -158,36 +830,260 @@ uint32_t TStruct::write(::apache::thrift::protocol::TProtocol* oprot) const {
   ::apache::thrift::protocol::TOutputRecursionTracker tracker(*oprot);
   xfer += oprot->writeStructBegin("TStruct");
 
-  xfer += oprot->writeFieldBegin("itpfypwk", ::apache::thrift::protocol::T_I32, 1);
-  xfer += oprot->writeI32(this->itpfypwk);
+  xfer += oprot->writeFieldBegin("kzgiwgrw", ::apache::thrift::protocol::T_STRING, 1);
+  xfer += oprot->writeString(this->kzgiwgrw);
   xfer += oprot->writeFieldEnd();
 
-  xfer += oprot->writeFieldBegin("rwmdhsqd", ::apache::thrift::protocol::T_I32, 2);
-  xfer += oprot->writeI32(this->rwmdhsqd);
+  xfer += oprot->writeFieldBegin("dezjobnz", ::apache::thrift::protocol::T_STRING, 2);
+  xfer += oprot->writeString(this->dezjobnz);
   xfer += oprot->writeFieldEnd();
 
-  xfer += oprot->writeFieldBegin("trtzcnjk", ::apache::thrift::protocol::T_I32, 3);
-  xfer += oprot->writeI32(this->trtzcnjk);
+  xfer += oprot->writeFieldBegin("ieremuco", ::apache::thrift::protocol::T_STRING, 3);
+  xfer += oprot->writeString(this->ieremuco);
   xfer += oprot->writeFieldEnd();
 
-  xfer += oprot->writeFieldBegin("zifozeef", ::apache::thrift::protocol::T_I32, 4);
-  xfer += oprot->writeI32(this->zifozeef);
+  xfer += oprot->writeFieldBegin("uesgdftd", ::apache::thrift::protocol::T_STRING, 4);
+  xfer += oprot->writeString(this->uesgdftd);
   xfer += oprot->writeFieldEnd();
 
-  xfer += oprot->writeFieldBegin("jrssogei", ::apache::thrift::protocol::T_I32, 5);
-  xfer += oprot->writeI32(this->jrssogei);
+  xfer += oprot->writeFieldBegin("dmstvxix", ::apache::thrift::protocol::T_STRING, 5);
+  xfer += oprot->writeString(this->dmstvxix);
   xfer += oprot->writeFieldEnd();
 
-  xfer += oprot->writeFieldBegin("qzagtdun", ::apache::thrift::protocol::T_I32, 6);
-  xfer += oprot->writeI32(this->qzagtdun);
+  xfer += oprot->writeFieldBegin("pyonuzzg", ::apache::thrift::protocol::T_STRING, 6);
+  xfer += oprot->writeString(this->pyonuzzg);
   xfer += oprot->writeFieldEnd();
 
-  xfer += oprot->writeFieldBegin("sgcokhhb", ::apache::thrift::protocol::T_I32, 7);
-  xfer += oprot->writeI32(this->sgcokhhb);
+  xfer += oprot->writeFieldBegin("tilpdtek", ::apache::thrift::protocol::T_STRING, 7);
+  xfer += oprot->writeString(this->tilpdtek);
   xfer += oprot->writeFieldEnd();
 
-  xfer += oprot->writeFieldBegin("bwmmqqsh", ::apache::thrift::protocol::T_I32, 8);
-  xfer += oprot->writeI32(this->bwmmqqsh);
+  xfer += oprot->writeFieldBegin("qswdlcdc", ::apache::thrift::protocol::T_STRING, 8);
+  xfer += oprot->writeString(this->qswdlcdc);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("xljaldlb", ::apache::thrift::protocol::T_STRING, 9);
+  xfer += oprot->writeString(this->xljaldlb);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("sfjsktjp", ::apache::thrift::protocol::T_STRING, 10);
+  xfer += oprot->writeString(this->sfjsktjp);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("knapjxna", ::apache::thrift::protocol::T_STRING, 11);
+  xfer += oprot->writeString(this->knapjxna);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("anlawttq", ::apache::thrift::protocol::T_STRING, 12);
+  xfer += oprot->writeString(this->anlawttq);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("nllzxvpp", ::apache::thrift::protocol::T_STRING, 13);
+  xfer += oprot->writeString(this->nllzxvpp);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("tyfotgbe", ::apache::thrift::protocol::T_STRING, 14);
+  xfer += oprot->writeString(this->tyfotgbe);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("flnkscdj", ::apache::thrift::protocol::T_STRING, 15);
+  xfer += oprot->writeString(this->flnkscdj);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("mukwbnfx", ::apache::thrift::protocol::T_STRING, 16);
+  xfer += oprot->writeString(this->mukwbnfx);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("laxqtwmt", ::apache::thrift::protocol::T_STRING, 17);
+  xfer += oprot->writeString(this->laxqtwmt);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("hcperyup", ::apache::thrift::protocol::T_STRING, 18);
+  xfer += oprot->writeString(this->hcperyup);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("qdplqouo", ::apache::thrift::protocol::T_STRING, 19);
+  xfer += oprot->writeString(this->qdplqouo);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("oogbawct", ::apache::thrift::protocol::T_STRING, 20);
+  xfer += oprot->writeString(this->oogbawct);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("nnwgvima", ::apache::thrift::protocol::T_STRING, 21);
+  xfer += oprot->writeString(this->nnwgvima);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("nwuzhpdb", ::apache::thrift::protocol::T_STRING, 22);
+  xfer += oprot->writeString(this->nwuzhpdb);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("tmzovmhd", ::apache::thrift::protocol::T_STRING, 23);
+  xfer += oprot->writeString(this->tmzovmhd);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("rsnrnizf", ::apache::thrift::protocol::T_STRING, 24);
+  xfer += oprot->writeString(this->rsnrnizf);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("ivjhkfwa", ::apache::thrift::protocol::T_STRING, 25);
+  xfer += oprot->writeString(this->ivjhkfwa);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("eymlquhq", ::apache::thrift::protocol::T_STRING, 26);
+  xfer += oprot->writeString(this->eymlquhq);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("lhfqsqrf", ::apache::thrift::protocol::T_STRING, 27);
+  xfer += oprot->writeString(this->lhfqsqrf);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("rrzickmr", ::apache::thrift::protocol::T_STRING, 28);
+  xfer += oprot->writeString(this->rrzickmr);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("esdkloyo", ::apache::thrift::protocol::T_STRING, 29);
+  xfer += oprot->writeString(this->esdkloyo);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("khbvphfk", ::apache::thrift::protocol::T_STRING, 30);
+  xfer += oprot->writeString(this->khbvphfk);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("xvfeefth", ::apache::thrift::protocol::T_STRING, 31);
+  xfer += oprot->writeString(this->xvfeefth);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("iflmxuur", ::apache::thrift::protocol::T_STRING, 32);
+  xfer += oprot->writeString(this->iflmxuur);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("zmbwqjnz", ::apache::thrift::protocol::T_STRING, 33);
+  xfer += oprot->writeString(this->zmbwqjnz);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("ikulmxip", ::apache::thrift::protocol::T_STRING, 34);
+  xfer += oprot->writeString(this->ikulmxip);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("uscevqrf", ::apache::thrift::protocol::T_STRING, 35);
+  xfer += oprot->writeString(this->uscevqrf);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("ocvwicgv", ::apache::thrift::protocol::T_STRING, 36);
+  xfer += oprot->writeString(this->ocvwicgv);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("lcdsulto", ::apache::thrift::protocol::T_STRING, 37);
+  xfer += oprot->writeString(this->lcdsulto);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("pumpatfl", ::apache::thrift::protocol::T_STRING, 38);
+  xfer += oprot->writeString(this->pumpatfl);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("lwclnihb", ::apache::thrift::protocol::T_STRING, 39);
+  xfer += oprot->writeString(this->lwclnihb);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("errgsaoi", ::apache::thrift::protocol::T_STRING, 40);
+  xfer += oprot->writeString(this->errgsaoi);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("gyhlnjwh", ::apache::thrift::protocol::T_STRING, 41);
+  xfer += oprot->writeString(this->gyhlnjwh);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("ehkcedtv", ::apache::thrift::protocol::T_STRING, 42);
+  xfer += oprot->writeString(this->ehkcedtv);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("vdfhhycn", ::apache::thrift::protocol::T_STRING, 43);
+  xfer += oprot->writeString(this->vdfhhycn);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("ozhwdmpw", ::apache::thrift::protocol::T_STRING, 44);
+  xfer += oprot->writeString(this->ozhwdmpw);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("ykdhluxn", ::apache::thrift::protocol::T_STRING, 45);
+  xfer += oprot->writeString(this->ykdhluxn);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("ihnwjuhw", ::apache::thrift::protocol::T_STRING, 46);
+  xfer += oprot->writeString(this->ihnwjuhw);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("umpbntqn", ::apache::thrift::protocol::T_STRING, 47);
+  xfer += oprot->writeString(this->umpbntqn);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("oaizyhlt", ::apache::thrift::protocol::T_STRING, 48);
+  xfer += oprot->writeString(this->oaizyhlt);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("yyzmaoxe", ::apache::thrift::protocol::T_STRING, 49);
+  xfer += oprot->writeString(this->yyzmaoxe);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("ewkwedkd", ::apache::thrift::protocol::T_STRING, 50);
+  xfer += oprot->writeString(this->ewkwedkd);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("nexgmjdm", ::apache::thrift::protocol::T_STRING, 51);
+  xfer += oprot->writeString(this->nexgmjdm);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("wwlqjcvq", ::apache::thrift::protocol::T_STRING, 52);
+  xfer += oprot->writeString(this->wwlqjcvq);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("zppxtpkk", ::apache::thrift::protocol::T_STRING, 53);
+  xfer += oprot->writeString(this->zppxtpkk);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("iaodurzp", ::apache::thrift::protocol::T_STRING, 54);
+  xfer += oprot->writeString(this->iaodurzp);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("ifcvayzb", ::apache::thrift::protocol::T_STRING, 55);
+  xfer += oprot->writeString(this->ifcvayzb);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("cfzsnfwn", ::apache::thrift::protocol::T_STRING, 56);
+  xfer += oprot->writeString(this->cfzsnfwn);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("uhzxtshi", ::apache::thrift::protocol::T_STRING, 57);
+  xfer += oprot->writeString(this->uhzxtshi);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("osyexwsp", ::apache::thrift::protocol::T_STRING, 58);
+  xfer += oprot->writeString(this->osyexwsp);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("ojmmuukk", ::apache::thrift::protocol::T_STRING, 59);
+  xfer += oprot->writeString(this->ojmmuukk);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("hadshozy", ::apache::thrift::protocol::T_STRING, 60);
+  xfer += oprot->writeString(this->hadshozy);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("wtjmxxrx", ::apache::thrift::protocol::T_STRING, 61);
+  xfer += oprot->writeString(this->wtjmxxrx);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("zrsytazc", ::apache::thrift::protocol::T_STRING, 62);
+  xfer += oprot->writeString(this->zrsytazc);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("oxbqbuvz", ::apache::thrift::protocol::T_STRING, 63);
+  xfer += oprot->writeString(this->oxbqbuvz);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("khodeqzz", ::apache::thrift::protocol::T_STRING, 64);
+  xfer += oprot->writeString(this->khodeqzz);
   xfer += oprot->writeFieldEnd();
 
   xfer += oprot->writeFieldStop();
@@ -197,51 +1093,275 @@ uint32_t TStruct::write(::apache::thrift::protocol::TProtocol* oprot) const {
 
 void swap(TStruct &a, TStruct &b) {
   using ::std::swap;
-  swap(a.itpfypwk, b.itpfypwk);
-  swap(a.rwmdhsqd, b.rwmdhsqd);
-  swap(a.trtzcnjk, b.trtzcnjk);
-  swap(a.zifozeef, b.zifozeef);
-  swap(a.jrssogei, b.jrssogei);
-  swap(a.qzagtdun, b.qzagtdun);
-  swap(a.sgcokhhb, b.sgcokhhb);
-  swap(a.bwmmqqsh, b.bwmmqqsh);
+  swap(a.kzgiwgrw, b.kzgiwgrw);
+  swap(a.dezjobnz, b.dezjobnz);
+  swap(a.ieremuco, b.ieremuco);
+  swap(a.uesgdftd, b.uesgdftd);
+  swap(a.dmstvxix, b.dmstvxix);
+  swap(a.pyonuzzg, b.pyonuzzg);
+  swap(a.tilpdtek, b.tilpdtek);
+  swap(a.qswdlcdc, b.qswdlcdc);
+  swap(a.xljaldlb, b.xljaldlb);
+  swap(a.sfjsktjp, b.sfjsktjp);
+  swap(a.knapjxna, b.knapjxna);
+  swap(a.anlawttq, b.anlawttq);
+  swap(a.nllzxvpp, b.nllzxvpp);
+  swap(a.tyfotgbe, b.tyfotgbe);
+  swap(a.flnkscdj, b.flnkscdj);
+  swap(a.mukwbnfx, b.mukwbnfx);
+  swap(a.laxqtwmt, b.laxqtwmt);
+  swap(a.hcperyup, b.hcperyup);
+  swap(a.qdplqouo, b.qdplqouo);
+  swap(a.oogbawct, b.oogbawct);
+  swap(a.nnwgvima, b.nnwgvima);
+  swap(a.nwuzhpdb, b.nwuzhpdb);
+  swap(a.tmzovmhd, b.tmzovmhd);
+  swap(a.rsnrnizf, b.rsnrnizf);
+  swap(a.ivjhkfwa, b.ivjhkfwa);
+  swap(a.eymlquhq, b.eymlquhq);
+  swap(a.lhfqsqrf, b.lhfqsqrf);
+  swap(a.rrzickmr, b.rrzickmr);
+  swap(a.esdkloyo, b.esdkloyo);
+  swap(a.khbvphfk, b.khbvphfk);
+  swap(a.xvfeefth, b.xvfeefth);
+  swap(a.iflmxuur, b.iflmxuur);
+  swap(a.zmbwqjnz, b.zmbwqjnz);
+  swap(a.ikulmxip, b.ikulmxip);
+  swap(a.uscevqrf, b.uscevqrf);
+  swap(a.ocvwicgv, b.ocvwicgv);
+  swap(a.lcdsulto, b.lcdsulto);
+  swap(a.pumpatfl, b.pumpatfl);
+  swap(a.lwclnihb, b.lwclnihb);
+  swap(a.errgsaoi, b.errgsaoi);
+  swap(a.gyhlnjwh, b.gyhlnjwh);
+  swap(a.ehkcedtv, b.ehkcedtv);
+  swap(a.vdfhhycn, b.vdfhhycn);
+  swap(a.ozhwdmpw, b.ozhwdmpw);
+  swap(a.ykdhluxn, b.ykdhluxn);
+  swap(a.ihnwjuhw, b.ihnwjuhw);
+  swap(a.umpbntqn, b.umpbntqn);
+  swap(a.oaizyhlt, b.oaizyhlt);
+  swap(a.yyzmaoxe, b.yyzmaoxe);
+  swap(a.ewkwedkd, b.ewkwedkd);
+  swap(a.nexgmjdm, b.nexgmjdm);
+  swap(a.wwlqjcvq, b.wwlqjcvq);
+  swap(a.zppxtpkk, b.zppxtpkk);
+  swap(a.iaodurzp, b.iaodurzp);
+  swap(a.ifcvayzb, b.ifcvayzb);
+  swap(a.cfzsnfwn, b.cfzsnfwn);
+  swap(a.uhzxtshi, b.uhzxtshi);
+  swap(a.osyexwsp, b.osyexwsp);
+  swap(a.ojmmuukk, b.ojmmuukk);
+  swap(a.hadshozy, b.hadshozy);
+  swap(a.wtjmxxrx, b.wtjmxxrx);
+  swap(a.zrsytazc, b.zrsytazc);
+  swap(a.oxbqbuvz, b.oxbqbuvz);
+  swap(a.khodeqzz, b.khodeqzz);
   swap(a.__isset, b.__isset);
 }
 
-TStruct::TStruct(const TStruct& other0) noexcept {
-  itpfypwk = other0.itpfypwk;
-  rwmdhsqd = other0.rwmdhsqd;
-  trtzcnjk = other0.trtzcnjk;
-  zifozeef = other0.zifozeef;
-  jrssogei = other0.jrssogei;
-  qzagtdun = other0.qzagtdun;
-  sgcokhhb = other0.sgcokhhb;
-  bwmmqqsh = other0.bwmmqqsh;
+TStruct::TStruct(const TStruct& other0) {
+  kzgiwgrw = other0.kzgiwgrw;
+  dezjobnz = other0.dezjobnz;
+  ieremuco = other0.ieremuco;
+  uesgdftd = other0.uesgdftd;
+  dmstvxix = other0.dmstvxix;
+  pyonuzzg = other0.pyonuzzg;
+  tilpdtek = other0.tilpdtek;
+  qswdlcdc = other0.qswdlcdc;
+  xljaldlb = other0.xljaldlb;
+  sfjsktjp = other0.sfjsktjp;
+  knapjxna = other0.knapjxna;
+  anlawttq = other0.anlawttq;
+  nllzxvpp = other0.nllzxvpp;
+  tyfotgbe = other0.tyfotgbe;
+  flnkscdj = other0.flnkscdj;
+  mukwbnfx = other0.mukwbnfx;
+  laxqtwmt = other0.laxqtwmt;
+  hcperyup = other0.hcperyup;
+  qdplqouo = other0.qdplqouo;
+  oogbawct = other0.oogbawct;
+  nnwgvima = other0.nnwgvima;
+  nwuzhpdb = other0.nwuzhpdb;
+  tmzovmhd = other0.tmzovmhd;
+  rsnrnizf = other0.rsnrnizf;
+  ivjhkfwa = other0.ivjhkfwa;
+  eymlquhq = other0.eymlquhq;
+  lhfqsqrf = other0.lhfqsqrf;
+  rrzickmr = other0.rrzickmr;
+  esdkloyo = other0.esdkloyo;
+  khbvphfk = other0.khbvphfk;
+  xvfeefth = other0.xvfeefth;
+  iflmxuur = other0.iflmxuur;
+  zmbwqjnz = other0.zmbwqjnz;
+  ikulmxip = other0.ikulmxip;
+  uscevqrf = other0.uscevqrf;
+  ocvwicgv = other0.ocvwicgv;
+  lcdsulto = other0.lcdsulto;
+  pumpatfl = other0.pumpatfl;
+  lwclnihb = other0.lwclnihb;
+  errgsaoi = other0.errgsaoi;
+  gyhlnjwh = other0.gyhlnjwh;
+  ehkcedtv = other0.ehkcedtv;
+  vdfhhycn = other0.vdfhhycn;
+  ozhwdmpw = other0.ozhwdmpw;
+  ykdhluxn = other0.ykdhluxn;
+  ihnwjuhw = other0.ihnwjuhw;
+  umpbntqn = other0.umpbntqn;
+  oaizyhlt = other0.oaizyhlt;
+  yyzmaoxe = other0.yyzmaoxe;
+  ewkwedkd = other0.ewkwedkd;
+  nexgmjdm = other0.nexgmjdm;
+  wwlqjcvq = other0.wwlqjcvq;
+  zppxtpkk = other0.zppxtpkk;
+  iaodurzp = other0.iaodurzp;
+  ifcvayzb = other0.ifcvayzb;
+  cfzsnfwn = other0.cfzsnfwn;
+  uhzxtshi = other0.uhzxtshi;
+  osyexwsp = other0.osyexwsp;
+  ojmmuukk = other0.ojmmuukk;
+  hadshozy = other0.hadshozy;
+  wtjmxxrx = other0.wtjmxxrx;
+  zrsytazc = other0.zrsytazc;
+  oxbqbuvz = other0.oxbqbuvz;
+  khodeqzz = other0.khodeqzz;
   __isset = other0.__isset;
 }
-TStruct& TStruct::operator=(const TStruct& other1) noexcept {
-  itpfypwk = other1.itpfypwk;
-  rwmdhsqd = other1.rwmdhsqd;
-  trtzcnjk = other1.trtzcnjk;
-  zifozeef = other1.zifozeef;
-  jrssogei = other1.jrssogei;
-  qzagtdun = other1.qzagtdun;
-  sgcokhhb = other1.sgcokhhb;
-  bwmmqqsh = other1.bwmmqqsh;
+TStruct& TStruct::operator=(const TStruct& other1) {
+  kzgiwgrw = other1.kzgiwgrw;
+  dezjobnz = other1.dezjobnz;
+  ieremuco = other1.ieremuco;
+  uesgdftd = other1.uesgdftd;
+  dmstvxix = other1.dmstvxix;
+  pyonuzzg = other1.pyonuzzg;
+  tilpdtek = other1.tilpdtek;
+  qswdlcdc = other1.qswdlcdc;
+  xljaldlb = other1.xljaldlb;
+  sfjsktjp = other1.sfjsktjp;
+  knapjxna = other1.knapjxna;
+  anlawttq = other1.anlawttq;
+  nllzxvpp = other1.nllzxvpp;
+  tyfotgbe = other1.tyfotgbe;
+  flnkscdj = other1.flnkscdj;
+  mukwbnfx = other1.mukwbnfx;
+  laxqtwmt = other1.laxqtwmt;
+  hcperyup = other1.hcperyup;
+  qdplqouo = other1.qdplqouo;
+  oogbawct = other1.oogbawct;
+  nnwgvima = other1.nnwgvima;
+  nwuzhpdb = other1.nwuzhpdb;
+  tmzovmhd = other1.tmzovmhd;
+  rsnrnizf = other1.rsnrnizf;
+  ivjhkfwa = other1.ivjhkfwa;
+  eymlquhq = other1.eymlquhq;
+  lhfqsqrf = other1.lhfqsqrf;
+  rrzickmr = other1.rrzickmr;
+  esdkloyo = other1.esdkloyo;
+  khbvphfk = other1.khbvphfk;
+  xvfeefth = other1.xvfeefth;
+  iflmxuur = other1.iflmxuur;
+  zmbwqjnz = other1.zmbwqjnz;
+  ikulmxip = other1.ikulmxip;
+  uscevqrf = other1.uscevqrf;
+  ocvwicgv = other1.ocvwicgv;
+  lcdsulto = other1.lcdsulto;
+  pumpatfl = other1.pumpatfl;
+  lwclnihb = other1.lwclnihb;
+  errgsaoi = other1.errgsaoi;
+  gyhlnjwh = other1.gyhlnjwh;
+  ehkcedtv = other1.ehkcedtv;
+  vdfhhycn = other1.vdfhhycn;
+  ozhwdmpw = other1.ozhwdmpw;
+  ykdhluxn = other1.ykdhluxn;
+  ihnwjuhw = other1.ihnwjuhw;
+  umpbntqn = other1.umpbntqn;
+  oaizyhlt = other1.oaizyhlt;
+  yyzmaoxe = other1.yyzmaoxe;
+  ewkwedkd = other1.ewkwedkd;
+  nexgmjdm = other1.nexgmjdm;
+  wwlqjcvq = other1.wwlqjcvq;
+  zppxtpkk = other1.zppxtpkk;
+  iaodurzp = other1.iaodurzp;
+  ifcvayzb = other1.ifcvayzb;
+  cfzsnfwn = other1.cfzsnfwn;
+  uhzxtshi = other1.uhzxtshi;
+  osyexwsp = other1.osyexwsp;
+  ojmmuukk = other1.ojmmuukk;
+  hadshozy = other1.hadshozy;
+  wtjmxxrx = other1.wtjmxxrx;
+  zrsytazc = other1.zrsytazc;
+  oxbqbuvz = other1.oxbqbuvz;
+  khodeqzz = other1.khodeqzz;
   __isset = other1.__isset;
   return *this;
 }
 void TStruct::printTo(std::ostream& out) const {
   using ::apache::thrift::to_string;
   out << "TStruct(";
-  out << "itpfypwk=" << to_string(itpfypwk);
-  out << ", " << "rwmdhsqd=" << to_string(rwmdhsqd);
-  out << ", " << "trtzcnjk=" << to_string(trtzcnjk);
-  out << ", " << "zifozeef=" << to_string(zifozeef);
-  out << ", " << "jrssogei=" << to_string(jrssogei);
-  out << ", " << "qzagtdun=" << to_string(qzagtdun);
-  out << ", " << "sgcokhhb=" << to_string(sgcokhhb);
-  out << ", " << "bwmmqqsh=" << to_string(bwmmqqsh);
+  out << "kzgiwgrw=" << to_string(kzgiwgrw);
+  out << ", " << "dezjobnz=" << to_string(dezjobnz);
+  out << ", " << "ieremuco=" << to_string(ieremuco);
+  out << ", " << "uesgdftd=" << to_string(uesgdftd);
+  out << ", " << "dmstvxix=" << to_string(dmstvxix);
+  out << ", " << "pyonuzzg=" << to_string(pyonuzzg);
+  out << ", " << "tilpdtek=" << to_string(tilpdtek);
+  out << ", " << "qswdlcdc=" << to_string(qswdlcdc);
+  out << ", " << "xljaldlb=" << to_string(xljaldlb);
+  out << ", " << "sfjsktjp=" << to_string(sfjsktjp);
+  out << ", " << "knapjxna=" << to_string(knapjxna);
+  out << ", " << "anlawttq=" << to_string(anlawttq);
+  out << ", " << "nllzxvpp=" << to_string(nllzxvpp);
+  out << ", " << "tyfotgbe=" << to_string(tyfotgbe);
+  out << ", " << "flnkscdj=" << to_string(flnkscdj);
+  out << ", " << "mukwbnfx=" << to_string(mukwbnfx);
+  out << ", " << "laxqtwmt=" << to_string(laxqtwmt);
+  out << ", " << "hcperyup=" << to_string(hcperyup);
+  out << ", " << "qdplqouo=" << to_string(qdplqouo);
+  out << ", " << "oogbawct=" << to_string(oogbawct);
+  out << ", " << "nnwgvima=" << to_string(nnwgvima);
+  out << ", " << "nwuzhpdb=" << to_string(nwuzhpdb);
+  out << ", " << "tmzovmhd=" << to_string(tmzovmhd);
+  out << ", " << "rsnrnizf=" << to_string(rsnrnizf);
+  out << ", " << "ivjhkfwa=" << to_string(ivjhkfwa);
+  out << ", " << "eymlquhq=" << to_string(eymlquhq);
+  out << ", " << "lhfqsqrf=" << to_string(lhfqsqrf);
+  out << ", " << "rrzickmr=" << to_string(rrzickmr);
+  out << ", " << "esdkloyo=" << to_string(esdkloyo);
+  out << ", " << "khbvphfk=" << to_string(khbvphfk);
+  out << ", " << "xvfeefth=" << to_string(xvfeefth);
+  out << ", " << "iflmxuur=" << to_string(iflmxuur);
+  out << ", " << "zmbwqjnz=" << to_string(zmbwqjnz);
+  out << ", " << "ikulmxip=" << to_string(ikulmxip);
+  out << ", " << "uscevqrf=" << to_string(uscevqrf);
+  out << ", " << "ocvwicgv=" << to_string(ocvwicgv);
+  out << ", " << "lcdsulto=" << to_string(lcdsulto);
+  out << ", " << "pumpatfl=" << to_string(pumpatfl);
+  out << ", " << "lwclnihb=" << to_string(lwclnihb);
+  out << ", " << "errgsaoi=" << to_string(errgsaoi);
+  out << ", " << "gyhlnjwh=" << to_string(gyhlnjwh);
+  out << ", " << "ehkcedtv=" << to_string(ehkcedtv);
+  out << ", " << "vdfhhycn=" << to_string(vdfhhycn);
+  out << ", " << "ozhwdmpw=" << to_string(ozhwdmpw);
+  out << ", " << "ykdhluxn=" << to_string(ykdhluxn);
+  out << ", " << "ihnwjuhw=" << to_string(ihnwjuhw);
+  out << ", " << "umpbntqn=" << to_string(umpbntqn);
+  out << ", " << "oaizyhlt=" << to_string(oaizyhlt);
+  out << ", " << "yyzmaoxe=" << to_string(yyzmaoxe);
+  out << ", " << "ewkwedkd=" << to_string(ewkwedkd);
+  out << ", " << "nexgmjdm=" << to_string(nexgmjdm);
+  out << ", " << "wwlqjcvq=" << to_string(wwlqjcvq);
+  out << ", " << "zppxtpkk=" << to_string(zppxtpkk);
+  out << ", " << "iaodurzp=" << to_string(iaodurzp);
+  out << ", " << "ifcvayzb=" << to_string(ifcvayzb);
+  out << ", " << "cfzsnfwn=" << to_string(cfzsnfwn);
+  out << ", " << "uhzxtshi=" << to_string(uhzxtshi);
+  out << ", " << "osyexwsp=" << to_string(osyexwsp);
+  out << ", " << "ojmmuukk=" << to_string(ojmmuukk);
+  out << ", " << "hadshozy=" << to_string(hadshozy);
+  out << ", " << "wtjmxxrx=" << to_string(wtjmxxrx);
+  out << ", " << "zrsytazc=" << to_string(zrsytazc);
+  out << ", " << "oxbqbuvz=" << to_string(oxbqbuvz);
+  out << ", " << "khodeqzz=" << to_string(khodeqzz);
   out << ")";
 }
 

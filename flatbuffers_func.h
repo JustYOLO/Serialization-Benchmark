@@ -1,0 +1,148 @@
+#include <flatbuffers/flatbuffers.h>
+#include <vector>
+#include "benchmark_struct.h"
+#include "struct_generated.h"
+
+namespace flat {
+    void Serialize(const testData& data, std::vector<uint8_t>& buf) {
+        flatbuffers::FlatBufferBuilder builder;
+        std::vector<flatbuffers::Offset<flatbuffers::String>> keys;
+        keys.push_back(builder.CreateString(data.kzgiwgrw));
+        keys.push_back(builder.CreateString(data.dezjobnz));
+        keys.push_back(builder.CreateString(data.ieremuco));
+        keys.push_back(builder.CreateString(data.uesgdftd));
+        keys.push_back(builder.CreateString(data.dmstvxix));
+        keys.push_back(builder.CreateString(data.pyonuzzg));
+        keys.push_back(builder.CreateString(data.tilpdtek));
+        keys.push_back(builder.CreateString(data.qswdlcdc));
+        keys.push_back(builder.CreateString(data.xljaldlb));
+        keys.push_back(builder.CreateString(data.sfjsktjp));
+        keys.push_back(builder.CreateString(data.knapjxna));
+        keys.push_back(builder.CreateString(data.anlawttq));
+        keys.push_back(builder.CreateString(data.nllzxvpp));
+        keys.push_back(builder.CreateString(data.tyfotgbe));
+        keys.push_back(builder.CreateString(data.flnkscdj));
+        keys.push_back(builder.CreateString(data.mukwbnfx));
+        keys.push_back(builder.CreateString(data.laxqtwmt));
+        keys.push_back(builder.CreateString(data.hcperyup));
+        keys.push_back(builder.CreateString(data.qdplqouo));
+        keys.push_back(builder.CreateString(data.oogbawct));
+        keys.push_back(builder.CreateString(data.nnwgvima));
+        keys.push_back(builder.CreateString(data.nwuzhpdb));
+        keys.push_back(builder.CreateString(data.tmzovmhd));
+        keys.push_back(builder.CreateString(data.rsnrnizf));
+        keys.push_back(builder.CreateString(data.ivjhkfwa));
+        keys.push_back(builder.CreateString(data.eymlquhq));
+        keys.push_back(builder.CreateString(data.lhfqsqrf));
+        keys.push_back(builder.CreateString(data.rrzickmr));
+        keys.push_back(builder.CreateString(data.esdkloyo));
+        keys.push_back(builder.CreateString(data.khbvphfk));
+        keys.push_back(builder.CreateString(data.xvfeefth));
+        keys.push_back(builder.CreateString(data.iflmxuur));
+        keys.push_back(builder.CreateString(data.zmbwqjnz));
+        keys.push_back(builder.CreateString(data.ikulmxip));
+        keys.push_back(builder.CreateString(data.uscevqrf));
+        keys.push_back(builder.CreateString(data.ocvwicgv));
+        keys.push_back(builder.CreateString(data.lcdsulto));
+        keys.push_back(builder.CreateString(data.pumpatfl));
+        keys.push_back(builder.CreateString(data.lwclnihb));
+        keys.push_back(builder.CreateString(data.errgsaoi));
+        keys.push_back(builder.CreateString(data.gyhlnjwh));
+        keys.push_back(builder.CreateString(data.ehkcedtv));
+        keys.push_back(builder.CreateString(data.vdfhhycn));
+        keys.push_back(builder.CreateString(data.ozhwdmpw));
+        keys.push_back(builder.CreateString(data.ykdhluxn));
+        keys.push_back(builder.CreateString(data.ihnwjuhw));
+        keys.push_back(builder.CreateString(data.umpbntqn));
+        keys.push_back(builder.CreateString(data.oaizyhlt));
+        keys.push_back(builder.CreateString(data.yyzmaoxe));
+        keys.push_back(builder.CreateString(data.ewkwedkd));
+        keys.push_back(builder.CreateString(data.nexgmjdm));
+        keys.push_back(builder.CreateString(data.wwlqjcvq));
+        keys.push_back(builder.CreateString(data.zppxtpkk));
+        keys.push_back(builder.CreateString(data.iaodurzp));
+        keys.push_back(builder.CreateString(data.ifcvayzb));
+        keys.push_back(builder.CreateString(data.cfzsnfwn));
+        keys.push_back(builder.CreateString(data.uhzxtshi));
+        keys.push_back(builder.CreateString(data.osyexwsp));
+        keys.push_back(builder.CreateString(data.ojmmuukk));
+        keys.push_back(builder.CreateString(data.hadshozy));
+        keys.push_back(builder.CreateString(data.wtjmxxrx));
+        keys.push_back(builder.CreateString(data.zrsytazc));
+        keys.push_back(builder.CreateString(data.oxbqbuvz));
+        keys.push_back(builder.CreateString(data.khodeqzz));
+        auto serializedData = CreateflatData(builder, keys[0], keys[1], keys[2], keys[3], keys[4], keys[5], keys[6], keys[7], keys[8], keys[9], keys[10], keys[11], keys[12], keys[13], keys[14], keys[15], keys[16], keys[17], keys[18], keys[19], keys[20], keys[21], keys[22], keys[23], keys[24], keys[25], keys[26], keys[27], keys[28], keys[29], keys[30], keys[31], keys[32], keys[33], keys[34], keys[35], keys[36], keys[37], keys[38], keys[39], keys[40], keys[41], keys[42], keys[43], keys[44], keys[45], keys[46], keys[47], keys[48], keys[49], keys[50], keys[51], keys[52], keys[53], keys[54], keys[55], keys[56], keys[57], keys[58], keys[59], keys[60], keys[61], keys[62], keys[63]);
+        builder.Finish(serializedData);
+
+        buf.assign(builder.GetBufferPointer(), builder.GetBufferPointer() + builder.GetSize());
+    }
+    
+    void Deserialize(testData& data, const std::vector<uint8_t> &buffer) {
+        auto flatData = GetflatData(buffer.data());
+        data.kzgiwgrw = flatData->kzgiwgrw()->str();
+        data.dezjobnz = flatData->dezjobnz()->str();
+        data.ieremuco = flatData->ieremuco()->str();
+        data.uesgdftd = flatData->uesgdftd()->str();
+        data.dmstvxix = flatData->dmstvxix()->str();
+        data.pyonuzzg = flatData->pyonuzzg()->str();
+        data.tilpdtek = flatData->tilpdtek()->str();
+        data.qswdlcdc = flatData->qswdlcdc()->str();
+        data.xljaldlb = flatData->xljaldlb()->str();
+        data.sfjsktjp = flatData->sfjsktjp()->str();
+        data.knapjxna = flatData->knapjxna()->str();
+        data.anlawttq = flatData->anlawttq()->str();
+        data.nllzxvpp = flatData->nllzxvpp()->str();
+        data.tyfotgbe = flatData->tyfotgbe()->str();
+        data.flnkscdj = flatData->flnkscdj()->str();
+        data.mukwbnfx = flatData->mukwbnfx()->str();
+        data.laxqtwmt = flatData->laxqtwmt()->str();
+        data.hcperyup = flatData->hcperyup()->str();
+        data.qdplqouo = flatData->qdplqouo()->str();
+        data.oogbawct = flatData->oogbawct()->str();
+        data.nnwgvima = flatData->nnwgvima()->str();
+        data.nwuzhpdb = flatData->nwuzhpdb()->str();
+        data.tmzovmhd = flatData->tmzovmhd()->str();
+        data.rsnrnizf = flatData->rsnrnizf()->str();
+        data.ivjhkfwa = flatData->ivjhkfwa()->str();
+        data.eymlquhq = flatData->eymlquhq()->str();
+        data.lhfqsqrf = flatData->lhfqsqrf()->str();
+        data.rrzickmr = flatData->rrzickmr()->str();
+        data.esdkloyo = flatData->esdkloyo()->str();
+        data.khbvphfk = flatData->khbvphfk()->str();
+        data.xvfeefth = flatData->xvfeefth()->str();
+        data.iflmxuur = flatData->iflmxuur()->str();
+        data.zmbwqjnz = flatData->zmbwqjnz()->str();
+        data.ikulmxip = flatData->ikulmxip()->str();
+        data.uscevqrf = flatData->uscevqrf()->str();
+        data.ocvwicgv = flatData->ocvwicgv()->str();
+        data.lcdsulto = flatData->lcdsulto()->str();
+        data.pumpatfl = flatData->pumpatfl()->str();
+        data.lwclnihb = flatData->lwclnihb()->str();
+        data.errgsaoi = flatData->errgsaoi()->str();
+        data.gyhlnjwh = flatData->gyhlnjwh()->str();
+        data.ehkcedtv = flatData->ehkcedtv()->str();
+        data.vdfhhycn = flatData->vdfhhycn()->str();
+        data.ozhwdmpw = flatData->ozhwdmpw()->str();
+        data.ykdhluxn = flatData->ykdhluxn()->str();
+        data.ihnwjuhw = flatData->ihnwjuhw()->str();
+        data.umpbntqn = flatData->umpbntqn()->str();
+        data.oaizyhlt = flatData->oaizyhlt()->str();
+        data.yyzmaoxe = flatData->yyzmaoxe()->str();
+        data.ewkwedkd = flatData->ewkwedkd()->str();
+        data.nexgmjdm = flatData->nexgmjdm()->str();
+        data.wwlqjcvq = flatData->wwlqjcvq()->str();
+        data.zppxtpkk = flatData->zppxtpkk()->str();
+        data.iaodurzp = flatData->iaodurzp()->str();
+        data.ifcvayzb = flatData->ifcvayzb()->str();
+        data.cfzsnfwn = flatData->cfzsnfwn()->str();
+        data.uhzxtshi = flatData->uhzxtshi()->str();
+        data.osyexwsp = flatData->osyexwsp()->str();
+        data.ojmmuukk = flatData->ojmmuukk()->str();
+        data.hadshozy = flatData->hadshozy()->str();
+        data.wtjmxxrx = flatData->wtjmxxrx()->str();
+        data.zrsytazc = flatData->zrsytazc()->str();
+        data.oxbqbuvz = flatData->oxbqbuvz()->str();
+        data.khodeqzz = flatData->khodeqzz()->str();
+        // data.{keys} = flatData->{keys}()->c_str();
+    }
+}

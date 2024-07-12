@@ -24,78 +24,470 @@
 class TStruct;
 
 typedef struct _TStruct__isset {
-  _TStruct__isset() : itpfypwk(false), rwmdhsqd(false), trtzcnjk(false), zifozeef(false), jrssogei(false), qzagtdun(false), sgcokhhb(false), bwmmqqsh(false) {}
-  bool itpfypwk :1;
-  bool rwmdhsqd :1;
-  bool trtzcnjk :1;
-  bool zifozeef :1;
-  bool jrssogei :1;
-  bool qzagtdun :1;
-  bool sgcokhhb :1;
-  bool bwmmqqsh :1;
+  _TStruct__isset() : kzgiwgrw(false), dezjobnz(false), ieremuco(false), uesgdftd(false), dmstvxix(false), pyonuzzg(false), tilpdtek(false), qswdlcdc(false), xljaldlb(false), sfjsktjp(false), knapjxna(false), anlawttq(false), nllzxvpp(false), tyfotgbe(false), flnkscdj(false), mukwbnfx(false), laxqtwmt(false), hcperyup(false), qdplqouo(false), oogbawct(false), nnwgvima(false), nwuzhpdb(false), tmzovmhd(false), rsnrnizf(false), ivjhkfwa(false), eymlquhq(false), lhfqsqrf(false), rrzickmr(false), esdkloyo(false), khbvphfk(false), xvfeefth(false), iflmxuur(false), zmbwqjnz(false), ikulmxip(false), uscevqrf(false), ocvwicgv(false), lcdsulto(false), pumpatfl(false), lwclnihb(false), errgsaoi(false), gyhlnjwh(false), ehkcedtv(false), vdfhhycn(false), ozhwdmpw(false), ykdhluxn(false), ihnwjuhw(false), umpbntqn(false), oaizyhlt(false), yyzmaoxe(false), ewkwedkd(false), nexgmjdm(false), wwlqjcvq(false), zppxtpkk(false), iaodurzp(false), ifcvayzb(false), cfzsnfwn(false), uhzxtshi(false), osyexwsp(false), ojmmuukk(false), hadshozy(false), wtjmxxrx(false), zrsytazc(false), oxbqbuvz(false), khodeqzz(false) {}
+  bool kzgiwgrw :1;
+  bool dezjobnz :1;
+  bool ieremuco :1;
+  bool uesgdftd :1;
+  bool dmstvxix :1;
+  bool pyonuzzg :1;
+  bool tilpdtek :1;
+  bool qswdlcdc :1;
+  bool xljaldlb :1;
+  bool sfjsktjp :1;
+  bool knapjxna :1;
+  bool anlawttq :1;
+  bool nllzxvpp :1;
+  bool tyfotgbe :1;
+  bool flnkscdj :1;
+  bool mukwbnfx :1;
+  bool laxqtwmt :1;
+  bool hcperyup :1;
+  bool qdplqouo :1;
+  bool oogbawct :1;
+  bool nnwgvima :1;
+  bool nwuzhpdb :1;
+  bool tmzovmhd :1;
+  bool rsnrnizf :1;
+  bool ivjhkfwa :1;
+  bool eymlquhq :1;
+  bool lhfqsqrf :1;
+  bool rrzickmr :1;
+  bool esdkloyo :1;
+  bool khbvphfk :1;
+  bool xvfeefth :1;
+  bool iflmxuur :1;
+  bool zmbwqjnz :1;
+  bool ikulmxip :1;
+  bool uscevqrf :1;
+  bool ocvwicgv :1;
+  bool lcdsulto :1;
+  bool pumpatfl :1;
+  bool lwclnihb :1;
+  bool errgsaoi :1;
+  bool gyhlnjwh :1;
+  bool ehkcedtv :1;
+  bool vdfhhycn :1;
+  bool ozhwdmpw :1;
+  bool ykdhluxn :1;
+  bool ihnwjuhw :1;
+  bool umpbntqn :1;
+  bool oaizyhlt :1;
+  bool yyzmaoxe :1;
+  bool ewkwedkd :1;
+  bool nexgmjdm :1;
+  bool wwlqjcvq :1;
+  bool zppxtpkk :1;
+  bool iaodurzp :1;
+  bool ifcvayzb :1;
+  bool cfzsnfwn :1;
+  bool uhzxtshi :1;
+  bool osyexwsp :1;
+  bool ojmmuukk :1;
+  bool hadshozy :1;
+  bool wtjmxxrx :1;
+  bool zrsytazc :1;
+  bool oxbqbuvz :1;
+  bool khodeqzz :1;
 } _TStruct__isset;
 
 class TStruct : public virtual ::apache::thrift::TBase {
  public:
 
-  TStruct(const TStruct&) noexcept;
-  TStruct& operator=(const TStruct&) noexcept;
+  TStruct(const TStruct&);
+  TStruct& operator=(const TStruct&);
   TStruct() noexcept
-          : itpfypwk(0),
-            rwmdhsqd(0),
-            trtzcnjk(0),
-            zifozeef(0),
-            jrssogei(0),
-            qzagtdun(0),
-            sgcokhhb(0),
-            bwmmqqsh(0) {
+          : kzgiwgrw(),
+            dezjobnz(),
+            ieremuco(),
+            uesgdftd(),
+            dmstvxix(),
+            pyonuzzg(),
+            tilpdtek(),
+            qswdlcdc(),
+            xljaldlb(),
+            sfjsktjp(),
+            knapjxna(),
+            anlawttq(),
+            nllzxvpp(),
+            tyfotgbe(),
+            flnkscdj(),
+            mukwbnfx(),
+            laxqtwmt(),
+            hcperyup(),
+            qdplqouo(),
+            oogbawct(),
+            nnwgvima(),
+            nwuzhpdb(),
+            tmzovmhd(),
+            rsnrnizf(),
+            ivjhkfwa(),
+            eymlquhq(),
+            lhfqsqrf(),
+            rrzickmr(),
+            esdkloyo(),
+            khbvphfk(),
+            xvfeefth(),
+            iflmxuur(),
+            zmbwqjnz(),
+            ikulmxip(),
+            uscevqrf(),
+            ocvwicgv(),
+            lcdsulto(),
+            pumpatfl(),
+            lwclnihb(),
+            errgsaoi(),
+            gyhlnjwh(),
+            ehkcedtv(),
+            vdfhhycn(),
+            ozhwdmpw(),
+            ykdhluxn(),
+            ihnwjuhw(),
+            umpbntqn(),
+            oaizyhlt(),
+            yyzmaoxe(),
+            ewkwedkd(),
+            nexgmjdm(),
+            wwlqjcvq(),
+            zppxtpkk(),
+            iaodurzp(),
+            ifcvayzb(),
+            cfzsnfwn(),
+            uhzxtshi(),
+            osyexwsp(),
+            ojmmuukk(),
+            hadshozy(),
+            wtjmxxrx(),
+            zrsytazc(),
+            oxbqbuvz(),
+            khodeqzz() {
   }
 
   virtual ~TStruct() noexcept;
-  int32_t itpfypwk;
-  int32_t rwmdhsqd;
-  int32_t trtzcnjk;
-  int32_t zifozeef;
-  int32_t jrssogei;
-  int32_t qzagtdun;
-  int32_t sgcokhhb;
-  int32_t bwmmqqsh;
+  std::string kzgiwgrw;
+  std::string dezjobnz;
+  std::string ieremuco;
+  std::string uesgdftd;
+  std::string dmstvxix;
+  std::string pyonuzzg;
+  std::string tilpdtek;
+  std::string qswdlcdc;
+  std::string xljaldlb;
+  std::string sfjsktjp;
+  std::string knapjxna;
+  std::string anlawttq;
+  std::string nllzxvpp;
+  std::string tyfotgbe;
+  std::string flnkscdj;
+  std::string mukwbnfx;
+  std::string laxqtwmt;
+  std::string hcperyup;
+  std::string qdplqouo;
+  std::string oogbawct;
+  std::string nnwgvima;
+  std::string nwuzhpdb;
+  std::string tmzovmhd;
+  std::string rsnrnizf;
+  std::string ivjhkfwa;
+  std::string eymlquhq;
+  std::string lhfqsqrf;
+  std::string rrzickmr;
+  std::string esdkloyo;
+  std::string khbvphfk;
+  std::string xvfeefth;
+  std::string iflmxuur;
+  std::string zmbwqjnz;
+  std::string ikulmxip;
+  std::string uscevqrf;
+  std::string ocvwicgv;
+  std::string lcdsulto;
+  std::string pumpatfl;
+  std::string lwclnihb;
+  std::string errgsaoi;
+  std::string gyhlnjwh;
+  std::string ehkcedtv;
+  std::string vdfhhycn;
+  std::string ozhwdmpw;
+  std::string ykdhluxn;
+  std::string ihnwjuhw;
+  std::string umpbntqn;
+  std::string oaizyhlt;
+  std::string yyzmaoxe;
+  std::string ewkwedkd;
+  std::string nexgmjdm;
+  std::string wwlqjcvq;
+  std::string zppxtpkk;
+  std::string iaodurzp;
+  std::string ifcvayzb;
+  std::string cfzsnfwn;
+  std::string uhzxtshi;
+  std::string osyexwsp;
+  std::string ojmmuukk;
+  std::string hadshozy;
+  std::string wtjmxxrx;
+  std::string zrsytazc;
+  std::string oxbqbuvz;
+  std::string khodeqzz;
 
   _TStruct__isset __isset;
 
-  void __set_itpfypwk(const int32_t val);
+  void __set_kzgiwgrw(const std::string& val);
 
-  void __set_rwmdhsqd(const int32_t val);
+  void __set_dezjobnz(const std::string& val);
 
-  void __set_trtzcnjk(const int32_t val);
+  void __set_ieremuco(const std::string& val);
 
-  void __set_zifozeef(const int32_t val);
+  void __set_uesgdftd(const std::string& val);
 
-  void __set_jrssogei(const int32_t val);
+  void __set_dmstvxix(const std::string& val);
 
-  void __set_qzagtdun(const int32_t val);
+  void __set_pyonuzzg(const std::string& val);
 
-  void __set_sgcokhhb(const int32_t val);
+  void __set_tilpdtek(const std::string& val);
 
-  void __set_bwmmqqsh(const int32_t val);
+  void __set_qswdlcdc(const std::string& val);
+
+  void __set_xljaldlb(const std::string& val);
+
+  void __set_sfjsktjp(const std::string& val);
+
+  void __set_knapjxna(const std::string& val);
+
+  void __set_anlawttq(const std::string& val);
+
+  void __set_nllzxvpp(const std::string& val);
+
+  void __set_tyfotgbe(const std::string& val);
+
+  void __set_flnkscdj(const std::string& val);
+
+  void __set_mukwbnfx(const std::string& val);
+
+  void __set_laxqtwmt(const std::string& val);
+
+  void __set_hcperyup(const std::string& val);
+
+  void __set_qdplqouo(const std::string& val);
+
+  void __set_oogbawct(const std::string& val);
+
+  void __set_nnwgvima(const std::string& val);
+
+  void __set_nwuzhpdb(const std::string& val);
+
+  void __set_tmzovmhd(const std::string& val);
+
+  void __set_rsnrnizf(const std::string& val);
+
+  void __set_ivjhkfwa(const std::string& val);
+
+  void __set_eymlquhq(const std::string& val);
+
+  void __set_lhfqsqrf(const std::string& val);
+
+  void __set_rrzickmr(const std::string& val);
+
+  void __set_esdkloyo(const std::string& val);
+
+  void __set_khbvphfk(const std::string& val);
+
+  void __set_xvfeefth(const std::string& val);
+
+  void __set_iflmxuur(const std::string& val);
+
+  void __set_zmbwqjnz(const std::string& val);
+
+  void __set_ikulmxip(const std::string& val);
+
+  void __set_uscevqrf(const std::string& val);
+
+  void __set_ocvwicgv(const std::string& val);
+
+  void __set_lcdsulto(const std::string& val);
+
+  void __set_pumpatfl(const std::string& val);
+
+  void __set_lwclnihb(const std::string& val);
+
+  void __set_errgsaoi(const std::string& val);
+
+  void __set_gyhlnjwh(const std::string& val);
+
+  void __set_ehkcedtv(const std::string& val);
+
+  void __set_vdfhhycn(const std::string& val);
+
+  void __set_ozhwdmpw(const std::string& val);
+
+  void __set_ykdhluxn(const std::string& val);
+
+  void __set_ihnwjuhw(const std::string& val);
+
+  void __set_umpbntqn(const std::string& val);
+
+  void __set_oaizyhlt(const std::string& val);
+
+  void __set_yyzmaoxe(const std::string& val);
+
+  void __set_ewkwedkd(const std::string& val);
+
+  void __set_nexgmjdm(const std::string& val);
+
+  void __set_wwlqjcvq(const std::string& val);
+
+  void __set_zppxtpkk(const std::string& val);
+
+  void __set_iaodurzp(const std::string& val);
+
+  void __set_ifcvayzb(const std::string& val);
+
+  void __set_cfzsnfwn(const std::string& val);
+
+  void __set_uhzxtshi(const std::string& val);
+
+  void __set_osyexwsp(const std::string& val);
+
+  void __set_ojmmuukk(const std::string& val);
+
+  void __set_hadshozy(const std::string& val);
+
+  void __set_wtjmxxrx(const std::string& val);
+
+  void __set_zrsytazc(const std::string& val);
+
+  void __set_oxbqbuvz(const std::string& val);
+
+  void __set_khodeqzz(const std::string& val);
 
   bool operator == (const TStruct & rhs) const
   {
-    if (!(itpfypwk == rhs.itpfypwk))
+    if (!(kzgiwgrw == rhs.kzgiwgrw))
       return false;
-    if (!(rwmdhsqd == rhs.rwmdhsqd))
+    if (!(dezjobnz == rhs.dezjobnz))
       return false;
-    if (!(trtzcnjk == rhs.trtzcnjk))
+    if (!(ieremuco == rhs.ieremuco))
       return false;
-    if (!(zifozeef == rhs.zifozeef))
+    if (!(uesgdftd == rhs.uesgdftd))
       return false;
-    if (!(jrssogei == rhs.jrssogei))
+    if (!(dmstvxix == rhs.dmstvxix))
       return false;
-    if (!(qzagtdun == rhs.qzagtdun))
+    if (!(pyonuzzg == rhs.pyonuzzg))
       return false;
-    if (!(sgcokhhb == rhs.sgcokhhb))
+    if (!(tilpdtek == rhs.tilpdtek))
       return false;
-    if (!(bwmmqqsh == rhs.bwmmqqsh))
+    if (!(qswdlcdc == rhs.qswdlcdc))
+      return false;
+    if (!(xljaldlb == rhs.xljaldlb))
+      return false;
+    if (!(sfjsktjp == rhs.sfjsktjp))
+      return false;
+    if (!(knapjxna == rhs.knapjxna))
+      return false;
+    if (!(anlawttq == rhs.anlawttq))
+      return false;
+    if (!(nllzxvpp == rhs.nllzxvpp))
+      return false;
+    if (!(tyfotgbe == rhs.tyfotgbe))
+      return false;
+    if (!(flnkscdj == rhs.flnkscdj))
+      return false;
+    if (!(mukwbnfx == rhs.mukwbnfx))
+      return false;
+    if (!(laxqtwmt == rhs.laxqtwmt))
+      return false;
+    if (!(hcperyup == rhs.hcperyup))
+      return false;
+    if (!(qdplqouo == rhs.qdplqouo))
+      return false;
+    if (!(oogbawct == rhs.oogbawct))
+      return false;
+    if (!(nnwgvima == rhs.nnwgvima))
+      return false;
+    if (!(nwuzhpdb == rhs.nwuzhpdb))
+      return false;
+    if (!(tmzovmhd == rhs.tmzovmhd))
+      return false;
+    if (!(rsnrnizf == rhs.rsnrnizf))
+      return false;
+    if (!(ivjhkfwa == rhs.ivjhkfwa))
+      return false;
+    if (!(eymlquhq == rhs.eymlquhq))
+      return false;
+    if (!(lhfqsqrf == rhs.lhfqsqrf))
+      return false;
+    if (!(rrzickmr == rhs.rrzickmr))
+      return false;
+    if (!(esdkloyo == rhs.esdkloyo))
+      return false;
+    if (!(khbvphfk == rhs.khbvphfk))
+      return false;
+    if (!(xvfeefth == rhs.xvfeefth))
+      return false;
+    if (!(iflmxuur == rhs.iflmxuur))
+      return false;
+    if (!(zmbwqjnz == rhs.zmbwqjnz))
+      return false;
+    if (!(ikulmxip == rhs.ikulmxip))
+      return false;
+    if (!(uscevqrf == rhs.uscevqrf))
+      return false;
+    if (!(ocvwicgv == rhs.ocvwicgv))
+      return false;
+    if (!(lcdsulto == rhs.lcdsulto))
+      return false;
+    if (!(pumpatfl == rhs.pumpatfl))
+      return false;
+    if (!(lwclnihb == rhs.lwclnihb))
+      return false;
+    if (!(errgsaoi == rhs.errgsaoi))
+      return false;
+    if (!(gyhlnjwh == rhs.gyhlnjwh))
+      return false;
+    if (!(ehkcedtv == rhs.ehkcedtv))
+      return false;
+    if (!(vdfhhycn == rhs.vdfhhycn))
+      return false;
+    if (!(ozhwdmpw == rhs.ozhwdmpw))
+      return false;
+    if (!(ykdhluxn == rhs.ykdhluxn))
+      return false;
+    if (!(ihnwjuhw == rhs.ihnwjuhw))
+      return false;
+    if (!(umpbntqn == rhs.umpbntqn))
+      return false;
+    if (!(oaizyhlt == rhs.oaizyhlt))
+      return false;
+    if (!(yyzmaoxe == rhs.yyzmaoxe))
+      return false;
+    if (!(ewkwedkd == rhs.ewkwedkd))
+      return false;
+    if (!(nexgmjdm == rhs.nexgmjdm))
+      return false;
+    if (!(wwlqjcvq == rhs.wwlqjcvq))
+      return false;
+    if (!(zppxtpkk == rhs.zppxtpkk))
+      return false;
+    if (!(iaodurzp == rhs.iaodurzp))
+      return false;
+    if (!(ifcvayzb == rhs.ifcvayzb))
+      return false;
+    if (!(cfzsnfwn == rhs.cfzsnfwn))
+      return false;
+    if (!(uhzxtshi == rhs.uhzxtshi))
+      return false;
+    if (!(osyexwsp == rhs.osyexwsp))
+      return false;
+    if (!(ojmmuukk == rhs.ojmmuukk))
+      return false;
+    if (!(hadshozy == rhs.hadshozy))
+      return false;
+    if (!(wtjmxxrx == rhs.wtjmxxrx))
+      return false;
+    if (!(zrsytazc == rhs.zrsytazc))
+      return false;
+    if (!(oxbqbuvz == rhs.oxbqbuvz))
+      return false;
+    if (!(khodeqzz == rhs.khodeqzz))
       return false;
     return true;
   }
