@@ -360,8 +360,8 @@ def generate_values_file():
 # starts here? 
 
 with open("config.txt", "r") as f:
-    nkey, tkey, skeyMin, skeyMax, svalMin, svalMax, testSize, serType = f.readline().split(", ")
-nkey, skeyMin, skeyMax, svalMin, svalMax, testSize= map(int, (nkey, skeyMin, skeyMax, svalMin, svalMax, testSize))
+    nkey, tkey, skeyMin, skeyMax, svalMin, svalMax, testSize = f.readline().split(", ")
+nkey, skeyMin, skeyMax, svalMin, svalMax, testSize = map(int, (nkey, skeyMin, skeyMax, svalMin, svalMax, testSize))
 
 # Generate the header file content
 header_content = generate_header_file(nkey, tkey, skeyMin, skeyMax)
