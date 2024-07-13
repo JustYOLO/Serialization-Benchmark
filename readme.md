@@ -2,7 +2,7 @@
 
 ## Requirements
 
-1. [Google Benchmark](https://github.com/google/benchmark) as a global library
+1. [Google Benchmark](https://github.com/google/benchmark) as global library
 2. [Protocol Buffers](https://protobuf.dev/)
 3. [JSON library for C++](https://github.com/nlohmann/json) by Niels Lohmann (used 3.10.5-2)
 4. [flexbuffers/flatbuffers](https://github.com/google/flatbuffers)
@@ -21,9 +21,11 @@ $ ./mtest.sh # runs multiple settings (modifies config.txt and runs ./run.sh scr
 ```
 
 ./run.sh script run all 6 serialization with same key-value test data.
+
 **If config.txt is changed, you need to compile the whole program -> running ./run.sh script will do the job.**
 
 **WARNING: ./run.sh script runs "make clean" and "make"**
+
 **./test.sh script deletes ./tmp folder**
 
 ## config.txt
@@ -34,10 +36,11 @@ nkey: number of keys | tkey: type of keys | skey: size of keys (min, max) | sval
 supported types(tkey): int32_t, double, string
 
 sval used only when the type(tkey) is string
+
 ~~string means: char {variable length = skey} [{sval + 1}]~~
 ~~adding 1 in sval means it needs a space for null character~~
 
-now uses std::string instead of char array
+-> now uses std::string instead of char array
 
 serialization_function names:
     JSON, MP (MessagePack), FX (FlexBuffers), PB (Protocol Buffers), TH (Apache Thrift), FB (FlatBuffers)
