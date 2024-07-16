@@ -3,32 +3,35 @@
 using jsonStruct = nlohmann::json;
 
 namespace json {
-    void Serialize(const testData& data, std::string& buf) {
+    size_t Serialize(const testData& data, std::vector<char> &serializedData) {
     jsonStruct j = {
         // {"{key}", data.{key}},
-        {"nscpwcmu", data.nscpwcmu},
-        {"nwvrdaek", data.nwvrdaek},
-        {"fuzvztzr", data.fuzvztzr},
-        {"uykpiqcm", data.uykpiqcm},
-        {"ygxdpvnv", data.ygxdpvnv},
-        {"muzxzgja", data.muzxzgja},
-        {"sweazing", data.sweazing},
-        {"sutsmvdd", data.sutsmvdd},
+        {"uztrathh", data.uztrathh},
+        {"xlcdrebd", data.xlcdrebd},
+        {"svblwglq", data.svblwglq},
+        {"gkesoazh", data.gkesoazh},
+        {"gdnajler", data.gdnajler},
+        {"yzjgzcpl", data.yzjgzcpl},
+        {"ucfkmhfi", data.ucfkmhfi},
+        {"hcfkimtf", data.hcfkimtf},
         };
-        buf =  j.dump(4); // The '4' argument adds indentation for pretty-printing
+        std::string buf =  j.dump(4);
+        serializedData.resize(buf.size());
+        std::memcpy(serializedData.data(), buf.c_str(), buf.size());
+        return buf.size();
     }
 
-    void Deserialize(testData& data, const std::string& buf) {
-        jsonStruct j = jsonStruct::parse(buf);
+    void Deserialize(testData& data, std::vector<char> &serializedData, const size_t size) {
+        jsonStruct j = jsonStruct::parse(serializedData);
 
         // data.{key} = j["{key}"];
-        data.nscpwcmu = j["nscpwcmu"];
-        data.nwvrdaek = j["nwvrdaek"];
-        data.fuzvztzr = j["fuzvztzr"];
-        data.uykpiqcm = j["uykpiqcm"];
-        data.ygxdpvnv = j["ygxdpvnv"];
-        data.muzxzgja = j["muzxzgja"];
-        data.sweazing = j["sweazing"];
-        data.sutsmvdd = j["sutsmvdd"];
+        data.uztrathh = j["uztrathh"];
+        data.xlcdrebd = j["xlcdrebd"];
+        data.svblwglq = j["svblwglq"];
+        data.gkesoazh = j["gkesoazh"];
+        data.gdnajler = j["gdnajler"];
+        data.yzjgzcpl = j["yzjgzcpl"];
+        data.ucfkmhfi = j["ucfkmhfi"];
+        data.hcfkimtf = j["hcfkimtf"];
     }
 }

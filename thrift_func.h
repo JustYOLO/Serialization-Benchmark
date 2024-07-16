@@ -9,41 +9,43 @@ using namespace apache::thrift::protocol;
 using namespace apache::thrift::transport;
 
 namespace thrift {
-    void Serialize(const testData& data, std::string& serialized_str) {
+    size_t Serialize(const testData& data, std::vector<char> &serializedData) {
         TStruct tStruct;
-        tStruct.nscpwcmu = data.nscpwcmu;
-        tStruct.nwvrdaek = data.nwvrdaek;
-        tStruct.fuzvztzr = data.fuzvztzr;
-        tStruct.uykpiqcm = data.uykpiqcm;
-        tStruct.ygxdpvnv = data.ygxdpvnv;
-        tStruct.muzxzgja = data.muzxzgja;
-        tStruct.sweazing = data.sweazing;
-        tStruct.sutsmvdd = data.sutsmvdd;
+        tStruct.uztrathh = data.uztrathh;
+        tStruct.xlcdrebd = data.xlcdrebd;
+        tStruct.svblwglq = data.svblwglq;
+        tStruct.gkesoazh = data.gkesoazh;
+        tStruct.gdnajler = data.gdnajler;
+        tStruct.yzjgzcpl = data.yzjgzcpl;
+        tStruct.ucfkmhfi = data.ucfkmhfi;
+        tStruct.hcfkimtf = data.hcfkimtf;
+
 
         std::shared_ptr<TMemoryBuffer> buffer(new TMemoryBuffer());
         std::shared_ptr<TBinaryProtocol> protocol(new TBinaryProtocol(buffer));
 
         tStruct.write(protocol.get());
+        size_t size = buffer->getBufferSize();
 
-        // uint8_t* serializedData;
-        // buffer->getBuffer(&serializedData, &dataSize);
-        serialized_str = buffer->getBufferAsString();
+        serializedData.resize(size);
+        std::memcpy(serializedData.data(), buffer->getBufferAsString().c_str(), size);
+        return size;
     }
 
-    void Deserialize(testData& data, std::vector<uint8_t>& inBuffer) {
+    void Deserialize(testData& data, std::vector<char> &serializedData, const size_t size) {
         std::shared_ptr<TMemoryBuffer> bufferIn(new TMemoryBuffer());
-        bufferIn->resetBuffer(inBuffer.data(), inBuffer.size());
+        bufferIn->write((uint8_t*)(serializedData.data()), size);
         std::shared_ptr<TBinaryProtocol> protocolIn(new TBinaryProtocol(bufferIn));
 
         TStruct tStruct;
         tStruct.read(protocolIn.get());
-        data.nscpwcmu = tStruct.nscpwcmu;
-        data.nwvrdaek = tStruct.nwvrdaek;
-        data.fuzvztzr = tStruct.fuzvztzr;
-        data.uykpiqcm = tStruct.uykpiqcm;
-        data.ygxdpvnv = tStruct.ygxdpvnv;
-        data.muzxzgja = tStruct.muzxzgja;
-        data.sweazing = tStruct.sweazing;
-        data.sutsmvdd = tStruct.sutsmvdd;
+        data.uztrathh = tStruct.uztrathh;
+        data.xlcdrebd = tStruct.xlcdrebd;
+        data.svblwglq = tStruct.svblwglq;
+        data.gkesoazh = tStruct.gkesoazh;
+        data.gdnajler = tStruct.gdnajler;
+        data.yzjgzcpl = tStruct.yzjgzcpl;
+        data.ucfkmhfi = tStruct.ucfkmhfi;
+        data.hcfkimtf = tStruct.hcfkimtf;
     }
 }

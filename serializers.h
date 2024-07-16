@@ -9,30 +9,30 @@
 namespace serializers {
 
 // MessagePack
-size_t serializeMsgPack(const testData& data, const std::string& filename, benchmark::State& state);
-testData deserializeMsgPack(const std::string& filename, benchmark::State& state);
+size_t serializeMsgPack(const testData& data, std::vector<char> &serializedData);
+testData deserializeMsgPack(std::vector<char> &serializedData, size_t size);
 
 // futher improvements add more serialization functions here
 
 // Protobuf
-size_t serializeProtoBuf(const testData& data, const std::string& filename, benchmark::State& state);
-testData deserializeProtoBuf(const std::string& filename, benchmark::State& state);
+size_t serializeProtoBuf(const testData& data, std::vector<char> &serializedData);
+testData deserializeProtoBuf(std::vector<char> &serializedData, size_t size);
 
 // JSON
-size_t serializeJson(const testData& data, const std::string& filename, benchmark::State& state);
-testData deserializeJson(const std::string& filename, benchmark::State& state);
+size_t serializeJson(const testData& data, std::vector<char> &serializedData);
+testData deserializeJson(std::vector<char> &serializedData, size_t size);
 
 // FlexBuffers
-size_t serializeFlexBuffers(const testData& data, const std::string& filename, benchmark::State& state);
-testData deserializeFlexBuffers(const std::string& filename, benchmark::State& state);
+size_t serializeFlexBuffers(const testData& data, std::vector<char> &serializedData);
+testData deserializeFlexBuffers(std::vector<char> &serializedData, size_t size);
 
 // Apache Thrift
 
-size_t serializeApacheThrift(const testData& data, const std::string& filename, benchmark::State& state);
-testData deserializeApacheThrift(const std::string& filename, benchmark::State& state);
+size_t serializeApacheThrift(const testData& data, std::vector<char> &serializedData);
+testData deserializeApacheThrift(std::vector<char> &serializedData, size_t size);
 
 // FlatBuffers
-size_t serializeFlatBuffers(const testData& data, const std::string& filename, benchmark::State& state);
-testData deserializeFlatBuffers(const std::string& filename, benchmark::State& state);
+size_t serializeFlatBuffers(const testData& data, std::vector<char> &serializedData);
+testData deserializeFlatBuffers(std::vector<char> &serializedData, size_t size);
 
 }  // namespace serializers

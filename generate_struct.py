@@ -109,7 +109,7 @@ message ProtoData {
 #include "ProtoData.pb.h"
 
 namespace proto {
-    size_t Serialize(const testData& data, std::vector<uint8_t>& buffer) {
+    size_t Serialize(const testData& data, std::vector<char> &serializedData) {
         GOOGLE_PROTOBUF_VERIFY_VERSION; // is it necessary?
         ProtoData protoData;
 """
@@ -117,22 +117,24 @@ namespace proto {
         func_content += f"        protoData.set_{key}(data.{key});\n"
 
     func_content += """        size_t size = protoData.ByteSizeLong();
-        buffer.resize(size);
-        protoData.SerializeToArray(buffer.data(), static_cast<int>(size));
+        serializedData.resize(size);
+        protoData.SerializeToArray(serializedData.data(), static_cast<int>(size));
+        // protoData.SerializeToArray(buffer.data(), static_cast<int>(size));
         // std::ofstream output(filename, std::ios::out | std::ios::binary);
         // if (!protoData.SerializeToOstream(&output)) {
         //     std::cerr << "protobuf: Failed to write data to file." << std::endl;
         // }
         return size;
     }
-    void Deserialize(testData& data, const std::vector<uint8_t>& buffer) {
+    void Deserialize(testData& data, std::vector<char> &serializedData, const size_t size) {
         ProtoData protoData;
-        protoData.ParseFromArray(buffer.data(), static_cast<int>(buffer.size()));
+        protoData.ParseFromArray(serializedData.data(), static_cast<int>(size));
 """
     for key in key_value_pair.keys():
         func_content += f"        data.{key} = protoData.{key}();\n"
     func_content += """    }
 }
+
 """
 
     with open("ProtoData.proto", "w") as f:
@@ -146,7 +148,7 @@ def generate_flexBuf_struct():
 #include "benchmark_struct.h"
 
 namespace flex {
-    void Serialize(const testData& data, std::vector<uint8_t> &outBuffer) {
+    size_t Serialize(const testData& data, std::vector<char> &serializedData) {
         flexbuffers::Builder builder;
 
         builder.Map([&]() {
@@ -162,15 +164,17 @@ namespace flex {
         for key in key_value_pair.keys():
             header_content += f"            builder.Double(\"{key}\", data.{key});\n"
 
-    header_content += """
-        });
-
+    header_content += """        });
         builder.Finish();
+        std::vector<uint8_t> outBuffer;
         outBuffer = builder.GetBuffer();
+        serializedData.resize(outBuffer.size());
+        std::memcpy(serializedData.data(), outBuffer.data(), outBuffer.size());
+        return outBuffer.size();
     }
-    void Deserialize(testData& data, const std::vector<uint8_t> &inBuffer) {
-        auto root = flexbuffers::GetRoot(inBuffer).AsMap();
-        
+    void Deserialize(testData& data, std::vector<char> &serializedData, const size_t size) {
+        auto root = flexbuffers::GetRoot(reinterpret_cast<const uint8_t*>(serializedData.data()), size).AsMap();
+
 """
     # data.dngdRVLn = root["dngdRVLn"].AsString().str();
     if tkey == "string":
@@ -203,25 +207,27 @@ using namespace apache::thrift::protocol;
 using namespace apache::thrift::transport;
 
 namespace thrift {
-    void Serialize(const testData& data, std::string& serialized_str) {
+    size_t Serialize(const testData& data, std::vector<char> &serializedData) {
         TStruct tStruct;
 """
     for key in key_value_pair.keys():
         struct_content += f"        tStruct.{key} = data.{key};\n"
     struct_content += """
+
         std::shared_ptr<TMemoryBuffer> buffer(new TMemoryBuffer());
         std::shared_ptr<TBinaryProtocol> protocol(new TBinaryProtocol(buffer));
 
         tStruct.write(protocol.get());
+        size_t size = buffer->getBufferSize();
 
-        // uint8_t* serializedData;
-        // buffer->getBuffer(&serializedData, &dataSize);
-        serialized_str = buffer->getBufferAsString();
+        serializedData.resize(size);
+        std::memcpy(serializedData.data(), buffer->getBufferAsString().c_str(), size);
+        return size;
     }
 
-    void Deserialize(testData& data, std::vector<uint8_t>& inBuffer) {
+    void Deserialize(testData& data, std::vector<char> &serializedData, const size_t size) {
         std::shared_ptr<TMemoryBuffer> bufferIn(new TMemoryBuffer());
-        bufferIn->resetBuffer(inBuffer.data(), inBuffer.size());
+        bufferIn->write((uint8_t*)(serializedData.data()), size);
         std::shared_ptr<TBinaryProtocol> protocolIn(new TBinaryProtocol(bufferIn));
 
         TStruct tStruct;
@@ -273,14 +279,14 @@ root_type flatData;
 #include "struct_generated.h"
 
 namespace flat {
-    void Serialize(const testData& data, std::vector<uint8_t>& buf) {
+    size_t Serialize(const testData& data, std::vector<char> &serializedData) {
         flatbuffers::FlatBufferBuilder builder;
 """
     if tkey == "string":
         func_content += f"        std::vector<flatbuffers::Offset<flatbuffers::String>> keys;\n"
         for key in key_value_pair.keys():
             func_content += f"        keys.push_back(builder.CreateString(data.{key}));\n"
-        func_content += f"        auto serializedData = CreateflatData(builder, "
+        func_content += f"        auto result = CreateflatData(builder, "
         for idx, key in enumerate(key_value_pair.keys()):
             if idx == len(key_value_pair.keys()) - 1:
                 func_content += f"keys[{idx}]"
@@ -288,7 +294,7 @@ namespace flat {
                 func_content += f"keys[{idx}], "
         func_content += f");"
     else:
-        func_content += f"        auto serializedData = CreateflatData(builder, "
+        func_content += f"        auto result = CreateflatData(builder, "
         for idx, key in enumerate(key_value_pair.keys()):
             if idx == len(key_value_pair.keys()) - 1:
                 func_content += f"data.{key}"
@@ -296,13 +302,14 @@ namespace flat {
                 func_content += f"data.{key}, "
         func_content += f");"
     func_content += """
-        builder.Finish(serializedData);
-
-        buf.assign(builder.GetBufferPointer(), builder.GetBufferPointer() + builder.GetSize());
+        builder.Finish(result);
+        serializedData.resize(builder.GetSize());
+        std::memcpy(serializedData.data(), builder.GetBufferPointer(), builder.GetSize());
+        return builder.GetSize();
     }
     
-    void Deserialize(testData& data, const std::vector<uint8_t> &buffer) {
-        auto flatData = GetflatData(buffer.data());
+    void Deserialize(testData& data, std::vector<char> &serializedData, const size_t size) {
+        auto flatData = GetflatData(serializedData.data());
 """
     if tkey == "string":
         for key in key_value_pair.keys():
@@ -326,18 +333,21 @@ def generate_json_func():
 using jsonStruct = nlohmann::json;
 
 namespace json {
-    void Serialize(const testData& data, std::string& buf) {
+    size_t Serialize(const testData& data, std::vector<char> &serializedData) {
     jsonStruct j = {
         // {"{key}", data.{key}},
 """
     for key in key_value_pair.keys():
         func_content += f"        {{\"{key}\", data.{key}}},\n"
     func_content += """        };
-        buf =  j.dump(4); // The '4' argument adds indentation for pretty-printing
+        std::string buf =  j.dump(4);
+        serializedData.resize(buf.size());
+        std::memcpy(serializedData.data(), buf.c_str(), buf.size());
+        return buf.size();
     }
 
-    void Deserialize(testData& data, const std::string& buf) {
-        jsonStruct j = jsonStruct::parse(buf);
+    void Deserialize(testData& data, std::vector<char> &serializedData, const size_t size) {
+        jsonStruct j = jsonStruct::parse(serializedData);
 
         // data.{key} = j["{key}"];
 """

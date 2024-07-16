@@ -1,10 +1,10 @@
 struct TStruct {
- 1: string nscpwcmu,
- 2: string nwvrdaek,
- 3: string fuzvztzr,
- 4: string uykpiqcm,
- 5: string ygxdpvnv,
- 6: string muzxzgja,
- 7: string sweazing,
- 8: string sutsmvdd,
+ 1: string uztrathh,
+ 2: string xlcdrebd,
+ 3: string svblwglq,
+ 4: string gkesoazh,
+ 5: string gdnajler,
+ 6: string yzjgzcpl,
+ 7: string ucfkmhfi,
+ 8: string hcfkimtf,
 }

@@ -3,110 +3,104 @@
 #include "serializers.h"
 #include "benchmark_struct.h"
 
-static void BM_MsgPackSerialization(benchmark::State& state, testData data, const std::string& filename) {
+static void BM_MsgPackSerialization(benchmark::State& state, testData data, std::vector<char> &serializedData, size_t &size) {
     size_t dataSize = sizeof(data);
-    size_t serializedSize = 0;
     for (auto _ : state) {
-        auto serialized = serializers::serializeMsgPack(data, filename, state);
+        auto serialized = serializers::serializeMsgPack(data, serializedData);
         benchmark::DoNotOptimize(serialized);
-        serializedSize = serialized;
+        size = serialized;
     }
-    state.SetLabel(std::to_string(dataSize) + " " + std::to_string(serializedSize));
+    state.SetLabel(std::to_string(dataSize) + " " + std::to_string(size));
 }
 
-static void BM_MsgPackDeserialization(benchmark::State& state, const std::string& filename) {
+static void BM_MsgPackDeserialization(benchmark::State& state, std::vector<char> &serializedData, size_t &size) {
     for (auto _ : state) {
-        auto deserialized = serializers::deserializeMsgPack(filename, state);
+        auto deserialized = serializers::deserializeMsgPack(serializedData, size);
         benchmark::DoNotOptimize(deserialized);
     }
 }
 
-static void BM_ProtoBufSerialization(benchmark::State& state, testData data, const std::string& filename) {
+static void BM_ProtoBufSerialization(benchmark::State& state, testData data, std::vector<char> &serializedData, size_t &size) {
     size_t dataSize = sizeof(data);
-    size_t serializedSize = 0;
     for (auto _ : state) {
-        auto serialized = serializers::serializeProtoBuf(data, filename, state);
+        auto serialized = serializers::serializeProtoBuf(data, serializedData);
         benchmark::DoNotOptimize(serialized);
-        serializedSize = serialized;
+        size = serialized;
     }
-    state.SetLabel(std::to_string(dataSize) + " " + std::to_string(serializedSize));
+    state.SetLabel(std::to_string(dataSize) + " " + std::to_string(size));
 }
 
-static void BM_ProtoBufDeserialization(benchmark::State& state, const std::string& filename) {
+static void BM_ProtoBufDeserialization(benchmark::State& state, std::vector<char> &serializiedData, size_t &size) {
     for (auto _ : state) {
-        auto deserialized = serializers::deserializeProtoBuf(filename, state);
+        auto deserialized = serializers::deserializeProtoBuf(serializiedData, size);
         benchmark::DoNotOptimize(deserialized);
     }
 }
 
-static void BM_FlexBufSerialization(benchmark::State& state, testData data, const std::string& filename) {
+static void BM_FlexBufSerialization(benchmark::State& state, testData data, std::vector<char> &serializedData, size_t &size) {
     size_t dataSize = sizeof(data);
-    size_t serializedSize = 0;
     for (auto _ : state) {
-        auto serialized = serializers::serializeFlexBuffers(data, filename, state);
+        auto serialized = serializers::serializeFlexBuffers(data, serializedData);
         benchmark::DoNotOptimize(serialized);
-        serializedSize = serialized;
+        size = serialized;
     }
-    state.SetLabel(std::to_string(dataSize) + " " + std::to_string(serializedSize));
+    state.SetLabel(std::to_string(dataSize) + " " + std::to_string(size));
 
 }
-static void BM_FlexBufDeserialization(benchmark::State& state, const std::string& filename) {
+static void BM_FlexBufDeserialization(benchmark::State& state, std::vector<char> &serializiedData, size_t &size) {
     for (auto _ : state) {
-        auto deserialized = serializers::deserializeFlexBuffers(filename, state);
+        auto deserialized = serializers::deserializeFlexBuffers(serializiedData, size);
         benchmark::DoNotOptimize(deserialized);
     }
 }
 
-static void BM_ThriftSerialization(benchmark::State& state, testData data, const std::string& filename) {
+static void BM_ThriftSerialization(benchmark::State& state, testData data, std::vector<char> &serializedData, size_t &size) {
     size_t dataSize = sizeof(data);
-    size_t serializedSize = 0;
     for (auto _ : state) {
-        auto serialized = serializers::serializeApacheThrift(data, filename, state);
+        auto serialized = serializers::serializeApacheThrift(data, serializedData);
         benchmark::DoNotOptimize(serialized);
-        serializedSize = serialized;
+        size = serialized;
     }
-    state.SetLabel(std::to_string(dataSize) + " " + std::to_string(serializedSize));
+    state.SetLabel(std::to_string(dataSize) + " " + std::to_string(size));
 
 }
-static void BM_ThriftDeserialization(benchmark::State& state, const std::string& filename) {
+static void BM_ThriftDeserialization(benchmark::State& state, std::vector<char> &serializedData, size_t &size) {
     for (auto _ : state) {
-        auto deserialized = serializers::deserializeApacheThrift(filename, state);
+        auto deserialized = serializers::deserializeApacheThrift(serializedData, size);
         benchmark::DoNotOptimize(deserialized);
     }
 }
 
-static void BM_FlatBufSerialization(benchmark::State& state, testData data, const std::string& filename) {
+static void BM_FlatBufSerialization(benchmark::State& state, testData data, std::vector<char> &serializedData, size_t &size) {
     size_t dataSize = sizeof(data);
-    size_t serializedSize = 0;
     for (auto _ : state) {
-        auto serialized = serializers::serializeFlatBuffers(data, filename, state);
+        auto serialized = serializers::serializeFlatBuffers(data, serializedData);
         benchmark::DoNotOptimize(serialized);
-        serializedSize = serialized;
+        size = serialized;
     }
-    state.SetLabel(std::to_string(dataSize) + " " + std::to_string(serializedSize));
+    state.SetLabel(std::to_string(dataSize) + " " + std::to_string(size));
 }
 
-static void BM_FlatBufDeserialization(benchmark::State& state, const std::string& filename) {
+static void BM_FlatBufDeserialization(benchmark::State& state, std::vector<char> &serializedData, size_t &size) {
     for (auto _ : state) {
-        auto deserialized = serializers::deserializeFlatBuffers(filename, state);
+        auto deserialized = serializers::deserializeFlatBuffers(serializedData, size);
         benchmark::DoNotOptimize(deserialized);
     }
 }
 
-static void BM_JsonSerialization(benchmark::State& state, testData data, const std::string& filename) {
+static void BM_JsonSerialization(benchmark::State& state, testData data, std::vector<char> &serializedData, size_t &size) {
     size_t dataSize = sizeof(data);
-    size_t serializedSize = 0;
     for (auto _ : state) {
-        auto serialized = serializers::serializeJson(data, filename, state);
+        auto serialized = serializers::serializeJson(data, serializedData);
         benchmark::DoNotOptimize(serialized);
-        serializedSize = serialized;
+        size = serialized;
     }
-    state.SetLabel(std::to_string(dataSize) + " " + std::to_string(serializedSize));
+    state.SetLabel(std::to_string(dataSize) + " " + std::to_string(size));
 }
 
-static void BM_JsonDeserialization(benchmark::State& state, const std::string& filename) {
+static void BM_JsonDeserialization(benchmark::State& state, std::vector<char> &serializedData, size_t &size) {
     for (auto _ : state) {
-        auto deserialized = serializers::deserializeJson(filename, state);
+        auto deserialized = serializers::deserializeJson(serializedData, size);
         benchmark::DoNotOptimize(deserialized);
     }
 }

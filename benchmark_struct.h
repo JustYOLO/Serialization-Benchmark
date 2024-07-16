@@ -7,17 +7,17 @@
 // Number of keys: 8
 // Key type: string
 // Key size bound: [8, 8]
-// Value size bound: [128, 128]
+// Value size bound: [16, 16]
 
 struct testData {
-    std::string nscpwcmu;
-    std::string nwvrdaek;
-    std::string fuzvztzr;
-    std::string uykpiqcm;
-    std::string ygxdpvnv;
-    std::string muzxzgja;
-    std::string sweazing;
-    std::string sutsmvdd;
-    MSGPACK_DEFINE_MAP(nscpwcmu, nwvrdaek, fuzvztzr, uykpiqcm, ygxdpvnv, muzxzgja, sweazing, sutsmvdd);
+    std::string uztrathh;
+    std::string xlcdrebd;
+    std::string svblwglq;
+    std::string gkesoazh;
+    std::string gdnajler;
+    std::string yzjgzcpl;
+    std::string ucfkmhfi;
+    std::string hcfkimtf;
+    MSGPACK_DEFINE_MAP(uztrathh, xlcdrebd, svblwglq, gkesoazh, gdnajler, yzjgzcpl, ucfkmhfi, hcfkimtf);
 };
 
