@@ -7,10 +7,15 @@ CONFIG_FILE="config.txt"
 BASE_CONFIG="8, string, 8, 8, 16, 16, 100"
 
 # Variations
-KEY_TYPES=("int32_t" "double" "string")
-NUM_KEYS=("8" "16" "32" "64")
-KEY_SIZES=("4" "8" "16" "32")
-VALUE_SIZES=("16" "32" "64" "128")
+KEY_TYPES=("int32_t" "double")
+NUM_KEYS=("16" "32" "64")
+KEY_SIZES=("4" "16" "32")
+VALUE_SIZES=("32" "64" "128")
+
+# KEY_TYPES=("int32_t" "double" "string")
+# NUM_KEYS=("8" "16" "32" "64")
+# KEY_SIZES=("4" "8" "16" "32")
+# VALUE_SIZES=("16" "32" "64" "128")
 
 # Function to run the test with the provided configuration
 run_test() {
@@ -28,35 +33,37 @@ run_test() {
     ./run.sh
 }
 
-rm ./tmp/*
+rm -rf ./tmp/*
+
+echo "Running base test"
+echo "${BASE_CONFIG}"
+run_test "${BASE_CONFIG}"
+rm -rf ./tmp/*
 
 # Change key types
 for type in "${KEY_TYPES[@]}"; do
     config="8, $type, 8, 8, 16, 16, 100"
     run_test "$config"
-    rm ./tmp/*
+    rm -rf ./tmp/*
 done
 
 # Change number of keys
 for keys in "${NUM_KEYS[@]}"; do
     config="$keys, string, 8, 8, 16, 16, 100"
     run_test "$config"
-    rm ./tmp/*
+    rm -rf ./tmp/*
 done
 
 # Change key sizes
 for key_size in "${KEY_SIZES[@]}"; do
     config="8, string, $key_size, $key_size, 16, 16, 100"
     run_test "$config"
-    rm ./tmp/*
+    rm -rf ./tmp/*
 done
 
 # Change value sizes
 for value_size in "${VALUE_SIZES[@]}"; do
     config="8, string, 8, 8, $value_size, $value_size, 100"
     run_test "$config"
-    rm ./tmp/*
+    rm -rf ./tmp/*
 done
-
-
-

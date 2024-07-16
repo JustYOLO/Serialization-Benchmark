@@ -24,78 +24,78 @@
 class TStruct;
 
 typedef struct _TStruct__isset {
-  _TStruct__isset() : pphtemzf(false), gterefev(false), hqixjbhi(false), ygjaoemn(false), tulheqjt(false), wkaobqib(false), nmjjnyom(false), dgfaaijx(false) {}
-  bool pphtemzf :1;
-  bool gterefev :1;
-  bool hqixjbhi :1;
-  bool ygjaoemn :1;
-  bool tulheqjt :1;
-  bool wkaobqib :1;
-  bool nmjjnyom :1;
-  bool dgfaaijx :1;
+  _TStruct__isset() : nscpwcmu(false), nwvrdaek(false), fuzvztzr(false), uykpiqcm(false), ygxdpvnv(false), muzxzgja(false), sweazing(false), sutsmvdd(false) {}
+  bool nscpwcmu :1;
+  bool nwvrdaek :1;
+  bool fuzvztzr :1;
+  bool uykpiqcm :1;
+  bool ygxdpvnv :1;
+  bool muzxzgja :1;
+  bool sweazing :1;
+  bool sutsmvdd :1;
 } _TStruct__isset;
 
 class TStruct : public virtual ::apache::thrift::TBase {
  public:
 
-  TStruct(const TStruct&) noexcept;
-  TStruct& operator=(const TStruct&) noexcept;
+  TStruct(const TStruct&);
+  TStruct& operator=(const TStruct&);
   TStruct() noexcept
-          : pphtemzf(0),
-            gterefev(0),
-            hqixjbhi(0),
-            ygjaoemn(0),
-            tulheqjt(0),
-            wkaobqib(0),
-            nmjjnyom(0),
-            dgfaaijx(0) {
+          : nscpwcmu(),
+            nwvrdaek(),
+            fuzvztzr(),
+            uykpiqcm(),
+            ygxdpvnv(),
+            muzxzgja(),
+            sweazing(),
+            sutsmvdd() {
   }
 
   virtual ~TStruct() noexcept;
-  int32_t pphtemzf;
-  int32_t gterefev;
-  int32_t hqixjbhi;
-  int32_t ygjaoemn;
-  int32_t tulheqjt;
-  int32_t wkaobqib;
-  int32_t nmjjnyom;
-  int32_t dgfaaijx;
+  std::string nscpwcmu;
+  std::string nwvrdaek;
+  std::string fuzvztzr;
+  std::string uykpiqcm;
+  std::string ygxdpvnv;
+  std::string muzxzgja;
+  std::string sweazing;
+  std::string sutsmvdd;
 
   _TStruct__isset __isset;
 
-  void __set_pphtemzf(const int32_t val);
+  void __set_nscpwcmu(const std::string& val);
 
-  void __set_gterefev(const int32_t val);
+  void __set_nwvrdaek(const std::string& val);
 
-  void __set_hqixjbhi(const int32_t val);
+  void __set_fuzvztzr(const std::string& val);
 
-  void __set_ygjaoemn(const int32_t val);
+  void __set_uykpiqcm(const std::string& val);
 
-  void __set_tulheqjt(const int32_t val);
+  void __set_ygxdpvnv(const std::string& val);
 
-  void __set_wkaobqib(const int32_t val);
+  void __set_muzxzgja(const std::string& val);
 
-  void __set_nmjjnyom(const int32_t val);
+  void __set_sweazing(const std::string& val);
 
-  void __set_dgfaaijx(const int32_t val);
+  void __set_sutsmvdd(const std::string& val);
 
   bool operator == (const TStruct & rhs) const
   {
-    if (!(pphtemzf == rhs.pphtemzf))
+    if (!(nscpwcmu == rhs.nscpwcmu))
       return false;
-    if (!(gterefev == rhs.gterefev))
+    if (!(nwvrdaek == rhs.nwvrdaek))
       return false;
-    if (!(hqixjbhi == rhs.hqixjbhi))
+    if (!(fuzvztzr == rhs.fuzvztzr))
       return false;
-    if (!(ygjaoemn == rhs.ygjaoemn))
+    if (!(uykpiqcm == rhs.uykpiqcm))
       return false;
-    if (!(tulheqjt == rhs.tulheqjt))
+    if (!(ygxdpvnv == rhs.ygxdpvnv))
       return false;
-    if (!(wkaobqib == rhs.wkaobqib))
+    if (!(muzxzgja == rhs.muzxzgja))
       return false;
-    if (!(nmjjnyom == rhs.nmjjnyom))
+    if (!(sweazing == rhs.sweazing))
       return false;
-    if (!(dgfaaijx == rhs.dgfaaijx))
+    if (!(sutsmvdd == rhs.sutsmvdd))
       return false;
     return true;
   }

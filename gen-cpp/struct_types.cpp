@@ -18,36 +18,36 @@ TStruct::~TStruct() noexcept {
 }
 
 
-void TStruct::__set_pphtemzf(const int32_t val) {
-  this->pphtemzf = val;
+void TStruct::__set_nscpwcmu(const std::string& val) {
+  this->nscpwcmu = val;
 }
 
-void TStruct::__set_gterefev(const int32_t val) {
-  this->gterefev = val;
+void TStruct::__set_nwvrdaek(const std::string& val) {
+  this->nwvrdaek = val;
 }
 
-void TStruct::__set_hqixjbhi(const int32_t val) {
-  this->hqixjbhi = val;
+void TStruct::__set_fuzvztzr(const std::string& val) {
+  this->fuzvztzr = val;
 }
 
-void TStruct::__set_ygjaoemn(const int32_t val) {
-  this->ygjaoemn = val;
+void TStruct::__set_uykpiqcm(const std::string& val) {
+  this->uykpiqcm = val;
 }
 
-void TStruct::__set_tulheqjt(const int32_t val) {
-  this->tulheqjt = val;
+void TStruct::__set_ygxdpvnv(const std::string& val) {
+  this->ygxdpvnv = val;
 }
 
-void TStruct::__set_wkaobqib(const int32_t val) {
-  this->wkaobqib = val;
+void TStruct::__set_muzxzgja(const std::string& val) {
+  this->muzxzgja = val;
 }
 
-void TStruct::__set_nmjjnyom(const int32_t val) {
-  this->nmjjnyom = val;
+void TStruct::__set_sweazing(const std::string& val) {
+  this->sweazing = val;
 }
 
-void TStruct::__set_dgfaaijx(const int32_t val) {
-  this->dgfaaijx = val;
+void TStruct::__set_sutsmvdd(const std::string& val) {
+  this->sutsmvdd = val;
 }
 std::ostream& operator<<(std::ostream& out, const TStruct& obj)
 {
@@ -78,65 +78,65 @@ uint32_t TStruct::read(::apache::thrift::protocol::TProtocol* iprot) {
     switch (fid)
     {
       case 1:
-        if (ftype == ::apache::thrift::protocol::T_I32) {
-          xfer += iprot->readI32(this->pphtemzf);
-          this->__isset.pphtemzf = true;
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->nscpwcmu);
+          this->__isset.nscpwcmu = true;
         } else {
           xfer += iprot->skip(ftype);
         }
         break;
       case 2:
-        if (ftype == ::apache::thrift::protocol::T_I32) {
-          xfer += iprot->readI32(this->gterefev);
-          this->__isset.gterefev = true;
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->nwvrdaek);
+          this->__isset.nwvrdaek = true;
         } else {
           xfer += iprot->skip(ftype);
         }
         break;
       case 3:
-        if (ftype == ::apache::thrift::protocol::T_I32) {
-          xfer += iprot->readI32(this->hqixjbhi);
-          this->__isset.hqixjbhi = true;
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->fuzvztzr);
+          this->__isset.fuzvztzr = true;
         } else {
           xfer += iprot->skip(ftype);
         }
         break;
       case 4:
-        if (ftype == ::apache::thrift::protocol::T_I32) {
-          xfer += iprot->readI32(this->ygjaoemn);
-          this->__isset.ygjaoemn = true;
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->uykpiqcm);
+          this->__isset.uykpiqcm = true;
         } else {
           xfer += iprot->skip(ftype);
         }
         break;
       case 5:
-        if (ftype == ::apache::thrift::protocol::T_I32) {
-          xfer += iprot->readI32(this->tulheqjt);
-          this->__isset.tulheqjt = true;
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->ygxdpvnv);
+          this->__isset.ygxdpvnv = true;
         } else {
           xfer += iprot->skip(ftype);
         }
         break;
       case 6:
-        if (ftype == ::apache::thrift::protocol::T_I32) {
-          xfer += iprot->readI32(this->wkaobqib);
-          this->__isset.wkaobqib = true;
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->muzxzgja);
+          this->__isset.muzxzgja = true;
         } else {
           xfer += iprot->skip(ftype);
         }
         break;
       case 7:
-        if (ftype == ::apache::thrift::protocol::T_I32) {
-          xfer += iprot->readI32(this->nmjjnyom);
-          this->__isset.nmjjnyom = true;
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->sweazing);
+          this->__isset.sweazing = true;
         } else {
           xfer += iprot->skip(ftype);
         }
         break;
       case 8:
-        if (ftype == ::apache::thrift::protocol::T_I32) {
-          xfer += iprot->readI32(this->dgfaaijx);
-          this->__isset.dgfaaijx = true;
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->sutsmvdd);
+          this->__isset.sutsmvdd = true;
         } else {
           xfer += iprot->skip(ftype);
         }
@@ -158,36 +158,36 @@ uint32_t TStruct::write(::apache::thrift::protocol::TProtocol* oprot) const {
   ::apache::thrift::protocol::TOutputRecursionTracker tracker(*oprot);
   xfer += oprot->writeStructBegin("TStruct");
 
-  xfer += oprot->writeFieldBegin("pphtemzf", ::apache::thrift::protocol::T_I32, 1);
-  xfer += oprot->writeI32(this->pphtemzf);
+  xfer += oprot->writeFieldBegin("nscpwcmu", ::apache::thrift::protocol::T_STRING, 1);
+  xfer += oprot->writeString(this->nscpwcmu);
   xfer += oprot->writeFieldEnd();
 
-  xfer += oprot->writeFieldBegin("gterefev", ::apache::thrift::protocol::T_I32, 2);
-  xfer += oprot->writeI32(this->gterefev);
+  xfer += oprot->writeFieldBegin("nwvrdaek", ::apache::thrift::protocol::T_STRING, 2);
+  xfer += oprot->writeString(this->nwvrdaek);
   xfer += oprot->writeFieldEnd();
 
-  xfer += oprot->writeFieldBegin("hqixjbhi", ::apache::thrift::protocol::T_I32, 3);
-  xfer += oprot->writeI32(this->hqixjbhi);
+  xfer += oprot->writeFieldBegin("fuzvztzr", ::apache::thrift::protocol::T_STRING, 3);
+  xfer += oprot->writeString(this->fuzvztzr);
   xfer += oprot->writeFieldEnd();
 
-  xfer += oprot->writeFieldBegin("ygjaoemn", ::apache::thrift::protocol::T_I32, 4);
-  xfer += oprot->writeI32(this->ygjaoemn);
+  xfer += oprot->writeFieldBegin("uykpiqcm", ::apache::thrift::protocol::T_STRING, 4);
+  xfer += oprot->writeString(this->uykpiqcm);
   xfer += oprot->writeFieldEnd();
 
-  xfer += oprot->writeFieldBegin("tulheqjt", ::apache::thrift::protocol::T_I32, 5);
-  xfer += oprot->writeI32(this->tulheqjt);
+  xfer += oprot->writeFieldBegin("ygxdpvnv", ::apache::thrift::protocol::T_STRING, 5);
+  xfer += oprot->writeString(this->ygxdpvnv);
   xfer += oprot->writeFieldEnd();
 
-  xfer += oprot->writeFieldBegin("wkaobqib", ::apache::thrift::protocol::T_I32, 6);
-  xfer += oprot->writeI32(this->wkaobqib);
+  xfer += oprot->writeFieldBegin("muzxzgja", ::apache::thrift::protocol::T_STRING, 6);
+  xfer += oprot->writeString(this->muzxzgja);
   xfer += oprot->writeFieldEnd();
 
-  xfer += oprot->writeFieldBegin("nmjjnyom", ::apache::thrift::protocol::T_I32, 7);
-  xfer += oprot->writeI32(this->nmjjnyom);
+  xfer += oprot->writeFieldBegin("sweazing", ::apache::thrift::protocol::T_STRING, 7);
+  xfer += oprot->writeString(this->sweazing);
   xfer += oprot->writeFieldEnd();
 
-  xfer += oprot->writeFieldBegin("dgfaaijx", ::apache::thrift::protocol::T_I32, 8);
-  xfer += oprot->writeI32(this->dgfaaijx);
+  xfer += oprot->writeFieldBegin("sutsmvdd", ::apache::thrift::protocol::T_STRING, 8);
+  xfer += oprot->writeString(this->sutsmvdd);
   xfer += oprot->writeFieldEnd();
 
   xfer += oprot->writeFieldStop();
@@ -197,51 +197,51 @@ uint32_t TStruct::write(::apache::thrift::protocol::TProtocol* oprot) const {
 
 void swap(TStruct &a, TStruct &b) {
   using ::std::swap;
-  swap(a.pphtemzf, b.pphtemzf);
-  swap(a.gterefev, b.gterefev);
-  swap(a.hqixjbhi, b.hqixjbhi);
-  swap(a.ygjaoemn, b.ygjaoemn);
-  swap(a.tulheqjt, b.tulheqjt);
-  swap(a.wkaobqib, b.wkaobqib);
-  swap(a.nmjjnyom, b.nmjjnyom);
-  swap(a.dgfaaijx, b.dgfaaijx);
+  swap(a.nscpwcmu, b.nscpwcmu);
+  swap(a.nwvrdaek, b.nwvrdaek);
+  swap(a.fuzvztzr, b.fuzvztzr);
+  swap(a.uykpiqcm, b.uykpiqcm);
+  swap(a.ygxdpvnv, b.ygxdpvnv);
+  swap(a.muzxzgja, b.muzxzgja);
+  swap(a.sweazing, b.sweazing);
+  swap(a.sutsmvdd, b.sutsmvdd);
   swap(a.__isset, b.__isset);
 }
 
-TStruct::TStruct(const TStruct& other0) noexcept {
-  pphtemzf = other0.pphtemzf;
-  gterefev = other0.gterefev;
-  hqixjbhi = other0.hqixjbhi;
-  ygjaoemn = other0.ygjaoemn;
-  tulheqjt = other0.tulheqjt;
-  wkaobqib = other0.wkaobqib;
-  nmjjnyom = other0.nmjjnyom;
-  dgfaaijx = other0.dgfaaijx;
+TStruct::TStruct(const TStruct& other0) {
+  nscpwcmu = other0.nscpwcmu;
+  nwvrdaek = other0.nwvrdaek;
+  fuzvztzr = other0.fuzvztzr;
+  uykpiqcm = other0.uykpiqcm;
+  ygxdpvnv = other0.ygxdpvnv;
+  muzxzgja = other0.muzxzgja;
+  sweazing = other0.sweazing;
+  sutsmvdd = other0.sutsmvdd;
   __isset = other0.__isset;
 }
-TStruct& TStruct::operator=(const TStruct& other1) noexcept {
-  pphtemzf = other1.pphtemzf;
-  gterefev = other1.gterefev;
-  hqixjbhi = other1.hqixjbhi;
-  ygjaoemn = other1.ygjaoemn;
-  tulheqjt = other1.tulheqjt;
-  wkaobqib = other1.wkaobqib;
-  nmjjnyom = other1.nmjjnyom;
-  dgfaaijx = other1.dgfaaijx;
+TStruct& TStruct::operator=(const TStruct& other1) {
+  nscpwcmu = other1.nscpwcmu;
+  nwvrdaek = other1.nwvrdaek;
+  fuzvztzr = other1.fuzvztzr;
+  uykpiqcm = other1.uykpiqcm;
+  ygxdpvnv = other1.ygxdpvnv;
+  muzxzgja = other1.muzxzgja;
+  sweazing = other1.sweazing;
+  sutsmvdd = other1.sutsmvdd;
   __isset = other1.__isset;
   return *this;
 }
 void TStruct::printTo(std::ostream& out) const {
   using ::apache::thrift::to_string;
   out << "TStruct(";
-  out << "pphtemzf=" << to_string(pphtemzf);
-  out << ", " << "gterefev=" << to_string(gterefev);
-  out << ", " << "hqixjbhi=" << to_string(hqixjbhi);
-  out << ", " << "ygjaoemn=" << to_string(ygjaoemn);
-  out << ", " << "tulheqjt=" << to_string(tulheqjt);
-  out << ", " << "wkaobqib=" << to_string(wkaobqib);
-  out << ", " << "nmjjnyom=" << to_string(nmjjnyom);
-  out << ", " << "dgfaaijx=" << to_string(dgfaaijx);
+  out << "nscpwcmu=" << to_string(nscpwcmu);
+  out << ", " << "nwvrdaek=" << to_string(nwvrdaek);
+  out << ", " << "fuzvztzr=" << to_string(fuzvztzr);
+  out << ", " << "uykpiqcm=" << to_string(uykpiqcm);
+  out << ", " << "ygxdpvnv=" << to_string(ygxdpvnv);
+  out << ", " << "muzxzgja=" << to_string(muzxzgja);
+  out << ", " << "sweazing=" << to_string(sweazing);
+  out << ", " << "sutsmvdd=" << to_string(sutsmvdd);
   out << ")";
 }
 

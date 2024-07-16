@@ -6,14 +6,14 @@ namespace json {
     void Serialize(const testData& data, std::string& buf) {
     jsonStruct j = {
         // {"{key}", data.{key}},
-        {"pphtemzf", data.pphtemzf},
-        {"gterefev", data.gterefev},
-        {"hqixjbhi", data.hqixjbhi},
-        {"ygjaoemn", data.ygjaoemn},
-        {"tulheqjt", data.tulheqjt},
-        {"wkaobqib", data.wkaobqib},
-        {"nmjjnyom", data.nmjjnyom},
-        {"dgfaaijx", data.dgfaaijx},
+        {"nscpwcmu", data.nscpwcmu},
+        {"nwvrdaek", data.nwvrdaek},
+        {"fuzvztzr", data.fuzvztzr},
+        {"uykpiqcm", data.uykpiqcm},
+        {"ygxdpvnv", data.ygxdpvnv},
+        {"muzxzgja", data.muzxzgja},
+        {"sweazing", data.sweazing},
+        {"sutsmvdd", data.sutsmvdd},
         };
         buf =  j.dump(4); // The '4' argument adds indentation for pretty-printing
     }
@@ -22,13 +22,13 @@ namespace json {
         jsonStruct j = jsonStruct::parse(buf);
 
         // data.{key} = j["{key}"];
-        data.pphtemzf = j["pphtemzf"];
-        data.gterefev = j["gterefev"];
-        data.hqixjbhi = j["hqixjbhi"];
-        data.ygjaoemn = j["ygjaoemn"];
-        data.tulheqjt = j["tulheqjt"];
-        data.wkaobqib = j["wkaobqib"];
-        data.nmjjnyom = j["nmjjnyom"];
-        data.dgfaaijx = j["dgfaaijx"];
+        data.nscpwcmu = j["nscpwcmu"];
+        data.nwvrdaek = j["nwvrdaek"];
+        data.fuzvztzr = j["fuzvztzr"];
+        data.uykpiqcm = j["uykpiqcm"];
+        data.ygxdpvnv = j["ygxdpvnv"];
+        data.muzxzgja = j["muzxzgja"];
+        data.sweazing = j["sweazing"];
+        data.sutsmvdd = j["sutsmvdd"];
     }
 }

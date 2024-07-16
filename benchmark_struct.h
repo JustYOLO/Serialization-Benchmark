@@ -5,19 +5,19 @@
 
 // Automatically generated struct by generate_struct.py
 // Number of keys: 8
-// Key type: int32_t
+// Key type: string
 // Key size bound: [8, 8]
-// Value size bound: [16, 16]
+// Value size bound: [128, 128]
 
 struct testData {
-    int32_t pphtemzf;
-    int32_t gterefev;
-    int32_t hqixjbhi;
-    int32_t ygjaoemn;
-    int32_t tulheqjt;
-    int32_t wkaobqib;
-    int32_t nmjjnyom;
-    int32_t dgfaaijx;
-    MSGPACK_DEFINE_MAP(pphtemzf, gterefev, hqixjbhi, ygjaoemn, tulheqjt, wkaobqib, nmjjnyom, dgfaaijx);
+    std::string nscpwcmu;
+    std::string nwvrdaek;
+    std::string fuzvztzr;
+    std::string uykpiqcm;
+    std::string ygxdpvnv;
+    std::string muzxzgja;
+    std::string sweazing;
+    std::string sutsmvdd;
+    MSGPACK_DEFINE_MAP(nscpwcmu, nwvrdaek, fuzvztzr, uykpiqcm, ygxdpvnv, muzxzgja, sweazing, sutsmvdd);
 };
 

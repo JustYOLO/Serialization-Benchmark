@@ -1,12 +1,12 @@
 syntax = "proto3";
 
 message ProtoData {
-    int32 pphtemzf = 1;
-    int32 gterefev = 2;
-    int32 hqixjbhi = 3;
-    int32 ygjaoemn = 4;
-    int32 tulheqjt = 5;
-    int32 wkaobqib = 6;
-    int32 nmjjnyom = 7;
-    int32 dgfaaijx = 8;
+    string nscpwcmu = 1;
+    string nwvrdaek = 2;
+    string fuzvztzr = 3;
+    string uykpiqcm = 4;
+    string ygxdpvnv = 5;
+    string muzxzgja = 6;
+    string sweazing = 7;
+    string sutsmvdd = 8;
 }

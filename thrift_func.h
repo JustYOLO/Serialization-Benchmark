@@ -11,14 +11,14 @@ using namespace apache::thrift::transport;
 namespace thrift {
     void Serialize(const testData& data, std::string& serialized_str) {
         TStruct tStruct;
-        tStruct.pphtemzf = data.pphtemzf;
-        tStruct.gterefev = data.gterefev;
-        tStruct.hqixjbhi = data.hqixjbhi;
-        tStruct.ygjaoemn = data.ygjaoemn;
-        tStruct.tulheqjt = data.tulheqjt;
-        tStruct.wkaobqib = data.wkaobqib;
-        tStruct.nmjjnyom = data.nmjjnyom;
-        tStruct.dgfaaijx = data.dgfaaijx;
+        tStruct.nscpwcmu = data.nscpwcmu;
+        tStruct.nwvrdaek = data.nwvrdaek;
+        tStruct.fuzvztzr = data.fuzvztzr;
+        tStruct.uykpiqcm = data.uykpiqcm;
+        tStruct.ygxdpvnv = data.ygxdpvnv;
+        tStruct.muzxzgja = data.muzxzgja;
+        tStruct.sweazing = data.sweazing;
+        tStruct.sutsmvdd = data.sutsmvdd;
 
         std::shared_ptr<TMemoryBuffer> buffer(new TMemoryBuffer());
         std::shared_ptr<TBinaryProtocol> protocol(new TBinaryProtocol(buffer));
@@ -37,13 +37,13 @@ namespace thrift {
 
         TStruct tStruct;
         tStruct.read(protocolIn.get());
-        data.pphtemzf = tStruct.pphtemzf;
-        data.gterefev = tStruct.gterefev;
-        data.hqixjbhi = tStruct.hqixjbhi;
-        data.ygjaoemn = tStruct.ygjaoemn;
-        data.tulheqjt = tStruct.tulheqjt;
-        data.wkaobqib = tStruct.wkaobqib;
-        data.nmjjnyom = tStruct.nmjjnyom;
-        data.dgfaaijx = tStruct.dgfaaijx;
+        data.nscpwcmu = tStruct.nscpwcmu;
+        data.nwvrdaek = tStruct.nwvrdaek;
+        data.fuzvztzr = tStruct.fuzvztzr;
+        data.uykpiqcm = tStruct.uykpiqcm;
+        data.ygxdpvnv = tStruct.ygxdpvnv;
+        data.muzxzgja = tStruct.muzxzgja;
+        data.sweazing = tStruct.sweazing;
+        data.sutsmvdd = tStruct.sutsmvdd;
     }
 }

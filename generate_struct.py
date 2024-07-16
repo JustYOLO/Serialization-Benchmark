@@ -109,25 +109,25 @@ message ProtoData {
 #include "ProtoData.pb.h"
 
 namespace proto {
-    size_t Serialize(const testData& data, const std::string& filename) {
+    size_t Serialize(const testData& data, std::vector<uint8_t>& buffer) {
         GOOGLE_PROTOBUF_VERIFY_VERSION; // is it necessary?
         ProtoData protoData;
 """
     for key in key_value_pair.keys():
         func_content += f"        protoData.set_{key}(data.{key});\n"
 
-    func_content += """        std::ofstream output(filename, std::ios::out | std::ios::binary);
-        if (!protoData.SerializeToOstream(&output)) {
-            std::cerr << "protobuf: Failed to write data to file." << std::endl;
-        }
-        return protoData.ByteSizeLong();
+    func_content += """        size_t size = protoData.ByteSizeLong();
+        buffer.resize(size);
+        protoData.SerializeToArray(buffer.data(), static_cast<int>(size));
+        // std::ofstream output(filename, std::ios::out | std::ios::binary);
+        // if (!protoData.SerializeToOstream(&output)) {
+        //     std::cerr << "protobuf: Failed to write data to file." << std::endl;
+        // }
+        return size;
     }
-    void Deserialize(testData& data, const std::string& filename) {
-        std::ifstream input(filename, std::ios::in | std::ios::binary);
+    void Deserialize(testData& data, const std::vector<uint8_t>& buffer) {
         ProtoData protoData;
-        if (!protoData.ParseFromIstream(&input)) {
-            std::cerr << "protobuf: Failed to read data from file." << std::endl;
-        }
+        protoData.ParseFromArray(buffer.data(), static_cast<int>(buffer.size()));
 """
     for key in key_value_pair.keys():
         func_content += f"        data.{key} = protoData.{key}();\n"
